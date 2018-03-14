@@ -4,6 +4,7 @@
 
 body {
     /*background-color: #E5E8E8;*/
+    padding-bottom: 60px;
 }
 
 footer {
@@ -12,11 +13,13 @@ footer {
     background-repeat: repeat;
     background-attachment: scroll;
     background-position: 0% 0%;
+    position:fixed;
     left: 0;
     bottom: 0;
-    /*height: 100px;*/
+    min-height: 60px;
     width: 100%;
     overflow:hidden;
+    clear: both;
 }
 
 a {
