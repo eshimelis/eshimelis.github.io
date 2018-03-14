@@ -8,8 +8,10 @@ body {
 
 footer {
     background-color: #EAECEE;
-    font-family: 'Raleway', sans-serif;
-    position: absolute;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
     left: 0;
     bottom: 0;
     /*height: 100px;*/
