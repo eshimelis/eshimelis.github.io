@@ -31,16 +31,47 @@ a {
 	font-size: 32pt;
 }
 
+#smallName {
+	font-family: 'Roboto';
+	font-weight: lighter;
+	font-size: 20pt;
+}
+
 .item {
 	position: relative;
 	color: black;
 	font-family: 'Roboto';
-	font-size: 16pt;
+	font-size: 20pt;
 	font-weight: lighter;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	padding-bottom: 30px;
+	/*margin-top: 30px;*/
+	/*margin-bottom: 20px;*/
+	/*padding-bottom: 30px;*/
 }
+
+#projects {
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#projects:hover #rocket {color:#E74C3C;}
+
+#resume {
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#resume:hover #paper {color:#3498DB;}
+
+
+#research {
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+#research:hover #network {color:#2ECC71;}
 
 
 .social {
