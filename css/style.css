@@ -9,17 +9,12 @@ body {
 
 footer {
     background-color: #EAECEE;
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
     position:fixed;
     left: 0;
     bottom: 0;
-    min-height: 60px;
+    height: 60px;
     width: 100%;
     overflow:hidden;
-    clear: both;
 }
 
 a {
