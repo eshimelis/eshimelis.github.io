@@ -73,6 +73,20 @@ a {
 }
 #research:hover #network {color:#2ECC71;}
 
+/* #list-group {
+  margin-top: 200px;
+} */
+
+.projectList {
+  margin-top: 80px;
+}
+
+.list-group {
+  width: auto;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
 
 .social {
   text-align: center;
