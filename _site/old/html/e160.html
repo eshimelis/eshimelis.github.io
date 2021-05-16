@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+</head>
+
+<body>
+
+<h1 align="center">Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</h1>
+<h2 align="center">Autonomous Robot Navigation (E160) Final Project</h2>
+<h3 align="center"> Eyassu Shimelis and Sean Mahre </h3>
+
+<h2>Background</h2>
+<p>The Kalman Filter (KF) is a filtering and prediction technique for
+    continuous systems; however, it is only limited to linear Gaussian
+    systems. In order for the Kalman filter to be correct, its derivation
+    relies on linear transformations. One method of applying this filter to
+    nonlinear systems is to instead use a first-order Taylor series estimate.
+    In a previous lab, we implemented a particle filter, which can be used to
+    approximate most distributions with enough particles; however, particle
+    filters are computationally expensive. The benefit of the Kalman filter
+    is its closed form solution, making a very fast technique for Gaussian systems
+    The unscented Kalman filter (also known as sigma-point belief propagation)
+    is another method of linearizing nonlinear systems, for use in Kalman filtering.
+    Instead of linearizing a system, like the EKF, the UKF propogates sigma points
+    through the non-linear transformation. Sigma points are located at the mean and
+    symmetrically along the main axes of the covariance.
+</p>
+
+<p>Link to the final presentation: <a href="https://docs.google.com/presentation/d/1-C9s5yihTRWvIDMOfT9dZc8EY41FBMYsYPX167Xb2Rc/edit?usp=sharing"> E160 UKF Final Presentation</a> </p>
+
+<h2>Project Definition</h2>
+Localize a differential drive robot in a known map, using an algorithm more
+accurate than an extended Kalman filter and more efficient than a particle filter.
+
+<h2>Materials</h2>
+The robot used in this report is a small, two-pound differential drive robot,
+shown in the figure below. The diameter of each wheel is 6.95 cm +/- 0.01
+ and the distance between the center of the two wheels is 14.15 cm +/- 0.01.
+ Each wheel also has an encoder that is capable of measuring the relative
+ rotation of each wheel with a resolution of 4.36*10^{-3} rad/tick.
+
+<div align="center">
+<img src="../E160img/chassis.png" alt="E160 Robot" width=500px>
+</div>
+
+<h2>Map</h2>
+The particle filter was tested in simple hallway. The hallway has a footprint
+of approximately 4 meters by 4 meters, the specific measurements
+are shown in the figure below. To overcome the sensor's limited range, the
+robot's trajectory was place next to the walls.
+
+<div align="center">
+<img src="../E160img/map.png" alt="E160 map" width=500px>
+</div>
+
+<h2>UKF Pseudocode</h2>
+The following UKF pseudocode is from Chapter 4 of Sebastian Thrun's text: Probabilistic Robotics.<br>
+
+<img src="../E160img/UKFPseudocode.png" alt="UKFPseudocode" width=700px>
+
+
+<h2>UKF State Design</h2>
+The UKF state consisted of three variables: the two dimensional position (x,y) and the robot's heading (theta). <br>
+<img src="../E160img/ukfstate.png" alt="UKF State" width=100px> <br>
+<img src="../E160img/ukfcovariance.png" alt="UKF Covariance" width=250px>
+
+<h2>Experiment 1 - Convergence</h2>
+<h2 align="center">Simulation</h2>
+<p>Theta-offset: Converged 4/5 times</p>
+<p>XY-offset: Converged 5/5 times</p><br>
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DtFZNy1HP_M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<img src="../E160img/UKFSimConvergenceError.png" alt="" width="700px">
+</div>
+
+<h2>Experiment 2 - Passive Tracking</h2>
+<h2 align="center">[Simulation]</h3>
+<p>RMSE: 0.0331 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eIip8V51J2c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<img src="../E160img/UKFSimPassive.png" alt="" width="1000px">
+<img src="../E160img/UKFSimPassiveError.png" alt="" width="700px">
+</div>
+
+<h2 align="center">[Hardware]</h3>
+<p>RMSE: 0.1841 m</p>
+
+<div align="center">
+<img src="../E160img/UKFHardwarePassive.png" alt="" width="1000px">
+<img src="../E160img/UKFHardwarePassiveError.png" alt="" width="700px">
+</div>
+
+<h2>Experiment 3 - Feedback Control</h2>
+<h2 align="center">[Simulation]</h3>
+<p>RMSE: 0.0389 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KkzKvl0QoRs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<img src="../E160img/UKFSimFeedbackTest.png" alt="" width="1000px">
+<img src="../E160img/UKFSimFeedbackTestError.png" alt="" width="700px">
+</div>
+
+<h2 align="center">[Hardware]</h3>
+<p>RMSE: 0.1914 m</p>
+
+<div align="center">
+<img src="../E160img/UKFHardwareFeedback.png" alt="" width="1000px">
+<img src="../E160img/UKFHardwarePositionError.png" alt="" width="700px">
+</div>
+
+<h2>Experiment 4 - UKF and Particle Filter Comparison</h2>
+<h2 align="center">Simulation</h2>
+<p>UKF RMSE: 0.0496 m</p>
+<p>Particle Filter RMSE: 0.0183 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cGWNfols4lc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<img src="../E160img/UKFvsPF.png" alt="" width="1000px">
+<img src="../E160img/UKFvsPFError.png" alt="" width="700px">
+</div>
+
+
+
+</body>

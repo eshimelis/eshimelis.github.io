@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Chalk | Jekyll</title>
+  <title>Eyassu Shimelis | Jekyll</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://localhost:4000/tag/jekyll/">
   <meta property="og:description" content="">
-  <meta property="og:site_name" content="Chalk">
+  <meta property="og:site_name" content="Eyassu Shimelis">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="http://localhost:4000/tag/jekyll/">
@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="http://localhost:4000/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
   
 
-  <link href="http://localhost:4000/feed.xml" type="application/rss+xml" rel="alternate" title="Chalk Last 10 blog posts" />
+  <link href="http://localhost:4000/feed.xml" type="application/rss+xml" rel="alternate" title="Eyassu Shimelis Last 10 blog posts" />
 
   
 
@@ -32,19 +32,22 @@
     
       <link rel="icon" type="image/x-icon" href="/assets/favicon-light-a98c41efc5ed9fcc06ac664c9e2f7a9b3c3b2e0a52357d221fe382f6f4abc8fc.ico">
       <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
-      <link rel="stylesheet" type="text/css" href="/assets/light-bb1553a18d0f1ccfe1aabc010584c49b4277a88503216b78906ba719e30019c1.css">
+      <link rel="stylesheet" type="text/css" title="light" id="light" href="/assets/light-bb1553a18d0f1ccfe1aabc010584c49b4277a88503216b78906ba719e30019c1.css">
+      <link rel="stylesheet" type="text/css" title="dark" id="dark" href="/assets/dark-831218bc9e41aef39ee6a0bae4501195bccafcc13101ae2b9cd20493a6ec04c0.css" disabled="true">
     
 
   
 
 </head>
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto&display=swap" rel="stylesheet">  -->
 <body>
   <main>
     <div class="grid grid-centered">
       <div class="grid-cell">
         <nav class="header-nav scrollappear">
-  <a href="/" class="header-logo" title="Chalk">Chalk</a>
+  <a href="/" class="header-logo" title="Eyassu Shimelis">Eyassu Shimelis</a>
   <ul class="header-links">
     
       <li>
@@ -58,7 +61,7 @@
     
     
       <li>
-        <a href="https://twitter.com/nielsenramon" rel="noreferrer noopener" target="_blank" title="Twitter">
+        <a href="https://twitter.com/eyassushimelis" rel="noreferrer noopener" target="_blank" title="Twitter">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
   <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
 </svg>
@@ -70,7 +73,7 @@
     
     
       <li>
-        <a href="https://github.com/nielsenramon" rel="noreferrer noopener" target="_blank" title="GitHub">
+        <a href="https://github.com/eshimelis" rel="noreferrer noopener" target="_blank" title="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
   <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
 </svg>
@@ -85,14 +88,6 @@
     
     
     
-      <li>
-        <a href="https://dribbble.com/nielsenramon" rel="noreferrer noopener" target="_blank" title="Dribbble">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon-dribbble">
-  <use href="/assets/dribbble-13bac13b56f8cd7edb821f8a51d199f6c5867b8ec835d226b27d54a05374ef88.svg#icon-dribbble" xlink:href="/assets/dribbble-13bac13b56f8cd7edb821f8a51d199f6c5867b8ec835d226b27d54a05374ef88.svg#icon-dribbble"></use>
-</svg>
-
-        </a>
-      </li>
     
     
     
@@ -107,14 +102,13 @@
     
     
       <li>
-        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
-  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+        <a onclick="toggle()" title="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-theme">
+  <use href="/assets/theme-66869e0bf8dab34bae1c86bda400327b772e0be69e8dc28d3ede896e771320ed.svg#icon-theme" xlink:href="/assets/theme-66869e0bf8dab34bae1c86bda400327b772e0be69e8dc28d3ede896e771320ed.svg#icon-theme"></use>
 </svg>
 
         </a>
       </li>
-    
     
   </ul>
 </nav>
@@ -227,23 +221,19 @@
 
 
         <footer class="footer scrollappear">
-  <p>
-    Chalk is a high quality, completely customizable, performant and 100% free
-    blog template for Jekyll built by
-    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">here</a>.
-  </p>
+  <p>© Eyassu Shimelis</p>
 </footer>
 
       </div>
     </div>
   </main>
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28631876-6"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115796871-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-28631876-6');
+    gtag('config', 'UA-115796871-1');
   </script>
 
 
@@ -259,6 +249,8 @@
 
 <script type="text/javascript" src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js"></script>
 
+
+  <script type="text/javascript" src="/assets/themetoggle-df0d3d73164dc26dffbd630182ae4d0dfa7bee6b694a2b5d565d73595b582bbf.js"></script>
 
 </body>
 </html>
