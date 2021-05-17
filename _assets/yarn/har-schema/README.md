@@ -25,7 +25,7 @@ Compatible with any [JSON Schema validation tool][validator].
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
-[license-url]: http://choosealicense.com/licenses/isc/
+[license-url]: https://choosealicense.com/licenses/isc/
 
 [travis-url]: https://travis-ci.org/ahmadnassri/har-schema
 [travis-image]: https://img.shields.io/travis/ahmadnassri/har-schema.svg?style=flat-square

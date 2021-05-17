@@ -83,7 +83,7 @@ Thank you.
 
 ## Using version 6
 
-[JSON Schema draft-07](http://json-schema.org/latest/json-schema-validation.html) is published.
+[JSON Schema draft-07](https://json-schema.org/latest/json-schema-validation.html) is published.
 
 [Ajv version 6.0.0](https://github.com/ajv-validator/ajv/releases/tag/v6.0.0) that supports draft-07 is released. It may require either migrating your schemas or updating your code (to continue using draft-04 and v5 schemas, draft-06 schemas will be supported without changes).
 
@@ -162,7 +162,7 @@ Performance of different validators by [json-schema-benchmark](https://github.co
 
 ## Features
 
-- Ajv implements full JSON Schema [draft-06/07](http://json-schema.org/) and draft-04 standards:
+- Ajv implements full JSON Schema [draft-06/07](https://json-schema.org/) and draft-04 standards:
   - all validation keywords (see [JSON Schema validation keywords](https://github.com/ajv-validator/ajv/blob/master/KEYWORDS.md))
   - full support of remote refs (remote schemas have to be added with `addSchema` or compiled to be available)
   - support of circular references between schemas
@@ -334,7 +334,7 @@ __Please note__: if you need to use "format" keyword to validate untrusted data,
 
 The following formats are implemented for string validation with "format" keyword:
 
-- _date_: full-date according to [RFC3339](http://tools.ietf.org/html/rfc3339#section-5.6).
+- _date_: full-date according to [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6).
 - _time_: time with optional time-zone.
 - _date-time_: date-time from the same source (time-zone is mandatory). `date`, `time` and `date-time` validate ranges in `full` mode and only regexp in `fast` mode (see [options](#options)).
 - _uri_: full URI.
@@ -342,13 +342,13 @@ The following formats are implemented for string validation with "format" keywor
 - _uri-template_: URI template according to [RFC6570](https://tools.ietf.org/html/rfc6570)
 - _url_ (deprecated): [URL record](https://url.spec.whatwg.org/#concept-url).
 - _email_: email address.
-- _hostname_: host name according to [RFC1034](http://tools.ietf.org/html/rfc1034#section-3.5).
+- _hostname_: host name according to [RFC1034](https://tools.ietf.org/html/rfc1034#section-3.5).
 - _ipv4_: IP address v4.
 - _ipv6_: IP address v6.
 - _regex_: tests whether a string is a valid regular expression by passing it to RegExp constructor.
-- _uuid_: Universally Unique IDentifier according to [RFC4122](http://tools.ietf.org/html/rfc4122).
+- _uuid_: Universally Unique IDentifier according to [RFC4122](https://tools.ietf.org/html/rfc4122).
 - _json-pointer_: JSON-pointer according to [RFC6901](https://tools.ietf.org/html/rfc6901).
-- _relative-json-pointer_: relative JSON-pointer according to [this draft](http://tools.ietf.org/html/draft-luff-relative-json-pointer-00).
+- _relative-json-pointer_: relative JSON-pointer according to [this draft](https://tools.ietf.org/html/draft-luff-relative-json-pointer-00).
 
 __Please note__: JSON Schema draft-07 also defines formats `iri`, `iri-reference`, `idn-hostname` and `idn-email` for URLs, hostnames and emails with international characters. Ajv does not implement these formats. If you create Ajv plugin that implements them please make a PR to mention this plugin here.
 
@@ -369,7 +369,7 @@ Example:
 
 ```javascript
 var schema = {
-  "$id": "http://example.com/schemas/schema.json",
+  "$id": "https://example.com/schemas/schema.json",
   "type": "object",
   "properties": {
     "foo": { "$ref": "defs.json#/definitions/int" },
@@ -378,7 +378,7 @@ var schema = {
 };
 
 var defsSchema = {
-  "$id": "http://example.com/schemas/defs.json",
+  "$id": "https://example.com/schemas/defs.json",
   "definitions": {
     "int": { "type": "integer" },
     "str": { "type": "string" }
@@ -390,7 +390,7 @@ Now to compile your schema you can either pass all schemas to Ajv instance:
 
 ```javascript
 var ajv = new Ajv({schemas: [schema, defsSchema]});
-var validate = ajv.getSchema('http://example.com/schemas/schema.json');
+var validate = ajv.getSchema('https://example.com/schemas/schema.json');
 ```
 
 or use `addSchema` method:
@@ -419,7 +419,7 @@ With `$data` option you can use values from the validated data as the values for
 
 `$data` reference is supported in the keywords: const, enum, format, maximum/minimum, exclusiveMaximum / exclusiveMinimum, maxLength / minLength, maxItems / minItems, maxProperties / minProperties, formatMaximum / formatMinimum, formatExclusiveMaximum / formatExclusiveMinimum, multipleOf, pattern, required, uniqueItems.
 
-The value of "$data" should be a [JSON-pointer](https://tools.ietf.org/html/rfc6901) to the data (the root is always the top level data object, even if the $data reference is inside a referenced subschema) or a [relative JSON-pointer](http://tools.ietf.org/html/draft-luff-relative-json-pointer-00) (it is relative to the current point in data; if the $data reference is inside a referenced subschema it cannot point to the data outside of the root level for this subschema).
+The value of "$data" should be a [JSON-pointer](https://tools.ietf.org/html/rfc6901) to the data (the root is always the top level data object, even if the $data reference is inside a referenced subschema) or a [relative JSON-pointer](https://tools.ietf.org/html/draft-luff-relative-json-pointer-00) (it is relative to the current point in data; if the $data reference is inside a referenced subschema it cannot point to the data outside of the root level for this subschema).
 
 Examples.
 
@@ -617,7 +617,7 @@ __Please note__: all asynchronous subschemas that are referenced from the curren
 
 Validation function for an asynchronous custom format/keyword should return a promise that resolves with `true` or `false` (or rejects with `new Ajv.ValidationError(errors)` if you want to return custom errors from the keyword function).
 
-Ajv compiles asynchronous schemas to [es7 async functions](http://tc39.github.io/ecmascript-asyncawait/) that can optionally be transpiled with [nodent](https://github.com/MatAtBread/nodent). Async functions are supported in Node.js 7+ and all modern browsers. You can also supply any other transpiler as a function via `processCode` option. See [Options](#options).
+Ajv compiles asynchronous schemas to [es7 async functions](https://tc39.github.io/ecmascript-asyncawait/) that can optionally be transpiled with [nodent](https://github.com/MatAtBread/nodent). Async functions are supported in Node.js 7+ and all modern browsers. You can also supply any other transpiler as a function via `processCode` option. See [Options](#options).
 
 The compiled validation function has `$async: true` property (if the schema is asynchronous), so you can differentiate these functions if you are using both synchronous and asynchronous schemas.
 
@@ -1054,7 +1054,7 @@ var validate = new Ajv().addSchema(schema).addFormat(name, regex).getSchema(uri)
 
 Adds meta schema(s) that can be used to validate other schemas. That function should be used instead of `addSchema` because there may be instance options that would compile a meta schema incorrectly (at the moment it is `removeAdditional` option).
 
-There is no need to explicitly add draft-07 meta schema (http://json-schema.org/draft-07/schema) - it is added by default, unless option `meta` is set to `false`. You only need to use it if you have a changed meta-schema that you want to use to validate your schemas. See `validateSchema`.
+There is no need to explicitly add draft-07 meta schema (https://json-schema.org/draft-07/schema) - it is added by default, unless option `meta` is set to `false`. You only need to use it if you have a changed meta-schema that you want to use to validate your schemas. See `validateSchema`.
 
 
 ##### <a name="api-validateschema"></a>.validateSchema(Object schema) -&gt; Boolean
@@ -1306,8 +1306,8 @@ Defaults:
 
 ##### Advanced options
 
-- _meta_: add [meta-schema](http://json-schema.org/documentation.html) so it can be used by other schemas (true by default). If an object is passed, it will be used as the default meta-schema for schemas that have no `$schema` keyword. This default meta-schema MUST have `$schema` keyword.
-- _validateSchema_: validate added/compiled schemas against meta-schema (true by default). `$schema` property in the schema can be http://json-schema.org/draft-07/schema or absent (draft-07 meta-schema will be used) or can be a reference to the schema previously added with `addMetaSchema` method. Option values:
+- _meta_: add [meta-schema](https://json-schema.org/documentation.html) so it can be used by other schemas (true by default). If an object is passed, it will be used as the default meta-schema for schemas that have no `$schema` keyword. This default meta-schema MUST have `$schema` keyword.
+- _validateSchema_: validate added/compiled schemas against meta-schema (true by default). `$schema` property in the schema can be https://json-schema.org/draft-07/schema or absent (draft-07 meta-schema will be used) or can be a reference to the schema previously added with `addMetaSchema` method. Option values:
   - `true` (default) -  if the validation fails, throw the exception.
   - `"log"` - if the validation fails, log error.
   - `false` - skip schema validation.
@@ -1431,11 +1431,11 @@ If you have published a useful plugin please submit a PR to add it to the next s
 ## Some packages using Ajv
 
 - [webpack](https://github.com/webpack/webpack) - a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser
-- [jsonscript-js](https://github.com/JSONScript/jsonscript-js) - the interpreter for [JSONScript](http://www.jsonscript.org) - scripted processing of existing endpoints and services
+- [jsonscript-js](https://github.com/JSONScript/jsonscript-js) - the interpreter for [JSONScript](https://www.jsonscript.org) - scripted processing of existing endpoints and services
 - [osprey-method-handler](https://github.com/mulesoft-labs/osprey-method-handler) - Express middleware for validating requests and responses based on a RAML method object, used in [osprey](https://github.com/mulesoft/osprey) - validating API proxy generated from a RAML definition
 - [har-validator](https://github.com/ahmadnassri/har-validator) - HTTP Archive (HAR) validator
-- [jsoneditor](https://github.com/josdejong/jsoneditor) - a web-based tool to view, edit, format, and validate JSON http://jsoneditoronline.org
-- [JSON Schema Lint](https://github.com/nickcmaynard/jsonschemalint) - a web tool to validate JSON/YAML document against a single JSON Schema http://jsonschemalint.com
+- [jsoneditor](https://github.com/josdejong/jsoneditor) - a web-based tool to view, edit, format, and validate JSON https://jsoneditoronline.org
+- [JSON Schema Lint](https://github.com/nickcmaynard/jsonschemalint) - a web tool to validate JSON/YAML document against a single JSON Schema https://jsonschemalint.com
 - [objection](https://github.com/vincit/objection.js) - SQL-friendly ORM for Node.js
 - [table](https://github.com/gajus/table) - formats data into a string table
 - [ripple-lib](https://github.com/ripple/ripple-lib) - a JavaScript API for interacting with [Ripple](https://ripple.com) in Node.js and the browser

@@ -1,6 +1,6 @@
 # registry-auth-token
 
-[![npm version](http://img.shields.io/npm/v/registry-auth-token.svg?style=flat-square)](http://browsenpm.org/package/registry-auth-token)[![Build Status](http://img.shields.io/travis/rexxars/registry-auth-token/master.svg?style=flat-square)](https://travis-ci.org/rexxars/registry-auth-token)
+[![npm version](https://img.shields.io/npm/v/registry-auth-token.svg?style=flat-square)](https://browsenpm.org/package/registry-auth-token)[![Build Status](https://img.shields.io/travis/rexxars/registry-auth-token/master.svg?style=flat-square)](https://travis-ci.org/rexxars/registry-auth-token)
 
 Get the auth token set for an npm registry from `.npmrc`. Also allows fetching the configured registry URL for a given npm scope.
 
@@ -35,9 +35,9 @@ console.log(getAuthToken('//some.host/registry/deep/path', {recursive: true}))
 console.log(getRegistryUrl('@foobar'))
 
 // Use the npm config that is passed in
-console.log(getRegistryUrl('http://registry.foobar.eu/', {
+console.log(getRegistryUrl('https://registry.foobar.eu/', {
   npmrc: {
-    'registry': 'http://registry.foobar.eu/',
+    'registry': 'https://registry.foobar.eu/',
     '//registry.foobar.eu/:_authToken': 'qar'
   }
 }))

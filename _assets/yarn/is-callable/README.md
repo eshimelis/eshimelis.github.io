@@ -52,7 +52,7 @@ npm install is-callable
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/is-callable
-[2]: http://versionbadg.es/ljharb/is-callable.svg
+[2]: https://versionbadg.es/ljharb/is-callable.svg
 [3]: https://travis-ci.org/ljharb/is-callable.svg
 [4]: https://travis-ci.org/ljharb/is-callable
 [5]: https://david-dm.org/ljharb/is-callable.svg
@@ -62,7 +62,7 @@ Simply clone the repo, `npm install`, and run `npm test`
 [9]: https://ci.testling.com/ljharb/is-callable.png
 [10]: https://ci.testling.com/ljharb/is-callable
 [11]: https://nodei.co/npm/is-callable.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/is-callable.svg
+[license-image]: https://img.shields.io/npm/l/is-callable.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/is-callable.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=is-callable
+[downloads-image]: https://img.shields.io/npm/dm/is-callable.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=is-callable

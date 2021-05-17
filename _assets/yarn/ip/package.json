@@ -5,7 +5,7 @@
   "homepage": "https://github.com/indutny/node-ip",
   "repository": {
     "type": "git",
-    "url": "http://github.com/indutny/node-ip.git"
+    "url": "https://github.com/indutny/node-ip.git"
   },
   "main": "lib/ip",
   "devDependencies": {

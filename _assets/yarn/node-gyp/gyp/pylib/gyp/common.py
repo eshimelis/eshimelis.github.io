@@ -209,7 +209,7 @@ def UnrelativePath(path, relative_to):
 
 
 # re objects used by EncodePOSIXShellArgument.  See IEEE 1003.1 XCU.2.2 at
-# http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_02
+# https://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_02
 # and the documentation for various shells.
 
 # _quote is a pattern that should match any argument that needs to be quoted
@@ -481,7 +481,7 @@ def CopyTool(flavor, out_path):
 
 
 # From Alex Martelli,
-# http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52560
+# https://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52560
 # ASPN: Python Cookbook: Remove duplicates from a sequence
 # First comment, dated 2001/10/13.
 # (Also in the printed Python Cookbook.)
@@ -499,7 +499,7 @@ def uniquer(seq, idfun=None):
     return result
 
 
-# Based on http://code.activestate.com/recipes/576694/.
+# Based on https://code.activestate.com/recipes/576694/.
 class OrderedSet(MutableSet):
   def __init__(self, iterable=None):
     self.end = end = []

@@ -223,7 +223,7 @@ function consumeBody (body) {
 
 /**
  * Detect buffer encoding and convert to target encoding
- * ref: http://www.w3.org/TR/2011/WD-html5-20110113/parsing.html#determining-the-character-encoding
+ * ref: https://www.w3.org/TR/2011/WD-html5-20110113/parsing.html#determining-the-character-encoding
  *
  * @param   Buffer  buffer    Incoming buffer
  * @param   String  encoding  Target encoding

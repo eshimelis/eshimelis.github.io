@@ -1,8 +1,8 @@
 ## iconv-lite: Pure JS character encoding conversion
 
- * No need for native code compilation. Quick to install, works on Windows and in sandboxed environments like [Cloud9](http://c9.io).
+ * No need for native code compilation. Quick to install, works on Windows and in sandboxed environments like [Cloud9](https://c9.io).
  * Used in popular projects like [Express.js (body_parser)](https://github.com/expressjs/body-parser), 
-   [Grunt](http://gruntjs.com/), [Nodemailer](http://www.nodemailer.com/), [Yeoman](http://yeoman.io/) and others.
+   [Grunt](https://gruntjs.com/), [Nodemailer](https://www.nodemailer.com/), [Yeoman](https://yeoman.io/) and others.
  * Faster than [node-iconv](https://github.com/bnoordhuis/node-iconv) (see below for performance comparison).
  * Intuitive encode/decode API, including Streaming support.
  * In-browser usage via [browserify](https://github.com/substack/node-browserify) or [webpack](https://webpack.js.org/) (~180kb gzip compressed with Buffer shim included).
@@ -72,7 +72,7 @@ See [all supported encodings on wiki](https://github.com/ashtuchkin/iconv-lite/w
 
 Most singlebyte encodings are generated automatically from [node-iconv](https://github.com/bnoordhuis/node-iconv). Thank you Ben Noordhuis and libiconv authors!
 
-Multibyte encodings are generated from [Unicode.org mappings](http://www.unicode.org/Public/MAPPINGS/) and [WHATWG Encoding Standard mappings](http://encoding.spec.whatwg.org/). Thank you, respective authors!
+Multibyte encodings are generated from [Unicode.org mappings](https://www.unicode.org/Public/MAPPINGS/) and [WHATWG Encoding Standard mappings](https://encoding.spec.whatwg.org/). Thank you, respective authors!
 
 
 ## Encoding/decoding speed

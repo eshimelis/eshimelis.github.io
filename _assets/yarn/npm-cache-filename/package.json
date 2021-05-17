@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git://github.com/npm/npm-cache-filename"
   },
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/npm-cache-filename/issues"

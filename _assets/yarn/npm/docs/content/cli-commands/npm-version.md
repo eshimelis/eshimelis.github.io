@@ -53,7 +53,7 @@ $ npm config set sign-git-tag true
 $ npm version patch
 
 You need a passphrase to unlock the secret key for
-user: "isaacs (http://blog.izs.me/) <i@izs.me>"
+user: "isaacs (https://blog.izs.me/) <i@izs.me>"
 2048-bit RSA key, ID 6C481CF6, created 2010-08-31
 
 Enter passphrase:

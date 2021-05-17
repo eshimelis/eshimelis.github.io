@@ -36,7 +36,7 @@ rpt('/path/to/pkg/root').then(data => { ... })
 
 That's it.  It doesn't figure out if dependencies are met, it doesn't
 mutate package.json data objects (beyond what
-[read-package-json](http://npm.im/read-package-json) already does), it
+[read-package-json](https://npm.im/read-package-json) already does), it
 doesn't limit its search to include/exclude `devDependencies`, or
 anything else.
 

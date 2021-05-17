@@ -48,7 +48,7 @@ var hashAlgs = {
 
 /*
  * Taken from
- * http://csrc.nist.gov/groups/ST/toolkit/documents/dss/NISTReCur.pdf
+ * https://csrc.nist.gov/groups/ST/toolkit/documents/dss/NISTReCur.pdf
  */
 var curves = {
 	'nistp256': {

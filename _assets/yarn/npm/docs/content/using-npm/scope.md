@@ -106,7 +106,7 @@ private registries, such as npm Enterprise.
 You can associate a scope with a registry at login, e.g.
 
 ```bash
-npm login --registry=http://reg.example.com --scope=@myco
+npm login --registry=https://reg.example.com --scope=@myco
 ```
 
 Scopes have a many-to-one relationship with registries: one registry can
@@ -115,7 +115,7 @@ host multiple scopes, but a scope only ever points to one registry.
 You can also associate a scope with a registry using `npm config`:
 
 ```bash
-npm config set @myco:registry http://reg.example.com
+npm config set @myco:registry https://reg.example.com
 ```
 
 Once a scope is associated with a registry, any `npm install` for a package

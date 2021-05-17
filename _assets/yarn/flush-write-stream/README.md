@@ -6,7 +6,7 @@ A write stream constructor that supports a flush function that is called before 
 npm install flush-write-stream
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/flush-write-stream.svg?style=flat)](http://travis-ci.org/mafintosh/flush-write-stream)
+[![build status](https://img.shields.io/travis/mafintosh/flush-write-stream.svg?style=flat)](https://travis-ci.org/mafintosh/flush-write-stream)
 
 ## Usage
 

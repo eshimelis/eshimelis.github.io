@@ -629,4 +629,4 @@ Destroys the SmartBuffer instance.
 
 ## License
 
-This work is licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
+This work is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).

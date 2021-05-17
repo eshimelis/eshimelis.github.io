@@ -4,7 +4,7 @@
 
 Get a list of the files to add from a folder into an npm package
 
-These can be handed to [tar](http://npm.im/tar) like so to make an npm
+These can be handed to [tar](https://npm.im/tar) like so to make an npm
 package tarball:
 
 ```js
@@ -59,7 +59,7 @@ This uses the following rules:
 
 ## API
 
-Same API as [ignore-walk](http://npm.im/ignore-walk), just hard-coded
+Same API as [ignore-walk](https://npm.im/ignore-walk), just hard-coded
 file list and rule sets.
 
 The `Walker` and `WalkerSync` classes take a `bundled` argument, which

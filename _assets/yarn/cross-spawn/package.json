@@ -33,7 +33,7 @@
     "cmd",
     "execute"
   ],
-  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+  "author": "IndigoUnited <hello@indigounited.com> (https://indigounited.com)",
   "license": "MIT",
   "dependencies": {
     "lru-cache": "^4.0.1",

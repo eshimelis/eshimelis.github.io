@@ -36,7 +36,7 @@ var https = require('https');
 var HttpsProxyAgent = require('https-proxy-agent');
 
 // HTTP/HTTPS proxy to connect to
-var proxy = process.env.http_proxy || 'http://168.63.76.32:3128';
+var proxy = process.env.http_proxy || 'https://168.63.76.32:3128';
 console.log('using proxy server %j', proxy);
 
 // HTTPS endpoint for the proxy to connect to
@@ -62,7 +62,7 @@ var WebSocket = require('ws');
 var HttpsProxyAgent = require('https-proxy-agent');
 
 // HTTP/HTTPS proxy to connect to
-var proxy = process.env.http_proxy || 'http://168.63.76.32:3128';
+var proxy = process.env.http_proxy || 'https://168.63.76.32:3128';
 console.log('using proxy server %j', proxy);
 
 // WebSocket endpoint for the proxy to connect to
@@ -134,4 +134,4 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[CONNECT]: http://en.wikipedia.org/wiki/HTTP_tunnel#HTTP_CONNECT_Tunneling
+[CONNECT]: https://en.wikipedia.org/wiki/HTTP_tunnel#HTTP_CONNECT_Tunneling

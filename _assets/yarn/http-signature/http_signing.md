@@ -227,7 +227,7 @@ will want to enforce, but service providers SHOULD at minimum include the
     Name: Mark Cavage (editor)
     Company: Joyent, Inc.
     Email: mark.cavage@joyent.com
-    URI: http://www.joyent.com
+    URI: https://www.joyent.com
 
 # Appendix A - Test Values
 

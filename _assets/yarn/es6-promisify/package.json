@@ -17,7 +17,7 @@
     "pretest": "./node_modules/eslint/bin/eslint.js ./lib/*.js ./tests/*.js",
     "test": "gulp && nodeunit tests"
   },
-  "bugs": "http://github.com/digitaldesignlabs/es6-promisify/issues",
+  "bugs": "https://github.com/digitaldesignlabs/es6-promisify/issues",
   "files": [
     "dist/promisify.js",
     "dist/promise.js"

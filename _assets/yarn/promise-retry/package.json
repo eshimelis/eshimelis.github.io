@@ -20,7 +20,7 @@
     "repeat",
     "replay"
   ],
-  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+  "author": "IndigoUnited <hello@indigounited.com> (https://indigounited.com)",
   "license": "MIT",
   "devDependencies": {
     "expect.js": "^0.3.1",

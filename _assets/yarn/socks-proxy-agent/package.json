@@ -19,7 +19,7 @@
     "https",
     "agent"
   ],
-  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (https://n8.io/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TooTallNate/node-socks-proxy-agent/issues"

@@ -31,4 +31,4 @@ isPathInside('/Users/sindresorhus/dev/unicorn', '/Users/sindresorhus');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

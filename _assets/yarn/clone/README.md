@@ -1,8 +1,8 @@
 # clone
 
-[![build status](https://secure.travis-ci.org/pvorb/node-clone.png)](http://travis-ci.org/pvorb/node-clone)
+[![build status](https://secure.travis-ci.org/pvorb/node-clone.png)](https://travis-ci.org/pvorb/node-clone)
 
-[![info badge](https://nodei.co/npm/clone.png?downloads=true&downloadRank=true&stars=true)](http://npm-stat.com/charts.html?package=clone)
+[![info badge](https://nodei.co/npm/clone.png?downloads=true&downloadRank=true&stars=true)](https://npm-stat.com/charts.html?package=clone)
 
 offers foolproof _deep cloning_ of objects, arrays, numbers, strings etc. in JavaScript.
 
@@ -60,7 +60,7 @@ can clone dates in arrays in objects, for example.
   * `obj` -- the object that you want to clone
 
 Does a prototype clone as
-[described by Oran Looney](http://oranlooney.com/functional-javascript/).
+[described by Oran Looney](https://oranlooney.com/functional-javascript/).
 
 
 ## Circular References
@@ -105,7 +105,7 @@ github](https://github.com/pvorb/node-clone/issues) or send me an email to
 
 ## License
 
-Copyright © 2011-2015 [Paul Vorbach](http://paul.vorba.ch/) and
+Copyright © 2011-2015 [Paul Vorbach](https://paul.vorba.ch/) and
 [contributors](https://github.com/pvorb/node-clone/graphs/contributors).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

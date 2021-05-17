@@ -29,7 +29,7 @@ You can even specify the error level (default is 'L'):
 
 If you don't want to display to the terminal but just want to string you can provide a callback:
 
-    qrcode.generate('http://github.com', function (qrcode) {
+    qrcode.generate('https://github.com', function (qrcode) {
         console.log(qrcode);
     });
 
@@ -50,8 +50,8 @@ If you want to display small output, provide `opts` with `small`:
 ## Usage
 
     $ qrcode-terminal --help
-    $ qrcode-terminal 'http://github.com'
-    $ echo 'http://github.com' | qrcode-terminal
+    $ qrcode-terminal 'https://github.com'
+    $ echo 'https://github.com' | qrcode-terminal
 
 # Support
 

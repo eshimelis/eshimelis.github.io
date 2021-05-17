@@ -47,7 +47,7 @@ test('basic publish', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -106,7 +106,7 @@ test('scoped publish', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/@zkat/libnpmpublish/-/@zkat/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/@zkat/libnpmpublish/-/@zkat/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -176,7 +176,7 @@ test('retry after a conflict', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.1.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.1.tgz'
           }
         }
       },
@@ -207,7 +207,7 @@ test('retry after a conflict', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -292,7 +292,7 @@ test('retry after a conflict -- no versions on remote', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -369,7 +369,7 @@ test('version conflict', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -445,7 +445,7 @@ test('publish with basic auth', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -506,7 +506,7 @@ test('publish base64 string', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -566,7 +566,7 @@ test('publish tar stream', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -651,7 +651,7 @@ test('publish includes access', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -764,7 +764,7 @@ test('other error code', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -827,7 +827,7 @@ test('publish includes access', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -889,7 +889,7 @@ test('publishConfig on manifest', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           },
           publishConfig: {
             registry: REG
@@ -958,7 +958,7 @@ test('publish with encoded _auth', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -1017,7 +1017,7 @@ test('publish with 302 redirect', t => {
           dist: {
             shasum,
             integrity: integrity.toString(),
-            tarball: 'http://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
+            tarball: 'https://mock.reg/libnpmpublish/-/libnpmpublish-1.0.0.tgz'
           }
         }
       },
@@ -1030,9 +1030,9 @@ test('publish with 302 redirect', t => {
       }
     }
     tnock(t, REG).put('/libnpmpublish').reply(302, '', {
-      location: 'http://blah.net/libnpmpublish'
+      location: 'https://blah.net/libnpmpublish'
     })
-    tnock(t, 'http://blah.net').put('/libnpmpublish', body => {
+    tnock(t, 'https://blah.net').put('/libnpmpublish', body => {
       t.deepEqual(body, packument, 'posted packument matches expectations')
       return true
     }, {

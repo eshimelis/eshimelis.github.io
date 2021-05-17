@@ -211,7 +211,7 @@ function readInstalled_ (folder, parent, name, reqver, depth, opts, cb) {
       reqver = obj.version;
     }
 
-    // "foo":"http://blah" and "foo":"latest" are always presumed valid
+    // "foo":"https://blah" and "foo":"latest" are always presumed valid
     if (reqver
         && semver.validRange(reqver, true)
         && !semver.satisfies(obj.version, reqver, true)) {
@@ -302,7 +302,7 @@ function findUnmet (obj, opts) {
     .forEach(function (d) {
       var found = findDep(obj, d)
       debug("finding dep %j", d, found && found.name || found)
-      // "foo":"http://blah" and "foo":"latest" are always presumed valid
+      // "foo":"https://blah" and "foo":"latest" are always presumed valid
       if (typeof deps[d] === "string" &&
           semver.validRange(deps[d], true) &&
           found &&

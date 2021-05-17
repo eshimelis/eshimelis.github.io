@@ -2006,7 +2006,7 @@ def GenerateOutputForConfig(target_list, target_dicts, data, params,
       deps=deps)
   else:
     # TODO(scottmg) Separate pdb names is a test to see if it works around
-    # http://crbug.com/142362. It seems there's a race between the creation of
+    # https://crbug.com/142362. It seems there's a race between the creation of
     # the .pdb by the precompiled header step for .cc and the compilation of
     # .c files. This should be handled by mspdbsrv, but rarely errors out with
     #   c1xx : fatal error C1033: cannot open program database

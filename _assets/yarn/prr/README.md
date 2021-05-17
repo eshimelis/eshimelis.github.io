@@ -1,4 +1,4 @@
-# prr [![Build Status](https://secure.travis-ci.org/rvagg/prr.png)](http://travis-ci.org/rvagg/prr)
+# prr [![Build Status](https://secure.travis-ci.org/rvagg/prr.png)](https://travis-ci.org/rvagg/prr)
 
 An sensible alternative to `Object.defineProperty()`. Available in npm and Ender as **prr**.
 

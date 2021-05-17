@@ -65,7 +65,7 @@
 #
 #
 # Dev Notes:
-# - compgen notes, from http://unix.stackexchange.com/questions/151118/understand-compgen-builtin-command
+# - compgen notes, from https://unix.stackexchange.com/questions/151118/understand-compgen-builtin-command
 # - https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html
 #
 

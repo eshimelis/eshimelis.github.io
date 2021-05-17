@@ -184,7 +184,7 @@ Utf32Decoder.prototype.end = function() {
 
 // == UTF-32 Auto codec =============================================================
 // Decoder chooses automatically from UTF-32LE and UTF-32BE using BOM and space-based heuristic.
-// Defaults to UTF-32LE. http://en.wikipedia.org/wiki/UTF-32
+// Defaults to UTF-32LE. https://en.wikipedia.org/wiki/UTF-32
 // Encoder/decoder default can be changed: iconv.decode(buf, 'utf32', {defaultEncoding: 'utf-32be'});
 
 // Encoder prepends BOM (which can be overridden with (addBOM: false}).

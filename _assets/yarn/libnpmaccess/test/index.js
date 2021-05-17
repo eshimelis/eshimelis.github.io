@@ -7,7 +7,7 @@ const tnock = require('./util/tnock.js')
 
 const access = require('../index.js')
 
-const REG = 'http://localhost:1337'
+const REG = 'https://localhost:1337'
 const OPTS = figgyPudding({})({
   registry: REG
 })

@@ -50,14 +50,14 @@ describe('registry-url', function () {
 
   it('should return configured global registry if given', function (done) {
     var content = [
-      'registry=http://registry.foobar.eu/',
+      'registry=https://registry.foobar.eu/',
       '@somescope:registry=https://some.url/', ''
     ].join('\n')
 
     fs.writeFile(npmRcPath, content, function (err) {
       var getRegistryUrl = requireUncached('../registry-url')
       assert(!err, err)
-      assert.equal(getRegistryUrl(), 'http://registry.foobar.eu/')
+      assert.equal(getRegistryUrl(), 'https://registry.foobar.eu/')
       done()
     })
   })

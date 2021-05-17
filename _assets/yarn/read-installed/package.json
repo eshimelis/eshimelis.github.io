@@ -21,7 +21,7 @@
   "optionalDependencies": {
     "graceful-fs": "^4.1.2"
   },
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "license": "ISC",
   "devDependencies": {
     "mkdirp": "^0.5.0",

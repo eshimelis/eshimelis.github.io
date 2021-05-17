@@ -6,7 +6,7 @@
 
 Inspired by [Dominic Tarr](https://github.com/dominictarr)'s [through](https://github.com/dominictarr/through) in that it's so much easier to make a stream out of a function than it is to set up the prototype chain properly: `through(function (chunk) { ... })`.
 
-Note: As 2.x.x this module starts using **Streams3** instead of Stream2. To continue using a Streams2 version use `npm install through2@0` to fetch the latest version of 0.x.x. More information about Streams2 vs Streams3 and recommendations see the article **[Why I don't use Node's core 'stream' module](http://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html)**.
+Note: As 2.x.x this module starts using **Streams3** instead of Stream2. To continue using a Streams2 version use `npm install through2@0` to fetch the latest version of 0.x.x. More information about Streams2 vs Streams3 and recommendations see the article **[Why I don't use Node's core 'stream' module](https://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html)**.
 
 ```js
 fs.createReadStream('ex.txt')
@@ -54,7 +54,7 @@ Note that `through2.obj(fn)` is a convenience wrapper around `through2({ objectM
 
 <b><code>through2([ options, ] [ transformFunction ] [, flushFunction ])</code></b>
 
-Consult the **[stream.Transform](http://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform)** documentation for the exact rules of the `transformFunction` (i.e. `this._transform`) and the optional `flushFunction` (i.e. `this._flush`).
+Consult the **[stream.Transform](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform)** documentation for the exact rules of the `transformFunction` (i.e. `this._transform`) and the optional `flushFunction` (i.e. `this._flush`).
 
 ### options
 

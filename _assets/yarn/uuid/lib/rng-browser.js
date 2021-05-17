@@ -9,7 +9,7 @@ var getRandomValues = (typeof(crypto) != 'undefined' && crypto.getRandomValues &
                       (typeof(msCrypto) != 'undefined' && typeof window.msCrypto.getRandomValues == 'function' && msCrypto.getRandomValues.bind(msCrypto));
 
 if (getRandomValues) {
-  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
+  // WHATWG crypto RNG - https://wiki.whatwg.org/wiki/Crypto
   var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
 
   module.exports = function whatwgRNG() {

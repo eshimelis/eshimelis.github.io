@@ -16,7 +16,7 @@ asap(function () {
 });
 ```
 
-[Zalgo]: http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony
+[Zalgo]: https://blog.izs.me/post/59142742143/designing-apis-for-asynchrony
 
 This CommonJS package provides an `asap` module that exports a function that
 executes a task function *as soon as possible*.
@@ -123,9 +123,9 @@ Integration][].
 
 [Continuous Integration]: https://github.com/kriskowal/asap/blob/master/CONTRIBUTING.md
 
-![Browser Compatibility](http://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-results-matrix.svg)
+![Browser Compatibility](https://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-results-matrix.svg)
 
-![Compatibility in Web Workers](http://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-worker-results-matrix.svg)
+![Compatibility in Web Workers](https://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-worker-results-matrix.svg)
 
 ## Caveats
 
@@ -140,8 +140,8 @@ the HTML [microtask queue][], and thus begin flushing ASAP's task queue
 immediately at the end of the current event loop turn, before any rendering or
 IO:
 
-[microtask queue]: http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#microtask-queue
-[DOM mutation observers]: http://dom.spec.whatwg.org/#mutation-observers
+[microtask queue]: https://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#microtask-queue
+[DOM mutation observers]: https://dom.spec.whatwg.org/#mutation-observers
 
 - Android 4–4.3
 - Chrome 26–34
@@ -160,8 +160,8 @@ without having the minimum delay imposed by timers.
 However, among these browsers, Internet Explorer 10 and Safari do not reliably
 dispatch messages, so they are not worth the trouble to implement.
 
-[message channels]: http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#message-channels
-[task queue]: http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#concept-task
+[message channels]: https://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#message-channels
+[task queue]: https://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#concept-task
 
 - Internet Explorer 10
 - Safair 5.0-1
@@ -196,12 +196,12 @@ we used to dispatch the potentially lower-priority flush event.
 Domenic went on to make ASAP cooperate with Node.js domains.
 
 [Q]: https://github.com/kriskowal/q
-[NonBlocking]: http://www.nonblocking.io/2011/06/windownexttick.html
+[NonBlocking]: https://www.nonblocking.io/2011/06/windownexttick.html
 
 For further reading, Nicholas Zakas provided a thorough article on [The
 Case for setImmediate][NCZ].
 
-[NCZ]: http://www.nczonline.net/blog/2013/07/09/the-case-for-setimmediate/
+[NCZ]: https://www.nczonline.net/blog/2013/07/09/the-case-for-setimmediate/
 
 Ember’s RSVP promise implementation later [adopted][RSVP ASAP] the name ASAP but
 further developed the implentation.

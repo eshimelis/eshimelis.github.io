@@ -6,7 +6,7 @@ Iterate all the data in a stream
 npm install stream-each
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/stream-each.svg?style=flat)](http://travis-ci.org/mafintosh/stream-each)
+[![build status](https://img.shields.io/travis/mafintosh/stream-each.svg?style=flat)](https://travis-ci.org/mafintosh/stream-each)
 
 ## Usage
 

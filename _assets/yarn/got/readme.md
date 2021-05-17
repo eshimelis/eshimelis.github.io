@@ -10,7 +10,7 @@
 
 [![Build Status](https://travis-ci.org/sindresorhus/got.svg?branch=master)](https://travis-ci.org/sindresorhus/got) [![Coverage Status](https://coveralls.io/repos/github/sindresorhus/got/badge.svg?branch=master)](https://coveralls.io/github/sindresorhus/got?branch=master) [![Downloads](https://img.shields.io/npm/dm/got.svg)](https://npmjs.com/got)
 
-A nicer interface to the built-in [`http`](http://nodejs.org/api/http.html) module.
+A nicer interface to the built-in [`http`](https://nodejs.org/api/http.html) module.
 
 It supports following redirects, promises, streams, retries, automagically handling gzip/deflate and some convenience options.
 
@@ -70,7 +70,7 @@ Properties from `options` will override properties in the parsed `url`.
 
 Type: `object`
 
-Any of the [`http.request`](http://nodejs.org/api/http.html#http_http_request_options_callback) options.
+Any of the [`http.request`](https://nodejs.org/api/http.html#http_http_request_options_callback) options.
 
 ###### body
 
@@ -287,14 +287,14 @@ got(url, {
 
 ## Unix Domain Sockets
 
-Requests can also be sent via [unix domain sockets](http://serverfault.com/questions/124517/whats-the-difference-between-unix-socket-and-tcp-ip-socket). Use the following URL scheme: `PROTOCOL://unix:SOCKET:PATH`.
+Requests can also be sent via [unix domain sockets](https://serverfault.com/questions/124517/whats-the-difference-between-unix-socket-and-tcp-ip-socket). Use the following URL scheme: `PROTOCOL://unix:SOCKET:PATH`.
 
 - `PROTOCOL` - `http` or `https` *(optional)*
 - `SOCKET` - absolute path to a unix domain socket, e.g. `/var/run/docker.sock`
 - `PATH` - request path, e.g. `/v2/keys`
 
 ```js
-got('http://unix:/var/run/docker.sock:/containers/json');
+got('https://unix:/var/run/docker.sock:/containers/json');
 
 // or without protocol (http by default)
 got('unix:/var/run/docker.sock:/containers/json');

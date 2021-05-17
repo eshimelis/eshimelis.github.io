@@ -198,7 +198,7 @@ function normalizeArguments(url, opts) {
 	}
 
 	if (typeof url === 'string') {
-		url = url.replace(/^unix:/, 'http://$&');
+		url = url.replace(/^unix:/, 'https://$&');
 		url = urlParseLax(url);
 
 		if (url.auth) {

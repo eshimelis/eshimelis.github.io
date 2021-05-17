@@ -455,7 +455,7 @@ for this year. Keep an eye out for exciting news. 👀
   * Retry git-based operations on certain types of failure.
 * [`ecfbb16dc`](https://github.com/npm/npm/commit/ecfbb16dc705f28aa61b3223bdbf9e47230a0fa4)
   [#19929](https://github.com/npm/npm/pull/19929)
-  Add support for the [`NO_COLOR` standard](http://no-color.org). This gives a
+  Add support for the [`NO_COLOR` standard](https://no-color.org). This gives a
   cross-application, consistent way of disabling ANSI color code output. Note
   that npm already supported this through `--no-color` or
   `npm_config_color='false'` configurations, so this is just another way to do
@@ -496,7 +496,7 @@ up your CI work by **2-5x** in some cases! Have a good example? Tell us on
 Twitter!
 
 `npm ci` is, right now, [the fastest
-installer](http://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable)
+installer](https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable)
 you can use in CI situations, so go check it out if you haven't already! We'll
 continue doing performance improvements on it, and a lot of those will help make
 `npm install` fast as well. 🏎😎
@@ -1186,7 +1186,7 @@ new features: [user profile editing](https://github.com/npm/registry/blob/master
 * [`5ee55dc71`](https://github.com/npm/npm/commit/5ee55dc71b8b74b8418c3d5ec17483a07b3b6777)
   install.sh: Drop support for upgrading from npm@1 as npm@5 can't run on
   any Node.js version that ships npm@1. This fixes an issue some folks were seeing when trying
-  to upgrade using `curl | http://npmjs.com/install.sh`.
+  to upgrade using `curl | https://npmjs.com/install.sh`.
   ([@iarna](https://github.com/iarna))
 * [`5cad1699a`](https://github.com/npm/npm/commit/5cad1699a7a0fc85ac7f77a95087a9647f75e344)
   `npm-lifecycle@1.0.3` Fix a bug where when more than one lifecycle script

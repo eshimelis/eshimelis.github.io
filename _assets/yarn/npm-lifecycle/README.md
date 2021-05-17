@@ -4,7 +4,7 @@
 on it more than absolutely necessary.**
 
 The lifecycle script runner used in npm v7 is
-[@npmcli/run-script](http://npm.im/@npmcli/run-script).  Please use that
+[@npmcli/run-script](https://npm.im/@npmcli/run-script).  Please use that
 module moving forward.
 
 -----

@@ -243,7 +243,7 @@ Request.prototype.init = function (options) {
 
   // DEPRECATED: Warning for users of the old Unix Sockets URL Scheme
   if (self.uri.protocol === 'unix:') {
-    return self.emit('error', new Error('`unix://` URL scheme is no longer supported. Please use the format `http://unix:SOCKET:PATH`'))
+    return self.emit('error', new Error('`unix://` URL scheme is no longer supported. Please use the format `https://unix:SOCKET:PATH`'))
   }
 
   // Support Unix Sockets

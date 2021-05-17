@@ -5,7 +5,7 @@
 
 [![Build Status](https://img.shields.io/travis/timoxley/columnify.svg?style=flat)](https://travis-ci.org/timoxley/columnify)
 [![NPM Version](https://img.shields.io/npm/v/columnify.svg?style=flat)](https://npmjs.org/package/columnify)
-[![License](http://img.shields.io/npm/l/columnify.svg?style=flat)](LICENSE)
+[![License](https://img.shields.io/npm/l/columnify.svg?style=flat)](LICENSE)
 [![Dependency Status](https://david-dm.org/timoxley/columnify.svg)](https://david-dm.org/timoxley/columnify)
 [![devDependency Status](https://david-dm.org/timoxley/columnify/dev-status.svg)](https://david-dm.org/timoxley/columnify#info=devDependencies)
 

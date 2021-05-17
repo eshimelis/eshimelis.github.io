@@ -3,7 +3,7 @@
 Contain async insanity so that the dark pony lord doesn't eat souls
 
 See [this blog
-post](http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony).
+post](https://blog.izs.me/post/59142742143/designing-apis-for-asynchrony).
 
 ## USAGE
 

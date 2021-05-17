@@ -3,10 +3,10 @@
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 [npm-url]:https://npmjs.org/package/promise-retry
-[downloads-image]:http://img.shields.io/npm/dm/promise-retry.svg
-[npm-image]:http://img.shields.io/npm/v/promise-retry.svg
+[downloads-image]:https://img.shields.io/npm/dm/promise-retry.svg
+[npm-image]:https://img.shields.io/npm/v/promise-retry.svg
 [travis-url]:https://travis-ci.org/IndigoUnited/node-promise-retry
-[travis-image]:http://img.shields.io/travis/IndigoUnited/node-promise-retry/master.svg
+[travis-image]:https://img.shields.io/travis/IndigoUnited/node-promise-retry/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/node-promise-retry
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-promise-retry.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-promise-retry#info=devDependencies
@@ -89,4 +89,4 @@ promiseRetry(function (retry, number) {
 
 ## License
 
-Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+Released under the [MIT License](https://www.opensource.org/licenses/mit-license.php).

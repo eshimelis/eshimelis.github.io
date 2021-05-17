@@ -101,7 +101,7 @@ describe('IP library for node.js', function() {
   });
 
   describe('subnet() method', function() {
-    // Test cases calculated with http://www.subnet-calculator.com/
+    // Test cases calculated with https://www.subnet-calculator.com/
     var ipv4Subnet = ip.subnet('192.168.1.134', '255.255.255.192');
 
     it('should compute ipv4 network address', function() {
@@ -146,7 +146,7 @@ describe('IP library for node.js', function() {
   });
 
   describe('subnet() method with mask length 32', function() {
-    // Test cases calculated with http://www.subnet-calculator.com/
+    // Test cases calculated with https://www.subnet-calculator.com/
     var ipv4Subnet = ip.subnet('192.168.1.134', '255.255.255.255');
     it('should compute ipv4 network\'s first address', function() {
       assert.equal(ipv4Subnet.firstAddress, '192.168.1.134');
@@ -162,7 +162,7 @@ describe('IP library for node.js', function() {
   });
 
   describe('subnet() method with mask length 31', function() {
-    // Test cases calculated with http://www.subnet-calculator.com/
+    // Test cases calculated with https://www.subnet-calculator.com/
     var ipv4Subnet = ip.subnet('192.168.1.134', '255.255.255.254');
     it('should compute ipv4 network\'s first address', function() {
       assert.equal(ipv4Subnet.firstAddress, '192.168.1.134');
@@ -178,7 +178,7 @@ describe('IP library for node.js', function() {
   });
 
   describe('cidrSubnet() method', function() {
-    // Test cases calculated with http://www.subnet-calculator.com/
+    // Test cases calculated with https://www.subnet-calculator.com/
     var ipv4Subnet = ip.cidrSubnet('192.168.1.134/26');
 
     it('should compute an ipv4 network address', function() {

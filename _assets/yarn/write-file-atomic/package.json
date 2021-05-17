@@ -17,7 +17,7 @@
     "writeFile",
     "atomic"
   ],
-  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org)",
+  "author": "Rebecca Turner <me@re-becca.org> (https://re-becca.org)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/iarna/write-file-atomic/issues"

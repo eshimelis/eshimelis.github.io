@@ -41,7 +41,7 @@ var url = require('url');
 var http = require('http');
 var agent = require('agent-base');
 
-var endpoint = 'http://nodejs.org/api/';
+var endpoint = 'https://nodejs.org/api/';
 var parsed = url.parse(endpoint);
 
 // This is the important part!

@@ -180,14 +180,14 @@ is an object with a "name" field and optionally "url" and "email", like this:
 ```json
 { "name" : "Barney Rubble"
 , "email" : "b@rubble.com"
-, "url" : "http://barnyrubble.tumblr.com/"
+, "url" : "https://barnyrubble.tumblr.com/"
 }
 ```
 
 Or you can shorten that all into a single string, and npm will parse it for you:
 
 ```json
-"Barney Rubble <b@rubble.com> (http://barnyrubble.tumblr.com/)"
+"Barney Rubble <b@rubble.com> (https://barnyrubble.tumblr.com/)"
 ```
 
 Both email and url are optional either way.
@@ -202,7 +202,7 @@ a string URL, or an array of these:
 
     "funding": {
       "type" : "individual",
-      "url" : "http://example.com/donate"
+      "url" : "https://example.com/donate"
     }
 
     "funding": {
@@ -210,14 +210,14 @@ a string URL, or an array of these:
       "url" : "https://www.patreon.com/my-account"
     }
 
-    "funding": "http://example.com/donate"
+    "funding": "https://example.com/donate"
 
     "funding": [
       {
         "type" : "individual",
-        "url" : "http://example.com/donate"
+        "url" : "https://example.com/donate"
       },
-      "http://example.com/donateAlso",
+      "https://example.com/donateAlso",
       {
         "type" : "patreon",
         "url" : "https://www.patreon.com/my-account"
@@ -387,7 +387,7 @@ will create entries for `man foo` and `man 2 foo`
 
 ### directories
 
-The CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0) spec details a
+The CommonJS [Packages](https://wiki.commonjs.org/wiki/Packages/1.0) spec details a
 few ways that you can indicate the structure of your package using a `directories`
 object. If you look at [npm's package.json](https://registry.npmjs.org/npm/latest),
 you'll see that it has directories for doc, lib, and man.
@@ -524,7 +524,7 @@ See [semver](/using-npm/semver) for more details about specifying version ranges
 * `~version` "Approximately equivalent to version"  See [semver](/using-npm/semver)
 * `^version` "Compatible with version"  See [semver](/using-npm/semver)
 * `1.2.x` 1.2.0, 1.2.1, etc., but not 1.3.0
-* `http://...` See 'URLs as Dependencies' below
+* `https://...` See 'URLs as Dependencies' below
 * `*` Matches any version
 * `""` (just an empty string) Same as `*`
 * `version1 - version2` Same as `>=version1 <=version2`.
@@ -543,7 +543,7 @@ For example, these are all valid:
   , "baz" : ">1.0.2 <=2.3.4"
   , "boo" : "2.0.1"
   , "qux" : "<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0"
-  , "asd" : "http://asdf.com/asdf.tar.gz"
+  , "asd" : "https://asdf.com/asdf.tar.gz"
   , "til" : "~1.2"
   , "elf" : "~1.2.3"
   , "two" : "2.x"

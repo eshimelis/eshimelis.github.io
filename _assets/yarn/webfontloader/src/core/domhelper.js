@@ -382,7 +382,7 @@ goog.scope(function () {
             opt_callback(null);
           }
           script.onload = script.onreadystatechange = null;
-          // Avoid a bizarre issue with unclosed <base> tag in IE6 - http://blog.dotsmart.net/2008/04/
+          // Avoid a bizarre issue with unclosed <base> tag in IE6 - https://blog.dotsmart.net/2008/04/
           if (script.parentNode.tagName == 'HEAD') head.removeChild(script);
         }
       };

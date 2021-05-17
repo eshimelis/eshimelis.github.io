@@ -2347,7 +2347,7 @@ class PBXNativeTarget(XCTarget):
           self.SetBuildSetting('TARGET_BUILD_DIR', force_outdir)
 
         # TODO(tvl): Remove the below hack.
-        #    http://code.google.com/p/gyp/issues/detail?id=122
+        #    https://code.google.com/p/gyp/issues/detail?id=122
 
         # Some targets include the prefix in the target_name.  These targets
         # really should just add a product_name setting that doesn't include

@@ -76,12 +76,12 @@ describe('HttpProxyAgent', function () {
       });
     });
     it('should accept a "string" proxy argument', function () {
-      var agent = new HttpProxyAgent('http://127.0.0.1:' + proxyPort);
+      var agent = new HttpProxyAgent('https://127.0.0.1:' + proxyPort);
       assert.equal('127.0.0.1', agent.proxy.host);
       assert.equal(proxyPort, agent.proxy.port);
     });
     it('should accept a `url.parse()` result object argument', function () {
-      var opts = url.parse('http://127.0.0.1:' + proxyPort);
+      var opts = url.parse('https://127.0.0.1:' + proxyPort);
       var agent = new HttpProxyAgent(opts);
       assert.equal('127.0.0.1', agent.proxy.host);
       assert.equal(proxyPort, agent.proxy.port);
@@ -113,10 +113,10 @@ describe('HttpProxyAgent', function () {
         res.end(JSON.stringify(req.headers));
       });
 
-      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'http://127.0.0.1:' + proxyPort;
+      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'https://127.0.0.1:' + proxyPort;
       var agent = new HttpProxyAgent(proxy);
 
-      var opts = url.parse('http://127.0.0.1:' + serverPort);
+      var opts = url.parse('https://127.0.0.1:' + serverPort);
       opts.agent = agent;
 
       http.get(opts, function (res) {
@@ -145,7 +145,7 @@ describe('HttpProxyAgent', function () {
       var agent = new HttpProxyAgent(proxy);
       assert.equal(true, agent.secureProxy);
 
-      var opts = url.parse('http://127.0.0.1:' + serverPort);
+      var opts = url.parse('https://127.0.0.1:' + serverPort);
       opts.agent = agent;
 
       http.get(opts, function (res) {
@@ -170,10 +170,10 @@ describe('HttpProxyAgent', function () {
         }));
       });
 
-      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'http://127.0.0.1:' + proxyPort;
+      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'https://127.0.0.1:' + proxyPort;
       var agent = new HttpProxyAgent(proxy);
 
-      var opts = url.parse('http://127.0.0.1:' + serverPort + '/test?foo=bar&1=2');
+      var opts = url.parse('https://127.0.0.1:' + serverPort + '/test?foo=bar&1=2');
       opts.agent = agent;
 
       http.get(opts, function (res) {
@@ -196,7 +196,7 @@ describe('HttpProxyAgent', function () {
         fn(null, false);
       };
 
-      var proxyUri = process.env.HTTP_PROXY || process.env.http_proxy || 'http://127.0.0.1:' + proxyPort;
+      var proxyUri = process.env.HTTP_PROXY || process.env.http_proxy || 'https://127.0.0.1:' + proxyPort;
       var agent = new HttpProxyAgent(proxyUri);
 
       var opts = {};
@@ -224,12 +224,12 @@ describe('HttpProxyAgent', function () {
         res.end(JSON.stringify(req.headers));
       });
 
-      var proxyUri = process.env.HTTP_PROXY || process.env.http_proxy || 'http://127.0.0.1:' + proxyPort;
+      var proxyUri = process.env.HTTP_PROXY || process.env.http_proxy || 'https://127.0.0.1:' + proxyPort;
       var proxyOpts = url.parse(proxyUri);
       proxyOpts.auth = 'foo:bar';
       var agent = new HttpProxyAgent(proxyOpts);
 
-      var opts = url.parse('http://127.0.0.1:' + serverPort);
+      var opts = url.parse('https://127.0.0.1:' + serverPort);
       opts.agent = agent;
 
       http.get(opts, function (res) {
@@ -249,10 +249,10 @@ describe('HttpProxyAgent', function () {
     });
     it('should emit an "error" event on the `http.ClientRequest` if the proxy does not exist', function (done) {
       // port 4 is a reserved, but "unassigned" port
-      var proxyUri = 'http://127.0.0.1:4';
+      var proxyUri = 'https://127.0.0.1:4';
       var agent = new HttpProxyAgent(proxyUri);
 
-      var opts = url.parse('http://nodejs.org');
+      var opts = url.parse('https://nodejs.org');
       opts.agent = agent;
 
       var req = http.get(opts);
@@ -268,10 +268,10 @@ describe('HttpProxyAgent', function () {
         res.end(JSON.stringify(req.url));
       });
 
-      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'http://127.0.0.1:' + proxyPort;
+      var proxy = process.env.HTTP_PROXY || process.env.http_proxy || 'https://127.0.0.1:' + proxyPort;
       var agent = new HttpProxyAgent(proxy);
 
-      var opts = url.parse('http://127.0.0.1:' + serverPort + '/test');
+      var opts = url.parse('https://127.0.0.1:' + serverPort + '/test');
       opts.agent = agent;
 
       // defer the "connect()" function logic, since calling .end() before the

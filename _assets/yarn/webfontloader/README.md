@@ -1,6 +1,6 @@
 # Web Font Loader
 
-Web Font Loader gives you added control when using linked fonts via `@font-face`. It provides a common interface to loading fonts regardless of the source, then adds a standard set of events you may use to control the loading experience. The Web Font Loader is able to load fonts from [Google Fonts](http://www.google.com/fonts/), [Typekit](http://www.typekit.com/),  [Fonts.com](http://www.fonts.com/), and [Fontdeck](http://fontdeck.com/), as well as self-hosted web fonts. It is co-developed by [Google](http://www.google.com/) and [Typekit](http://www.typekit.com).
+Web Font Loader gives you added control when using linked fonts via `@font-face`. It provides a common interface to loading fonts regardless of the source, then adds a standard set of events you may use to control the loading experience. The Web Font Loader is able to load fonts from [Google Fonts](https://www.google.com/fonts/), [Typekit](https://www.typekit.com/),  [Fonts.com](https://www.fonts.com/), and [Fontdeck](https://fontdeck.com/), as well as self-hosted web fonts. It is co-developed by [Google](https://www.google.com/) and [Typekit](https://www.typekit.com).
 
 [![Build Status](https://travis-ci.org/typekit/webfontloader.svg?branch=master)](https://travis-ci.org/typekit/webfontloader)
 
@@ -23,7 +23,7 @@ Web Font Loader gives you added control when using linked fonts via `@font-face`
 
 ## Get Started
 
-To use the Web Font Loader library, just include it in your page and tell it which fonts to load. For example, you could load fonts from [Google Fonts](http://www.google.com/fonts/) using the Web Font Loader hosted on [Google Hosted Libraries](https://developers.google.com/speed/libraries/) using the following code.
+To use the Web Font Loader library, just include it in your page and tell it which fonts to load. For example, you could load fonts from [Google Fonts](https://www.google.com/fonts/) using the Web Font Loader hosted on [Google Hosted Libraries](https://developers.google.com/speed/libraries/) using the following code.
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -38,9 +38,9 @@ To use the Web Font Loader library, just include it in your page and tell it whi
 
 Alternatively, you can link to the latest `1.x` version of the Web Font Loader by using `https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js` as the `script` source. Note that the version in this url is less specific. It will always load the latest `1.x` version, but it also has a shorter cache time to ensure that your page gets updates in a timely manner. For performance reasons, we recommend using an explicit version number (such as `1.6.26`) in urls when using the Web Font Loader in production. You can manually update the Web Font Loader version number in the url when you want to adopt a new version.
 
-Web Font Loader is also available on the [jsDelivr](http://www.jsdelivr.com/projects/webfontloader) & [CDNJS](https://cdnjs.com/libraries/webfont) CDNs.
+Web Font Loader is also available on the [jsDelivr](https://www.jsdelivr.com/projects/webfontloader) & [CDNJS](https://cdnjs.com/libraries/webfont) CDNs.
 
-It is also possible to use the Web Font Loader asynchronously. For example, to load [Typekit](http://www.typekit.com) fonts asynchronously, you could use the following code.
+It is also possible to use the Web Font Loader asynchronously. For example, to load [Typekit](https://www.typekit.com) fonts asynchronously, you could use the following code.
 
 ```html
 <script>
@@ -57,7 +57,7 @@ It is also possible to use the Web Font Loader asynchronously. For example, to l
 </script>
 ```
 
-Using the Web Font Loader asynchronously avoids blocking your page while loading the JavaScript. Be aware that if the script is used asynchronously, the rest of the page might render before the Web Font Loader is loaded and executed, which can cause a [Flash of Unstyled Text (FOUT)](http://help.typekit.com/customer/portal/articles/6852).
+Using the Web Font Loader asynchronously avoids blocking your page while loading the JavaScript. Be aware that if the script is used asynchronously, the rest of the page might render before the Web Font Loader is loaded and executed, which can cause a [Flash of Unstyled Text (FOUT)](https://help.typekit.com/customer/portal/articles/6852).
 
 The FOUT can be more easily avoided when loading the Web Font Loader synchronously, as it will automatically set the `wf-loading` class on the HTML element as soon as `Webfont.load` has been called. The browser will wait for the script to load before continuing to load the rest of the content, FOUT is avoided.
 
@@ -277,7 +277,7 @@ Tests strings should be specified on a per font basis and contain at least one c
 
 ### Fontdeck
 
-To use the [Fontdeck](http://fontdeck.com/) module, specify the ID of your website. You can find this ID on the website page within your account settings.
+To use the [Fontdeck](https://fontdeck.com/) module, specify the ID of your website. You can find this ID on the website page within your account settings.
 
 ```javascript
 WebFontConfig = {
@@ -289,7 +289,7 @@ WebFontConfig = {
 
 ### Fonts.com
 
-When using [Fonts.com web fonts](http://www.fonts.com/web-fonts/) specify your Project ID.
+When using [Fonts.com web fonts](https://www.fonts.com/web-fonts/) specify your Project ID.
 
 ```javascript
 WebFontConfig = {
@@ -350,7 +350,7 @@ The `text` subsetting functionality is only available for the Google module.
 
 ### Typekit
 
-When using [Typekit](http://www.typekit.com), specify the Kit to retrieve by its ID. You can find the Kit ID within Typekit's Kit Editor interface.
+When using [Typekit](https://www.typekit.com), specify the Kit to retrieve by its ID. You can find the Kit ID within Typekit's Kit Editor interface.
 
 ```javascript
 WebFontConfig = {
@@ -389,6 +389,6 @@ Web Font Loader Copyright (c) 2010-2017 Adobe Systems Incorporated, Google Incor
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

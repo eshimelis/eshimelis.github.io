@@ -5,7 +5,7 @@
   "main": "index.umd.js",
   "homepage": "https://github.com/IndigoUnited/js-err-code",
   "authors": [
-    "IndigoUnited <hello@indigounited.com> (http://indigounited.com)"
+    "IndigoUnited <hello@indigounited.com> (https://indigounited.com)"
   ],
   "moduleType": [
     "amd",

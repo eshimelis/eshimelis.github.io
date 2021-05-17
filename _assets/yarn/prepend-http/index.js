@@ -10,5 +10,5 @@ module.exports = function (url) {
 		return url;
 	}
 
-	return url.replace(/^(?!(?:\w+:)?\/\/)/, 'http://');
+	return url.replace(/^(?!(?:\w+:)?\/\/)/, 'https://');
 };

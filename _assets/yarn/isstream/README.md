@@ -1,6 +1,6 @@
 # isStream
 
-[![Build Status](https://secure.travis-ci.org/rvagg/isstream.png)](http://travis-ci.org/rvagg/isstream)
+[![Build Status](https://secure.travis-ci.org/rvagg/isstream.png)](https://travis-ci.org/rvagg/isstream)
 
 **Test if an object is a `Stream`**
 
@@ -58,7 +58,7 @@ isDuplex(new Stream.Transform())   // true
 isDuplex(new Stream.PassThrough()) // true
 ```
 
-*Reminder: when implementing your own streams, please [use **readable-stream** rather than core streams](http://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html).*
+*Reminder: when implementing your own streams, please [use **readable-stream** rather than core streams](https://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html).*
 
 
 ## License

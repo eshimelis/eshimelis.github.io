@@ -18,7 +18,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "http://github.com/Marak/colors.js.git"
+        "url": "https://github.com/Marak/colors.js.git"
     },
     "license": "MIT",
     "scripts": {

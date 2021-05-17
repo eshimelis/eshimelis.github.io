@@ -663,8 +663,8 @@ Gets the options that were passed to the SocksClient when it was created.
 # Further Reading:
 
 Please read the SOCKS 5 specifications for more information on how to use BIND and Associate.
-http://www.ietf.org/rfc/rfc1928.txt
+https://www.ietf.org/rfc/rfc1928.txt
 
 # License
 
-This work is licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
+This work is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).

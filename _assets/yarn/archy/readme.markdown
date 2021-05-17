@@ -2,9 +2,9 @@
 
 Render nested hierarchies `npm ls` style with unicode pipes.
 
-[![browser support](http://ci.testling.com/substack/node-archy.png)](http://ci.testling.com/substack/node-archy)
+[![browser support](https://ci.testling.com/substack/node-archy.png)](https://ci.testling.com/substack/node-archy)
 
-[![build status](https://secure.travis-ci.org/substack/node-archy.png)](http://travis-ci.org/substack/node-archy)
+[![build status](https://secure.travis-ci.org/substack/node-archy.png)](https://travis-ci.org/substack/node-archy)
 
 # example
 
@@ -77,7 +77,7 @@ To disable unicode results in favor of all-ansi output set `opts.unicode` to
 
 # install
 
-With [npm](http://npmjs.org) do:
+With [npm](https://npmjs.org) do:
 
 ```
 npm install archy

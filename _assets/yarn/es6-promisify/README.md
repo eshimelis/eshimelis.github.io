@@ -86,4 +86,4 @@ Test with nodeunit
 $ npm test
 ```
 
-Published under the [MIT License](http://opensource.org/licenses/MIT).
+Published under the [MIT License](https://opensource.org/licenses/MIT).

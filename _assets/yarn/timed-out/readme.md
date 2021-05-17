@@ -10,7 +10,7 @@ Emit Error object with `code` property equal `ETIMEDOUT` or `ESOCKETTIMEDOUT` wh
 var get = require('http').get;
 var timeout = require('timed-out');
 
-var req = get('http://www.google.ru');
+var req = get('https://www.google.ru');
 timeout(req, 2000); // Set 2 seconds limit
 ```
 
@@ -21,7 +21,7 @@ timeout(req, 2000); // Set 2 seconds limit
 ##### request
 
 *Required*  
-Type: [`ClientRequest`](http://nodejs.org/api/http.html#http_class_http_clientrequest)
+Type: [`ClientRequest`](https://nodejs.org/api/http.html#http_class_http_clientrequest)
 
 The request to watch on.
 

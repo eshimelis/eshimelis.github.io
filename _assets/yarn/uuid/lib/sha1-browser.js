@@ -1,5 +1,5 @@
 // Adapted from Chris Veness' SHA1 code at
-// http://www.movable-type.co.uk/scripts/sha1.html
+// https://www.movable-type.co.uk/scripts/sha1.html
 'use strict';
 
 function f(s, x, y, z) {

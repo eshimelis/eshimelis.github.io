@@ -12,7 +12,7 @@
 
 An Object.assign shim. Invoke its "shim" method to shim Object.assign if it is unavailable.
 
-This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](http://www.ecma-international.org/ecma-262/6.0/#sec-object.assign). In an ES6 environment, it will also work properly with `Symbol`s.
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://www.ecma-international.org/ecma-262/6.0/#sec-object.assign). In an ES6 environment, it will also work properly with `Symbol`s.
 
 Takes a minimum of 2 arguments: `target` and `source`.
 Takes a variable sized list of source arguments - at least 1, as many as you want.
@@ -119,7 +119,7 @@ assert.deepEqual(Object.assign(target, source), assign(target, source));
 Simply clone the repo, `npm install`, and run `npm test`
 
 [npm-url]: https://npmjs.org/package/object.assign
-[npm-version-svg]: http://versionbadg.es/ljharb/object.assign.svg
+[npm-version-svg]: https://versionbadg.es/ljharb/object.assign.svg
 [travis-svg]: https://travis-ci.org/ljharb/object.assign.svg
 [travis-url]: https://travis-ci.org/ljharb/object.assign
 [deps-svg]: https://david-dm.org/ljharb/object.assign.svg?theme=shields.io
@@ -129,7 +129,7 @@ Simply clone the repo, `npm install`, and run `npm test`
 [testling-png]: https://ci.testling.com/ljharb/object.assign.png
 [testling-url]: https://ci.testling.com/ljharb/object.assign
 [npm-badge-png]: https://nodei.co/npm/object.assign.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/object.assign.svg
+[license-image]: https://img.shields.io/npm/l/object.assign.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/object.assign.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=object.assign
+[downloads-image]: https://img.shields.io/npm/dm/object.assign.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=object.assign

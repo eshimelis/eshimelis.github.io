@@ -15,7 +15,7 @@ var request = require('request')
   , JSONStream = require('JSONStream')
   , es = require('event-stream')
 
-request({url: 'http://isaacs.couchone.com/registry/_all_docs'})
+request({url: 'https://isaacs.couchone.com/registry/_all_docs'})
   .pipe(JSONStream.parse('rows.*'))
   .pipe(es.mapSync(function (data) {
     console.error(data)
@@ -31,7 +31,7 @@ parse stream of values that match a path
   JSONStream.parse('rows.*.doc')
 ```
 
-The `..` operator is the recursive descent operator from [JSONPath](http://goessner.net/articles/JsonPath/), which will match a child at any depth (see examples below).
+The `..` operator is the recursive descent operator from [JSONPath](https://goessner.net/articles/JsonPath/), which will match a child at any depth (see examples below).
 
 If your keys have keys that include `.` or `*` etc, use an array instead.
 `['row', true, /^doc/]`.

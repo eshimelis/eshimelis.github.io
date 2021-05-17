@@ -26,7 +26,7 @@ try {
 ### var result = npa(*arg*[, *where*])
 
 * *arg* - a string that you might pass to `npm install`, like:
-`foo@1.2`, `@bar/foo@1.2`, `foo@user/foo`, `http://x.com/foo.tgz`,
+`foo@1.2`, `@bar/foo@1.2`, `foo@user/foo`, `https://x.com/foo.tgz`,
 `git+https://github.com/user/foo`, `bitbucket:user/foo`, `foo.tar.gz`,
 `../foo/bar/` or `bar`.  If the *arg* you provide doesn't have a specifier
 part, eg `foo` then the specifier will default to `latest`.
@@ -38,7 +38,7 @@ part, eg `foo` then the specifier will default to `latest`.
 
 * *name* - The name of the module you want to install. For example: `foo` or `@bar/foo`.
 * *spec* - The specifier indicating where and how you can get this module. Something like:
-`1.2`, `^1.7.17`, `http://x.com/foo.tgz`, `git+https://github.com/user/foo`,
+`1.2`, `^1.7.17`, `https://x.com/foo.tgz`, `git+https://github.com/user/foo`,
 `bitbucket:user/foo`, `file:foo.tar.gz` or `file:../foo/bar/`.  If not
 included then the default is `latest`.
 * *where* - Optionally the path to resolve file paths relative to. Defaults to `process.cwd()`

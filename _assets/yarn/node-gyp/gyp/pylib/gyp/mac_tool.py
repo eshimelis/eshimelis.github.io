@@ -239,7 +239,7 @@ class MacTool(object):
         r'\(no object file members in the library define global symbols\)$')
     env = os.environ.copy()
     # Ref:
-    # http://www.opensource.apple.com/source/cctools/cctools-809/misc/libtool.c
+    # https://www.opensource.apple.com/source/cctools/cctools-809/misc/libtool.c
     # The problem with this flag is that it resets the file mtime on the file to
     # epoch=0, e.g. 1970-1-1 or 1969-12-31 depending on timezone.
     env['ZERO_AR_DATE'] = '1'

@@ -39,4 +39,4 @@ Returns detected newline or `\n` when no newline character is found.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

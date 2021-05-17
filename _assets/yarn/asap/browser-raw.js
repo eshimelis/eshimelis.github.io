@@ -150,7 +150,7 @@ function makeRequestCallFromMutationObserver(callback) {
 
 // The message channel technique was discovered by Malte Ubl and was the
 // original foundation for this library.
-// http://www.nonblocking.io/2011/06/windownexttick.html
+// https://www.nonblocking.io/2011/06/windownexttick.html
 
 // Safari 6.0.5 (at least) intermittently fails to create message ports on a
 // page's first load. Thankfully, this version of Safari supports

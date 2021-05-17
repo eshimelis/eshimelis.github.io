@@ -9,7 +9,7 @@ and it allows you to set the readable and writable part asynchronously using `se
 npm install duplexify
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/duplexify.svg?style=flat)](http://travis-ci.org/mafintosh/duplexify)
+[![build status](https://img.shields.io/travis/mafintosh/duplexify.svg?style=flat)](https://travis-ci.org/mafintosh/duplexify)
 
 ## Usage
 

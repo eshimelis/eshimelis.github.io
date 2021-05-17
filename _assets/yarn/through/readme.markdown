@@ -1,6 +1,6 @@
 #through
 
-[![build status](https://secure.travis-ci.org/dominictarr/through.png)](http://travis-ci.org/dominictarr/through)
+[![build status](https://secure.travis-ci.org/dominictarr/through.png)](https://travis-ci.org/dominictarr/through)
 [![testling badge](https://ci.testling.com/dominictarr/through.png)](https://ci.testling.com/dominictarr/through)
 
 Easy way to create a `Stream` that is both `readable` and `writable`. 
@@ -11,7 +11,7 @@ Easy way to create a `Stream` that is both `readable` and `writable`.
 * Check `this.paused` to see current flow state. (`write` always returns `!this.paused`).
 
 This function is the basis for most of the synchronous streams in 
-[event-stream](http://github.com/dominictarr/event-stream).
+[event-stream](https://github.com/dominictarr/event-stream).
 
 ``` js
 var through = require('through')

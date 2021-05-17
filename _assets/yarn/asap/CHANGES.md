@@ -62,9 +62,9 @@ workers.
 These data are captured automatically by [Continuous
 Integration][].
 
-![Browser Compatibility](http://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-results-matrix.svg)
+![Browser Compatibility](https://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-results-matrix.svg)
 
-![Compatibility in Web Workers](http://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-worker-results-matrix.svg)
+![Compatibility in Web Workers](https://kriskowal-asap.s3-website-us-west-2.amazonaws.com/train/integration-2/saucelabs-worker-results-matrix.svg)
 
 [Continuous Integration]: https://github.com/kriskowal/asap/blob/master/CONTRIBUTING.md
 

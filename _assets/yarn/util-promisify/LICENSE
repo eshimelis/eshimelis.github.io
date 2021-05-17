@@ -101,7 +101,7 @@ The externally maintained libraries used by Node.js are:
     COPYRIGHT AND PERMISSION NOTICE (ICU 58 and later)
 
     Copyright © 1991-2016 Unicode, Inc. All rights reserved.
-    Distributed under the Terms of Use in http://www.unicode.org/copyright.html
+    Distributed under the Terms of Use in https://www.unicode.org/copyright.html
 
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of the Unicode data files and any associated documentation
@@ -182,7 +182,7 @@ The externally maintained libraries used by Node.js are:
      # provided under other licenses, as set forth below.
      #
      #  The BSD License
-     #  http://opensource.org/licenses/bsd-license.php
+     #  https://opensource.org/licenses/bsd-license.php
      #  Copyright (C) 2006-2008, Google Inc.
      #
      #  All rights reserved.
@@ -225,7 +225,7 @@ The externally maintained libraries used by Node.js are:
      #    - Its license terms and conditions are shown below.
      #
      #  * IPADIC (Japanese)
-     #    - http://chasen.aist-nara.ac.jp/chasen/distribution.html
+     #    - https://chasen.aist-nara.ac.jp/chasen/distribution.html
      #    - Its license terms and conditions are shown below.
      #
      #  ---------COPYING.libtabe ---- BEGIN--------------------
@@ -299,7 +299,7 @@ The externally maintained libraries used by Node.js are:
      #
      #  Copyright 1996 Chih-Hao Tsai @ Beckman Institute,
      #      University of Illinois
-     #  c-tsai4@uiuc.edu  http://casper.beckman.uiuc.edu/~c-tsai4
+     #  c-tsai4@uiuc.edu  https://casper.beckman.uiuc.edu/~c-tsai4
      #
      #  ---------------COPYING.libtabe-----END--------------------------------
      #
@@ -384,9 +384,9 @@ The externally maintained libraries used by Node.js are:
      #  Copyright (c) 2013 International Business Machines Corporation
      #  and others. All Rights Reserved.
      #
-     # Project: http://code.google.com/p/lao-dictionary/
-     # Dictionary: http://lao-dictionary.googlecode.com/git/Lao-Dictionary.txt
-     # License: http://lao-dictionary.googlecode.com/git/Lao-Dictionary-LICENSE.txt
+     # Project: https://code.google.com/p/lao-dictionary/
+     # Dictionary: https://lao-dictionary.googlecode.com/git/Lao-Dictionary.txt
+     # License: https://lao-dictionary.googlecode.com/git/Lao-Dictionary-LICENSE.txt
      #              (copied below)
      #
      #  This file is derived from the above dictionary, with slight
@@ -487,7 +487,7 @@ The externally maintained libraries used by Node.js are:
 
 - libuv, located at deps/uv, is licensed as follows:
   """
-    libuv is part of the Node project: http://nodejs.org/
+    libuv is part of the Node project: https://nodejs.org/
     libuv may be distributed alone under Node's license:
 
     ====
@@ -554,7 +554,7 @@ The externally maintained libraries used by Node.js are:
     3. All advertising materials mentioning features or use of this
     software must display the following acknowledgment:
     "This product includes software developed by the OpenSSL Project
-    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+    for use in the OpenSSL Toolkit. (https://www.openssl.org/)"
 
     4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
     endorse or promote products derived from this software without
@@ -568,7 +568,7 @@ The externally maintained libraries used by Node.js are:
     6. Redistributions of any form whatsoever must retain the following
     acknowledgment:
     "This product includes software developed by the OpenSSL Project
-    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
+    for use in the OpenSSL Toolkit (https://www.openssl.org/)"
 
     THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
     EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE

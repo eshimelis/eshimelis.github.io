@@ -35,7 +35,7 @@ pacote.manifest('pacote@^1').then(pkg => {
   // { "name": "pacote", "version": "1.0.0", ... }
 })
 
-pacote.extract('http://hi.com/pkg.tgz', './here').then(() => {
+pacote.extract('https://hi.com/pkg.tgz', './here').then(() => {
   console.log('remote tarball contents extracted to ./here')
 })
 ```

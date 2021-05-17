@@ -1,7 +1,7 @@
 # verror: rich JavaScript errors
 
 This module provides several classes in support of Joyent's [Best Practices for
-Error Handling in Node.js](http://www.joyent.com/developers/node/design/errors).
+Error Handling in Node.js](https://www.joyent.com/developers/node/design/errors).
 If you find any of the behavior here confusing or surprising, check out that
 document first.
 

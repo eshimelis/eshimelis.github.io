@@ -23,7 +23,7 @@ Request is designed to be the simplest way possible to make http calls. It suppo
 
 ```js
 const request = require('request');
-request('http://www.google.com', function (error, response, body) {
+request('https://www.google.com', function (error, response, body) {
   console.error('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   console.log('body:', body); // Print the HTML for the Google homepage.
@@ -59,38 +59,38 @@ lots of [usage examples](#examples) and several
 You can stream any response to a file stream.
 
 ```js
-request('http://google.com/doodle.png').pipe(fs.createWriteStream('doodle.png'))
+request('https://google.com/doodle.png').pipe(fs.createWriteStream('doodle.png'))
 ```
 
 You can also stream a file to a PUT or POST request. This method will also check the file extension against a mapping of file extensions to content-types (in this case `application/json`) and use the proper `content-type` in the PUT request (if the headers don’t already provide one).
 
 ```js
-fs.createReadStream('file.json').pipe(request.put('http://mysite.com/obj.json'))
+fs.createReadStream('file.json').pipe(request.put('https://mysite.com/obj.json'))
 ```
 
 Request can also `pipe` to itself. When doing so, `content-type` and `content-length` are preserved in the PUT headers.
 
 ```js
-request.get('http://google.com/img.png').pipe(request.put('http://mysite.com/img.png'))
+request.get('https://google.com/img.png').pipe(request.put('https://mysite.com/img.png'))
 ```
 
 Request emits a "response" event when a response is received. The `response` argument will be an instance of [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage).
 
 ```js
 request
-  .get('http://google.com/img.png')
+  .get('https://google.com/img.png')
   .on('response', function(response) {
     console.log(response.statusCode) // 200
     console.log(response.headers['content-type']) // 'image/png'
   })
-  .pipe(request.put('http://mysite.com/img.png'))
+  .pipe(request.put('https://mysite.com/img.png'))
 ```
 
 To easily handle errors when streaming requests, listen to the `error` event before piping:
 
 ```js
 request
-  .get('http://mysite.com/doodle.png')
+  .get('https://mysite.com/doodle.png')
   .on('error', function(err) {
     console.error(err)
   })
@@ -103,9 +103,9 @@ Now let’s get fancy.
 http.createServer(function (req, resp) {
   if (req.url === '/doodle.png') {
     if (req.method === 'PUT') {
-      req.pipe(request.put('http://mysite.com/doodle.png'))
+      req.pipe(request.put('https://mysite.com/doodle.png'))
     } else if (req.method === 'GET' || req.method === 'HEAD') {
-      request.get('http://mysite.com/doodle.png').pipe(resp)
+      request.get('https://mysite.com/doodle.png').pipe(resp)
     }
   }
 })
@@ -116,7 +116,7 @@ You can also `pipe()` from `http.ServerRequest` instances, as well as to `http.S
 ```js
 http.createServer(function (req, resp) {
   if (req.url === '/doodle.png') {
-    const x = request('http://mysite.com/doodle.png')
+    const x = request('https://mysite.com/doodle.png')
     req.pipe(x)
     x.pipe(resp)
   }
@@ -126,17 +126,17 @@ http.createServer(function (req, resp) {
 And since `pipe()` returns the destination stream in ≥ Node 0.5.x you can do one line proxying. :)
 
 ```js
-req.pipe(request('http://mysite.com/doodle.png')).pipe(resp)
+req.pipe(request('https://mysite.com/doodle.png')).pipe(resp)
 ```
 
 Also, none of this new functionality conflicts with requests previous features, it just expands them.
 
 ```js
-const r = request.defaults({'proxy':'http://localproxy.com'})
+const r = request.defaults({'proxy':'https://localproxy.com'})
 
 http.createServer(function (req, resp) {
   if (req.url === '/doodle.png') {
-    r.get('http://google.com/doodle.png').pipe(resp)
+    r.get('https://google.com/doodle.png').pipe(resp)
   }
 })
 ```
@@ -177,11 +177,11 @@ Also, [`util.promisify`](https://nodejs.org/api/util.html#util_util_promisify_or
 URL-encoded forms are simple.
 
 ```js
-request.post('http://service.com/upload', {form:{key:'value'}})
+request.post('https://service.com/upload', {form:{key:'value'}})
 // or
-request.post('http://service.com/upload').form({key:'value'})
+request.post('https://service.com/upload').form({key:'value'})
 // or
-request.post({url:'http://service.com/upload', form: {key:'value'}}, function(err,httpResponse,body){ /* ... */ })
+request.post({url:'https://service.com/upload', form: {key:'value'}}, function(err,httpResponse,body){ /* ... */ })
 ```
 
 
@@ -214,7 +214,7 @@ const formData = {
     }
   }
 };
-request.post({url:'http://service.com/upload', formData: formData}, function optionalCallback(err, httpResponse, body) {
+request.post({url:'https://service.com/upload', formData: formData}, function optionalCallback(err, httpResponse, body) {
   if (err) {
     return console.error('upload failed:', err);
   }
@@ -226,7 +226,7 @@ For advanced cases, you can access the form-data object itself via `r.form()`. T
 
 ```js
 // NOTE: Advanced use-case, for normal use see 'formData' usage above
-const r = request.post('http://service.com/upload', function optionalCallback(err, httpResponse, body) {...})
+const r = request.post('https://service.com/upload', function optionalCallback(err, httpResponse, body) {...})
 const form = r.form();
 form.append('my_field', 'my_value');
 form.append('my_buffer', Buffer.from([1, 2, 3]));
@@ -244,7 +244,7 @@ Some variations in different HTTP implementations require a newline/CRLF before,
     method: 'PUT',
     preambleCRLF: true,
     postambleCRLF: true,
-    uri: 'http://service.com/upload',
+    uri: 'https://service.com/upload',
     multipart: [
       {
         'content-type': 'application/json',
@@ -282,9 +282,9 @@ Some variations in different HTTP implementations require a newline/CRLF before,
 ## HTTP Authentication
 
 ```js
-request.get('http://some.server.com/').auth('username', 'password', false);
+request.get('https://some.server.com/').auth('username', 'password', false);
 // or
-request.get('http://some.server.com/', {
+request.get('https://some.server.com/', {
   'auth': {
     'user': 'username',
     'pass': 'password',
@@ -292,9 +292,9 @@ request.get('http://some.server.com/', {
   }
 });
 // or
-request.get('http://some.server.com/').auth(null, null, true, 'bearerToken');
+request.get('https://some.server.com/').auth(null, null, true, 'bearerToken');
 // or
-request.get('http://some.server.com/', {
+request.get('https://some.server.com/', {
   'auth': {
     'bearer': 'bearerToken'
   }
@@ -318,13 +318,13 @@ authentication header to be sent. If `sendImmediately` is `false`, then
 indicating the required authentication method).
 
 Note that you can also specify basic authentication using the URL itself, as
-detailed in [RFC 1738](http://www.ietf.org/rfc/rfc1738.txt). Simply pass the
+detailed in [RFC 1738](https://www.ietf.org/rfc/rfc1738.txt). Simply pass the
 `user:password` before the host with an `@` sign:
 
 ```js
 const username = 'username',
     password = 'password',
-    url = 'http://' + username + ':' + password + '@some.server.com';
+    url = 'https://' + username + ':' + password + '@some.server.com';
 
 request({url}, function (error, response, body) {
    // Do more stuff with 'body' here
@@ -392,7 +392,7 @@ default signing algorithm is
 // step 1
 const qs = require('querystring')
   , oauth =
-    { callback: 'http://mysite.com/callback/'
+    { callback: 'https://mysite.com/callback/'
     , consumer_key: CONSUMER_KEY
     , consumer_secret: CONSUMER_SECRET
     }
@@ -448,14 +448,14 @@ For [RSA-SHA1 signing](https://tools.ietf.org/html/rfc5849#section-3.4.3), make
 the following changes to the OAuth options object:
 * Pass `signature_method : 'RSA-SHA1'`
 * Instead of `consumer_secret`, specify a `private_key` string in
-  [PEM format](http://how2ssl.com/articles/working_with_pem_files/)
+  [PEM format](https://how2ssl.com/articles/working_with_pem_files/)
 
-For [PLAINTEXT signing](http://oauth.net/core/1.0/#anchor22), make
+For [PLAINTEXT signing](https://oauth.net/core/1.0/#anchor22), make
 the following changes to the OAuth options object:
 * Pass `signature_method : 'PLAINTEXT'`
 
 To send OAuth parameters via query params or in a post body as described in The
-[Consumer Request Parameters](http://oauth.net/core/1.0/#consumer_req_param)
+[Consumer Request Parameters](https://oauth.net/core/1.0/#consumer_req_param)
 section of the oauth1 spec:
 * Pass `transport_method : 'query'` or `transport_method : 'body'` in the OAuth
   options object.
@@ -509,7 +509,7 @@ the endpoint.
 For example, it will make a single request that looks like:
 
 ```
-HTTP/1.1 GET http://endpoint-server.com/some-url
+HTTP/1.1 GET https://endpoint-server.com/some-url
 Host: proxy-server.com
 Other-Headers: all go here
 
@@ -595,8 +595,8 @@ Here's some examples of valid `no_proxy` values:
 `request` supports making requests to [UNIX Domain Sockets](https://en.wikipedia.org/wiki/Unix_domain_socket). To make one, use the following URL scheme:
 
 ```js
-/* Pattern */ 'http://unix:SOCKET:PATH'
-/* Example */ request.get('http://unix:/absolute/path/to/unix.socket:/request/path')
+/* Pattern */ 'https://unix:SOCKET:PATH'
+/* Example */ request.get('https://unix:/absolute/path/to/unix.socket:/request/path')
 ```
 
 Note: The `SOCKET` path is assumed to be absolute to the root of the host file system.
@@ -718,11 +718,11 @@ A validation step will check if the HAR Request format matches the latest spec (
   request({
     // will be ignored
     method: 'GET',
-    uri: 'http://www.google.com',
+    uri: 'https://www.google.com',
 
     // HTTP Archive Request Object
     har: {
-      url: 'http://www.mockbin.com/har',
+      url: 'https://www.mockbin.com/har',
       method: 'POST',
       headers: [
         {
@@ -746,7 +746,7 @@ A validation step will check if the HAR Request format matches the latest spec (
     }
   })
 
-  // a POST request will be sent to http://www.mockbin.com
+  // a POST request will be sent to https://www.mockbin.com
   // with body an application/x-www-form-urlencoded body:
   // foo=bar&hello=world
 ```
@@ -812,7 +812,7 @@ The first argument can be either a `url` or an `options` object. The only requir
 
 ---
 
-- `encoding` - encoding to be used on `setEncoding` of response data. If `null`, the `body` is returned as a `Buffer`. Anything else **(including the default value of `undefined`)** will be passed as the [encoding](http://nodejs.org/api/buffer.html#buffer_buffer) parameter to `toString()` (meaning this is effectively `utf8` by default). (**Note:** if you expect binary data, you should set `encoding: null`.)
+- `encoding` - encoding to be used on `setEncoding` of response data. If `null`, the `body` is returned as a `Buffer`. Anything else **(including the default value of `undefined`)** will be passed as the [encoding](https://nodejs.org/api/buffer.html#buffer_buffer) parameter to `toString()` (meaning this is effectively `utf8` by default). (**Note:** if you expect binary data, you should set `encoding: null`.)
 - `gzip` - if `true`, add an `Accept-Encoding` header to request compressed content encodings from the server (if not already present) and decode supported content encodings in the response. **Note:** Automatic decoding of the response content is performed on the body data returned through `request` (both through the `request` stream and passed to the callback function) but is not performed on the `response` stream (available from the `response` event) which is the unmodified `http.IncomingMessage` object which may contain compressed data. See example below.
 - `jar` - if `true`, remember cookies for future use (or define your custom cookie jar; see examples section)
 
@@ -820,7 +820,7 @@ The first argument can be either a `url` or an `options` object. The only requir
 
 - `agent` - `http(s).Agent` instance to use
 - `agentClass` - alternatively specify your agent's class name
-- `agentOptions` - and pass its options. **Note:** for HTTPS see [tls API doc for TLS/SSL options](http://nodejs.org/api/tls.html#tls_tls_connect_options_callback) and the [documentation above](#using-optionsagentoptions).
+- `agentOptions` - and pass its options. **Note:** for HTTPS see [tls API doc for TLS/SSL options](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback) and the [documentation above](#using-optionsagentoptions).
 - `forever` - set to `true` to use the [forever-agent](https://github.com/request/forever-agent) **Note:** Defaults to `http(s).Agent({keepAlive:true})` in node 0.12+
 - `pool` - an object describing which agents to use for the request. If this option is omitted the request will use the global agent (as long as your options allow for it). Otherwise, request will search the pool for your custom agent. If no custom agent is found, a new agent will be created and added to the pool. **Note:** `pool` is used only when the `agent` option is not specified.
   - A `maxSockets` property can also be provided on the `pool` object to set the max number of sockets for all agents created (ex: `pool: {maxSockets: Infinity}`).
@@ -833,7 +833,7 @@ The first argument can be either a `url` or an `options` object. The only requir
   - **Read timeout**: Time to wait for a server to send response headers (and start the response body) before aborting the request.
   - **Connection timeout**: Sets the socket to timeout after `timeout` milliseconds of inactivity. Note that increasing the timeout beyond the OS-wide TCP connection timeout will not have any effect ([the default in Linux can be anywhere from 20-120 seconds][linux-timeout])
 
-[linux-timeout]: http://www.sekuda.com/overriding_the_default_linux_kernel_20_second_tcp_socket_connect_timeout
+[linux-timeout]: https://www.sekuda.com/overriding_the_default_linux_kernel_20_second_tcp_socket_connect_timeout
 
 ---
 
@@ -872,12 +872,12 @@ The first argument can be either a `url` or an `options` object. The only requir
     - `download`: Duration of HTTP download (`timings.end` - `timings.response`)
     - `total`: Duration entire HTTP round-trip (`timings.end`)
 
-- `har` - a [HAR 1.2 Request Object](http://www.softwareishard.com/blog/har-12-spec/#request), will be processed from HAR format into options overwriting matching values *(see the [HAR 1.2 section](#support-for-har-12) for details)*
+- `har` - a [HAR 1.2 Request Object](https://www.softwareishard.com/blog/har-12-spec/#request), will be processed from HAR format into options overwriting matching values *(see the [HAR 1.2 section](#support-for-har-12) for details)*
 - `callback` - alternatively pass the request's callback in the options object
 
 The callback argument gets 3 arguments:
 
-1. An `error` when applicable (usually from [`http.ClientRequest`](http://nodejs.org/api/http.html#http_class_http_clientrequest) object)
+1. An `error` when applicable (usually from [`http.ClientRequest`](https://nodejs.org/api/http.html#http_class_http_clientrequest) object)
 2. An [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_class_http_incomingmessage) object (Response object)
 3. The third is the `response` body (`String` or `Buffer`, or JSON object if the `json` option is supplied)
 
@@ -948,7 +948,7 @@ request.jar()
 Function that returns the specified response header field using a [case-insensitive match](https://tools.ietf.org/html/rfc7230#section-3.2)
 
 ```js
-request('http://www.google.com', function (error, response, body) {
+request('https://www.google.com', function (error, response, body) {
   // print the Content-Type header even if the server returned it as 'content-type' (lowercase)
   console.log('Content-Type is:', response.caseless.get('Content-Type')); 
 });
@@ -997,7 +997,7 @@ can detect whether the timeout was a connection timeout by checking if the
 `err.connect` property is set to `true`.
 
 ```js
-request.get('http://10.255.255.1', {timeout: 1500}, function(err) {
+request.get('https://10.255.255.1', {timeout: 1500}, function(err) {
     console.log(err.code === 'ETIMEDOUT');
     // Set to `true` if the timeout was a connection timeout, `false` or
     // `undefined` otherwise.
@@ -1006,7 +1006,7 @@ request.get('http://10.255.255.1', {timeout: 1500}, function(err) {
 });
 ```
 
-[connect]: http://linux.die.net/man/2/connect
+[connect]: https://linux.die.net/man/2/connect
 
 ## Examples:
 
@@ -1016,7 +1016,7 @@ request.get('http://10.255.255.1', {timeout: 1500}, function(err) {
     ;
   request(
     { method: 'PUT'
-    , uri: 'http://mikeal.iriscouch.com/testjs/' + rand
+    , uri: 'https://mikeal.iriscouch.com/testjs/' + rand
     , multipart:
       [ { 'content-type': 'application/json'
         ,  body: JSON.stringify({foo: 'bar', _attachments: {'message.txt': {follows: true, length: 18, 'content_type': 'text/plain' }}})
@@ -1026,7 +1026,7 @@ request.get('http://10.255.255.1', {timeout: 1500}, function(err) {
     }
   , function (error, response, body) {
       if(response.statusCode == 201){
-        console.log('document saved as: http://mikeal.iriscouch.com/testjs/'+ rand)
+        console.log('document saved as: https://mikeal.iriscouch.com/testjs/'+ rand)
       } else {
         console.log('error: '+ response.statusCode)
         console.log(body)
@@ -1045,7 +1045,7 @@ the server sent a compressed response.
   const request = require('request')
   request(
     { method: 'GET'
-    , uri: 'http://www.google.com'
+    , uri: 'https://www.google.com'
     , gzip: true
     }
   , function (error, response, body) {
@@ -1071,8 +1071,8 @@ Cookies are disabled by default (else, they would be used in subsequent requests
 
 ```js
 const request = request.defaults({jar: true})
-request('http://www.google.com', function () {
-  request('http://images.google.com')
+request('https://www.google.com', function () {
+  request('https://images.google.com')
 })
 ```
 
@@ -1081,8 +1081,8 @@ To use a custom cookie jar (instead of `request`’s global cookie jar), set `ja
 ```js
 const j = request.jar()
 const request = request.defaults({jar:j})
-request('http://www.google.com', function () {
-  request('http://images.google.com')
+request('https://www.google.com', function () {
+  request('https://images.google.com')
 })
 ```
 
@@ -1091,10 +1091,10 @@ OR
 ```js
 const j = request.jar();
 const cookie = request.cookie('key1=value1');
-const url = 'http://www.google.com';
+const url = 'https://www.google.com';
 j.setCookie(cookie, url);
 request({url: url, jar: j}, function () {
-  request('http://images.google.com')
+  request('https://images.google.com')
 })
 ```
 
@@ -1108,8 +1108,8 @@ const FileCookieStore = require('tough-cookie-filestore');
 // NOTE - currently the 'cookies.json' file must already exist!
 const j = request.jar(new FileCookieStore('cookies.json'));
 request = request.defaults({ jar : j })
-request('http://www.google.com', function() {
-  request('http://images.google.com')
+request('https://www.google.com', function() {
+  request('https://images.google.com')
 })
 ```
 
@@ -1123,7 +1123,7 @@ To inspect your cookie jar after a request:
 
 ```js
 const j = request.jar()
-request({url: 'http://www.google.com', jar: j}, function () {
+request({url: 'https://www.google.com', jar: j}, function () {
   const cookie_string = j.getCookieString(url); // "key1=value1; key2=value2; ..."
   const cookies = j.getCookies(url);
   // [{key: 'key1', value: 'value1', domain: "www.google.com", ...}, ...]

@@ -1,6 +1,6 @@
 # mississippi Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## 3.0.0 - 2018-02-26
 * Update to pump@3.0.0.  Returns the last stream the pipeline to enable chaining.  (Use the individual modules to avoid potentially unnecessary major updates in your project).

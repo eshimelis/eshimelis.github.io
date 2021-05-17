@@ -2,7 +2,7 @@
 
 A node module to get your node module started.
 
-[![Build Status](https://secure.travis-ci.org/npm/init-package-json.svg)](http://travis-ci.org/npm/init-package-json)
+[![Build Status](https://secure.travis-ci.org/npm/init-package-json.svg)](https://travis-ci.org/npm/init-package-json)
 
 ## Usage
 

@@ -4,7 +4,7 @@ A thing that is a lot like ES6 `Map`, but without iterators, for use
 in environments where `for..of` syntax and `Map` are not available.
 
 If you need iterators, or just in general a more faithful polyfill to
-ES6 Maps, check out [es6-map](http://npm.im/es6-map).
+ES6 Maps, check out [es6-map](https://npm.im/es6-map).
 
 If you are in an environment where `Map` is supported, then that will
 be returned instead, unless `process.env.TEST_PSEUDOMAP` is set.

@@ -33,4 +33,4 @@ Target Object, that will recieve stack property.
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop)
+MIT © [Vsevolod Strukchinsky](https://github.com/floatdrop)

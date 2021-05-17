@@ -86,7 +86,7 @@ function getTarballUrl (spec, registry, mani, opts) {
   // TL;DR: Some alternative registries host tarballs on http and packuments
   // on https, and vice-versa. There's also a case where people who can't use
   // SSL to access the npm registry, for example, might use
-  // `--registry=http://registry.npmjs.org/`. In this case, we need to
+  // `--registry=https://registry.npmjs.org/`. In this case, we need to
   // rewrite `tarball` to match the protocol.
   //
   if (reg.hostname === tarball.hostname && reg.protocol !== tarball.protocol) {

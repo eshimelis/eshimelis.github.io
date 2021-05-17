@@ -2,7 +2,7 @@
 
 [![browser support][3]][4]
 
-[![locked](http://badges.github.io/stability-badges/dist/locked.svg)](http://github.com/badges/stability-badges)
+[![locked](https://badges.github.io/stability-badges/dist/locked.svg)](https://github.com/badges/stability-badges)
 
 Extend like a boss
 
@@ -28,5 +28,5 @@ var combination = extend({
 ## MIT Licensed 
 
 
-  [3]: http://ci.testling.com/Raynos/xtend.png
-  [4]: http://ci.testling.com/Raynos/xtend
+  [3]: https://ci.testling.com/Raynos/xtend.png
+  [4]: https://ci.testling.com/Raynos/xtend

@@ -35,7 +35,7 @@ assert(toPrimitive(Object(sym)) === sym);
 Simply clone the repo, `npm install`, and run `npm test`
 
 [package-url]: https://npmjs.org/package/es-to-primitive
-[npm-version-svg]: http://versionbadg.es/ljharb/es-to-primitive.svg
+[npm-version-svg]: https://versionbadg.es/ljharb/es-to-primitive.svg
 [travis-svg]: https://travis-ci.org/ljharb/es-to-primitive.svg
 [travis-url]: https://travis-ci.org/ljharb/es-to-primitive
 [deps-svg]: https://david-dm.org/ljharb/es-to-primitive.svg
@@ -43,7 +43,7 @@ Simply clone the repo, `npm install`, and run `npm test`
 [dev-deps-svg]: https://david-dm.org/ljharb/es-to-primitive/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/es-to-primitive#info=devDependencies
 [npm-badge-png]: https://nodei.co/npm/es-to-primitive.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/es-to-primitive.svg
+[license-image]: https://img.shields.io/npm/l/es-to-primitive.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/es-to-primitive.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=es-to-primitive
+[downloads-image]: https://img.shields.io/npm/dm/es-to-primitive.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=es-to-primitive

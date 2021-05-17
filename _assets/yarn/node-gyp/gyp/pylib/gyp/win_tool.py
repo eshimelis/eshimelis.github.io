@@ -304,7 +304,7 @@ class WinTool(object):
     for |arch|. If |dir| is supplied, use that as the working directory."""
     env = self._GetEnv(arch)
     # TODO(scottmg): This is a temporary hack to get some specific variables
-    # through to actions that are set after gyp-time. http://crbug.com/333738.
+    # through to actions that are set after gyp-time. https://crbug.com/333738.
     for k, v in os.environ.items():
       if k not in env:
         env[k] = v

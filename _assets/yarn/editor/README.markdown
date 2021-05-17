@@ -19,7 +19,7 @@ editor('beep.json', function (code, sig) {
 $ node edit.js
 ```
 
-![editor](http://substack.net/images/screenshots/editor.png)
+![editor](https://substack.net/images/screenshots/editor.png)
 
 ```
 finished editing with code 0
@@ -42,7 +42,7 @@ When the editor exits, `cb(code, sig)` fires.
 install
 =======
 
-With [npm](http://npmjs.org) do:
+With [npm](https://npmjs.org) do:
 
 ```
 npm install editor

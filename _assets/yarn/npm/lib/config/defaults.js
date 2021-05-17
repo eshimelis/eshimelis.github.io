@@ -54,7 +54,7 @@ nopt.invalidHandler = function (k, val, type) {
       log.warn('invalid config', 'Must be umask, octal number in range 0000..0777')
       break
     case url:
-      log.warn('invalid config', "Must be a full url with 'http://'")
+      log.warn('invalid config', "Must be a full url with 'https://'")
       break
     case path:
       log.warn('invalid config', 'Must be a valid filesystem path')

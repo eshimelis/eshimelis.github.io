@@ -6,7 +6,7 @@
   "author": "Tim Caswell <tim@creationix.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/creationix/jsonparse.git"
+    "url": "https://github.com/creationix/jsonparse.git"
   },
   "devDependencies": {
     "tape": "~0.1.1",
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "tap test/*.js"
   },
-  "bugs": "http://github.com/creationix/jsonparse/issues",
+  "bugs": "https://github.com/creationix/jsonparse/issues",
   "engines": ["node >= 0.2.0"],
   "license": "MIT",
   "main": "jsonparse.js"

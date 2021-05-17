@@ -96,7 +96,7 @@ after packing it up into a tarball (b).
 * `npm install <tarball url>`:
 
     Fetch the tarball url, and then install it.  In order to distinguish between
-    this and other options, the argument must start with "http://" or "https://"
+    this and other options, the argument must start with "https://" or "https://"
 
     Example:
 

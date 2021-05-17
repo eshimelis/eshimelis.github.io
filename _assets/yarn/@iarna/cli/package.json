@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "author": "Rebecca Turner <me@re-becca.org> (https://re-becca.org/)",
   "license": "ISC",
   "dependencies": {
     "signal-exit": "^3.0.2",

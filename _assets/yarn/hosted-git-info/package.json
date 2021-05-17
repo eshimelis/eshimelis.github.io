@@ -13,7 +13,7 @@
     "bitbucket",
     "gitlab"
   ],
-  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org)",
+  "author": "Rebecca Turner <me@re-becca.org> (https://re-becca.org)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/hosted-git-info/issues"

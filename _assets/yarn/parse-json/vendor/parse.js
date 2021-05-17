@@ -1,10 +1,10 @@
 /*
  * Author: Alex Kocharin <alex@kocharin.ru>
  * GIT: https://github.com/rlidwka/jju
- * License: WTFPL, grab your copy here: http://www.wtfpl.net/txt/copying/
+ * License: WTFPL, grab your copy here: https://www.wtfpl.net/txt/copying/
  */
 
-// RTFM: http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
+// RTFM: https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf
 
 var Uni = require('./unicode')
 

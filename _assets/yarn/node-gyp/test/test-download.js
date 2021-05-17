@@ -31,7 +31,7 @@ test('download over http', function (t) {
       opts: {},
       version: '42'
     }
-    var url = 'http://' + host + ':' + port
+    var url = 'https://' + host + ':' + port
     var req = install.test.download(gyp, {}, url)
     req.on('response', function (res) {
       var body = ''
@@ -117,11 +117,11 @@ test('download over http with proxy', function (t) {
     pserver.listen(port + 1, host, function () {
       var gyp = {
         opts: {
-          proxy: 'http://' + host + ':' + (port + 1)
+          proxy: 'https://' + host + ':' + (port + 1)
         },
         version: '42'
       }
-      var url = 'http://' + host + ':' + port
+      var url = 'https://' + host + ':' + port
       var req = install.test.download(gyp, {}, url)
       req.on('response', function (res) {
         var body = ''
@@ -164,12 +164,12 @@ test('download over http with noproxy', function (t) {
     pserver.listen(port + 1, host, function () {
       var gyp = {
         opts: {
-          proxy: 'http://' + host + ':' + (port + 1),
+          proxy: 'https://' + host + ':' + (port + 1),
           noproxy: 'localhost'
         },
         version: '42'
       }
-      var url = 'http://' + host + ':' + port
+      var url = 'https://' + host + ':' + port
       var req = install.test.download(gyp, {}, url)
       req.on('response', function (res) {
         var body = ''
@@ -191,7 +191,7 @@ test('download with missing cafile', function (t) {
     opts: { cafile: 'no.such.file' }
   }
   try {
-    install.test.download(gyp, {}, 'http://bad/')
+    install.test.download(gyp, {}, 'https://bad/')
   } catch (e) {
     t.ok(/no.such.file/.test(e.message))
   }

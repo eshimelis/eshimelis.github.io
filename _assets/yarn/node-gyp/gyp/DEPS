@@ -3,8 +3,8 @@
 # (You don't need to use gclient for normal GYP development work.)
 
 vars = {
-  "chrome_trunk": "http://src.chromium.org/svn/trunk",
-  "googlecode_url": "http://%s.googlecode.com/svn",
+  "chrome_trunk": "https://src.chromium.org/svn/trunk",
+  "googlecode_url": "https://%s.googlecode.com/svn",
 }
 
 deps = {

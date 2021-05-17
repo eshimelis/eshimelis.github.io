@@ -1,5 +1,5 @@
 {
-  "author": "Tim Koschützki <tim@debuggable.com> (http://debuggable.com/)",
+  "author": "Tim Koschützki <tim@debuggable.com> (https://debuggable.com/)",
   "name": "retry",
   "description": "Abstraction for exponential and custom retry strategies for failed operations.",
   "license": "MIT",

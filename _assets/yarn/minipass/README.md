@@ -37,15 +37,15 @@ you're done transforming the data however you want, call
 For some examples of streams that extend Minipass in various ways, check
 out:
 
-- [minizlib](http://npm.im/minizlib)
-- [fs-minipass](http://npm.im/fs-minipass)
-- [tar](http://npm.im/tar)
-- [minipass-collect](http://npm.im/minipass-collect)
-- [minipass-flush](http://npm.im/minipass-flush)
-- [minipass-pipeline](http://npm.im/minipass-pipeline)
-- [tap](http://npm.im/tap)
-- [tap-parser](http://npm.im/tap)
-- [treport](http://npm.im/tap)
+- [minizlib](https://npm.im/minizlib)
+- [fs-minipass](https://npm.im/fs-minipass)
+- [tar](https://npm.im/tar)
+- [minipass-collect](https://npm.im/minipass-collect)
+- [minipass-flush](https://npm.im/minipass-flush)
+- [minipass-pipeline](https://npm.im/minipass-pipeline)
+- [tap](https://npm.im/tap)
+- [tap-parser](https://npm.im/tap)
+- [treport](https://npm.im/tap)
 
 ## Differences from Node.js Streams
 
@@ -333,10 +333,10 @@ streams.
 * `writable` Whether the stream is writable.  Default `true`.  Set to
   `false` when `end()`
 * `readable` Whether the stream is readable.  Default `true`.
-* `buffer` A [yallist](http://npm.im/yallist) linked list of chunks written
+* `buffer` A [yallist](https://npm.im/yallist) linked list of chunks written
   to the stream that have not yet been emitted.  (It's probably a bad idea
   to mess with this.)
-* `pipes` A [yallist](http://npm.im/yallist) linked list of streams that
+* `pipes` A [yallist](https://npm.im/yallist) linked list of streams that
   this stream is piping into.  (It's probably a bad idea to mess with
   this.)
 * `destroyed` A getter that indicates whether the stream was destroyed.

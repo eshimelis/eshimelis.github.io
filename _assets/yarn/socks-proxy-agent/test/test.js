@@ -98,7 +98,7 @@ describe('SocksProxyAgent', function () {
       });
 
       var agent = new SocksProxyAgent('socks://127.0.0.1:' + socksPort);
-      var opts = url.parse('http://127.0.0.1:' + httpPort + '/foo');
+      var opts = url.parse('https://127.0.0.1:' + httpPort + '/foo');
       opts.agent = agent;
       opts.headers = { foo: 'bar' };
       var req = http.get(opts, function (res) {

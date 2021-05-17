@@ -1,4 +1,4 @@
-# ansicolors [![build status](https://secure.travis-ci.org/thlorenz/ansicolors.png)](http://next.travis-ci.org/thlorenz/ansicolors)
+# ansicolors [![build status](https://secure.travis-ci.org/thlorenz/ansicolors.png)](https://next.travis-ci.org/thlorenz/ansicolors)
 
 Functions that surround a string with ansicolor codes so it prints in color.
 

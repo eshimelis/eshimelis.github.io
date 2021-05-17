@@ -18,7 +18,7 @@ $ npm install --save unzip-response
 const http = require('http');
 const unzipResponse = require('unzip-response');
 
-http.get('http://sindresorhus.com', res => {
+http.get('https://sindresorhus.com', res => {
 	res = unzipResponse(res);
 });
 ```

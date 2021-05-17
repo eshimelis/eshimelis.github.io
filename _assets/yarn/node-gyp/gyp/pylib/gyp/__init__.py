@@ -330,7 +330,7 @@ def gyp_main(args):
   # currently have some circular relationships on non-Mac platforms, so this
   # option allows the strict behavior to be used on Macs and the lenient
   # behavior to be used elsewhere.
-  # TODO(mark): Remove this option when http://crbug.com/35878 is fixed.
+  # TODO(mark): Remove this option when https://crbug.com/35878 is fixed.
   parser.add_argument('--no-circular-check', dest='circular_check',
                     action='store_false', default=True, regenerate=False,
                     help="don't check for circular relationships between files")

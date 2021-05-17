@@ -19,7 +19,7 @@ const strCache = {}
 
 /*
  * Returns a useful dispatch object for value using a process similar to
- * the ToObject operation specified in http://es5.github.com/#x9.9
+ * the ToObject operation specified in https://es5.github.com/#x9.9
  */
 module.exports.dispatchableObject = dispatchableObject
 function dispatchableObject (value) {

@@ -151,7 +151,7 @@ A barebones `gyp` file appropriate for building a Node.js addon could look like:
 
 Some additional resources for Node.js native addons and writing `gyp` configuration files:
 
- * ["Going Native" a nodeschool.io tutorial](http://nodeschool.io/#goingnative)
+ * ["Going Native" a nodeschool.io tutorial](https://nodeschool.io/#goingnative)
  * ["Hello World" node addon example](https://github.com/nodejs/node/tree/master/test/addons/hello-world)
  * [gyp user documentation](https://gyp.gsrc.io/docs/UserDocumentation.md)
  * [gyp input format reference](https://gyp.gsrc.io/docs/InputFormatReference.md)

@@ -1,11 +1,11 @@
 # minizlib
 
-A fast zlib stream built on [minipass](http://npm.im/minipass) and
+A fast zlib stream built on [minipass](https://npm.im/minipass) and
 Node.js's zlib binding.
 
 This module was created to serve the needs of
-[node-tar](http://npm.im/tar) and
-[minipass-fetch](http://npm.im/minipass-fetch).
+[node-tar](https://npm.im/tar) and
+[minipass-fetch](https://npm.im/minipass-fetch).
 
 Brotli is supported in versions of node with a Brotli binding.
 
@@ -26,7 +26,7 @@ Node's built in zlib streams are built on top of `stream.Transform`.
 They do the maximally safe thing with respect to consistent
 asynchrony, buffering, and backpressure.
 
-See [Minipass](http://npm.im/minipass) for more on the differences between
+See [Minipass](https://npm.im/minipass) for more on the differences between
 Node.js core streams and Minipass streams, and the convenience methods
 provided by that class.
 

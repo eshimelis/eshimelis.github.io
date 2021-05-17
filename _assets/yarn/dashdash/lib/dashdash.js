@@ -795,7 +795,7 @@ const BASH_COMPLETION_TEMPLATE_PATH = path.join(
  *      vars in the spec. By default it is the empty string. When used to
  *      scope for completion on a *sub-command* (e.g. for "git log" on a "git"
  *      tool), then it would have a value (e.g. "__log"). See
- *      <http://github.com/trentm/node-cmdln> Bash completion for details.
+ *      <https://github.com/trentm/node-cmdln> Bash completion for details.
  * @param opts.includeHidden {Boolean} Optional. Default false. By default
  *      hidden options and subcmds are "excluded". Here excluded means they
  *      won't be offered as a completion, but if used, their argument type

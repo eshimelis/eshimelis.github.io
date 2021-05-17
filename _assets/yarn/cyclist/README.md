@@ -1,13 +1,13 @@
 # Cyclist
 
-Cyclist is an efficient [cyclic list](http://en.wikipedia.org/wiki/Circular_buffer) implemention for Javascript.
+Cyclist is an efficient [cyclic list](https://en.wikipedia.org/wiki/Circular_buffer) implemention for Javascript.
 It is available through npm
 
 ```
 npm install cyclist
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/cyclist.svg?style=flat)](http://travis-ci.org/mafintosh/cyclist)
+[![build status](https://img.shields.io/travis/mafintosh/cyclist.svg?style=flat)](https://travis-ci.org/mafintosh/cyclist)
 
 ## What?
 

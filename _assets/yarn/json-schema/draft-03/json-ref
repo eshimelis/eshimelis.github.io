@@ -1,6 +1,6 @@
 {
-	"$schema" : "http://json-schema.org/draft-03/hyper-schema#",
-	"id" : "http://json-schema.org/draft-03/json-ref#",
+	"$schema" : "https://json-schema.org/draft-03/hyper-schema#",
+	"id" : "https://json-schema.org/draft-03/json-ref#",
 	
 	"additionalItems" : {"$ref" : "#"},
 	"additionalProperties" : {"$ref" : "#"},

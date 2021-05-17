@@ -2,7 +2,7 @@
   "name": "nopt",
   "version": "4.0.3",
   "description": "Option parsing for Node, supporting types, shorthands, etc. Used by npm.",
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "main": "lib/nopt.js",
   "scripts": {
     "preversion": "npm test",

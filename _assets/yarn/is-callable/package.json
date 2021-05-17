@@ -4,7 +4,7 @@
 	"author": {
 		"name": "Jordan Harband",
 		"email": "ljharb@gmail.com",
-		"url": "http://ljharb.codes"
+		"url": "https://ljharb.codes"
 	},
 	"funding": {
 		"url": "https://github.com/sponsors/ljharb"
@@ -13,7 +13,7 @@
 		{
 			"name": "Jordan Harband",
 			"email": "ljharb@gmail.com",
-			"url": "http://ljharb.codes"
+			"url": "https://ljharb.codes"
 		}
 	],
 	"description": "Is this JS value callable? Works with Functions and GeneratorFunctions, despite ES6 @@toStringTag.",

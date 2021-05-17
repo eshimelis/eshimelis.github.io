@@ -78,7 +78,7 @@ describe('Agent', function() {
         called = true;
         assert.equal(this, agent);
       };
-      var info = url.parse('http://127.0.0.1/foo');
+      var info = url.parse('https://127.0.0.1/foo');
       info.agent = agent;
       var req = http.get(info);
       req.on('error', function(err) {
@@ -94,7 +94,7 @@ describe('Agent', function() {
         assert.equal(this, agent);
         fn();
       };
-      var info = url.parse('http://127.0.0.1/foo');
+      var info = url.parse('https://127.0.0.1/foo');
       info.agent = agent;
       var req = http.get(info);
       req.on('error', function(err) {
@@ -108,7 +108,7 @@ describe('Agent', function() {
       done
     ) {
       var agent = new Agent();
-      var info = url.parse('http://127.0.0.1/foo');
+      var info = url.parse('https://127.0.0.1/foo');
       info.agent = agent;
       var req = http.get(info);
       req.on('error', function(err) {
@@ -125,7 +125,7 @@ describe('Agent', function() {
       var agent = new Agent(function(req, opts, fn) {
         fn(new Error('is this caught?'));
       });
-      var info = url.parse('http://127.0.0.1/foo');
+      var info = url.parse('https://127.0.0.1/foo');
       info.agent = agent;
       var req = http.get(info);
       req.on('error', function(err) {
@@ -141,7 +141,7 @@ describe('Agent', function() {
           fn(new Error('is this caught?'));
         }, 10);
       });
-      var info = url.parse('http://127.0.0.1/foo');
+      var info = url.parse('https://127.0.0.1/foo');
       info.agent = agent;
       var req = http.get(info);
       req.on('error', function(err) {
@@ -252,7 +252,7 @@ describe('"http" module', function() {
       res.end();
     });
 
-    var info = url.parse('http://127.0.0.1:' + port + '/foo');
+    var info = url.parse('https://127.0.0.1:' + port + '/foo');
     info.agent = agent;
     http.get(info, function(res) {
       assert.equal('bar', res.headers['x-foo']);
@@ -279,7 +279,7 @@ describe('"http" module', function() {
       res.end();
     });
 
-    var info = url.parse('http://127.0.0.1:' + port + '/foo');
+    var info = url.parse('https://127.0.0.1:' + port + '/foo');
     info.agent = agent;
     http.get(info, function(res) {
       assert.equal('bar', res.headers['x-foo']);
@@ -308,7 +308,7 @@ describe('"http" module', function() {
       res.end();
     });
 
-    var info = url.parse('http://127.0.0.1:' + port + '/foo');
+    var info = url.parse('https://127.0.0.1:' + port + '/foo');
     info.agent = agent;
     http.get(info, function(res) {
       assert.equal('bar', res.headers['x-foo']);
@@ -336,7 +336,7 @@ describe('"http" module', function() {
       res.end();
     });
 
-    var info = url.parse('http://127.0.0.1:' + port + '/bar');
+    var info = url.parse('https://127.0.0.1:' + port + '/bar');
     info.agent = agent;
     http.get(info, function(res) {
       assert.equal('/bar', res.headers['x-url']);
@@ -388,7 +388,7 @@ describe('"http" module', function() {
       { timeout: 100 }
     );
 
-    var opts = url.parse('http://nodejs.org');
+    var opts = url.parse('https://nodejs.org');
     opts.agent = agent;
 
     var req = http.get(opts);
@@ -412,7 +412,7 @@ describe('"http" module', function() {
       res.end();
     });
 
-    var info = url.parse('http://127.0.0.1:' + port + '/foo');
+    var info = url.parse('https://127.0.0.1:' + port + '/foo');
     info.agent = agent;
     http.get(info, function(res) {
       res.socket.emit('free');
@@ -434,7 +434,7 @@ describe('"http" module', function() {
         res.end();
       });
 
-      var info = url.parse('http://127.0.0.1:' + port + '/foo');
+      var info = url.parse('https://127.0.0.1:' + port + '/foo');
       info.agent = PassthroughAgent;
       http.get(info, function(res) {
         assert.equal('bar', res.headers['x-foo']);

@@ -1,12 +1,12 @@
-# from2 [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=hughskennedy&url=http://github.com/hughsk/from2&title=from2&description=hughsk/from2%20on%20GitHub&language=en_GB&tags=flattr,github,javascript&category=software)[![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges) #
+# from2 [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=hughskennedy&url=https://github.com/hughsk/from2&title=from2&description=hughsk/from2%20on%20GitHub&language=en_GB&tags=flattr,github,javascript&category=software)[![experimental](https://hughsk.github.io/stability-badges/dist/experimental.svg)](https://github.com/hughsk/stability-badges) #
 
 `from2` is a high-level module for creating readable streams that properly handle backpressure.
 
 Convience wrapper for
-[readable-stream](http://github.com/isaacs/readable-stream)'s `ReadableStream`
+[readable-stream](https://github.com/isaacs/readable-stream)'s `ReadableStream`
 base class, with an API lifted from
-[from](http://github.com/dominictarr/from) and
-[through2](http://github.com/rvagg/through2).
+[from](https://github.com/dominictarr/from) and
+[through2](https://github.com/rvagg/through2).
 
 ## Usage ##
 
@@ -64,4 +64,4 @@ can use to create new streams.
 
 ## License ##
 
-MIT. See [LICENSE.md](http://github.com/hughsk/from2/blob/master/LICENSE.md) for details.
+MIT. See [LICENSE.md](https://github.com/hughsk/from2/blob/master/LICENSE.md) for details.

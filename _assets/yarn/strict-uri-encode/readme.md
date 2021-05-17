@@ -1,6 +1,6 @@
 # strict-uri-encode [![Build Status](https://travis-ci.org/kevva/strict-uri-encode.svg?branch=master)](https://travis-ci.org/kevva/strict-uri-encode)
 
-> A stricter URI encode adhering to [RFC 3986](http://tools.ietf.org/html/rfc3986)
+> A stricter URI encode adhering to [RFC 3986](https://tools.ietf.org/html/rfc3986)
 
 
 ## Install
@@ -36,4 +36,4 @@ String to URI encode.
 
 ## License
 
-MIT © [Kevin Mårtensson](http://github.com/kevva)
+MIT © [Kevin Mårtensson](https://github.com/kevva)

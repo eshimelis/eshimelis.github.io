@@ -192,7 +192,7 @@ class XcodeSettings(object):
     settings = self.xcode_settings[configname]
     conditional_keys = [key for key in settings if key.endswith(']')]
     for key in conditional_keys:
-      # If you need more, speak up at http://crbug.com/122592
+      # If you need more, speak up at https://crbug.com/122592
       if key.endswith("[sdk=iphoneos*]"):
         if configname.endswith("iphoneos"):
           new_key = key.split("[")[0]
@@ -1462,7 +1462,7 @@ def GetMacInfoPlist(product_dir, xcode_settings, gyp_path_to_build_path):
 def _GetXcodeEnv(xcode_settings, built_products_dir, srcroot, configuration,
                 additional_settings=None):
   """Return the environment variables that Xcode would set. See
-  http://developer.apple.com/library/mac/#documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html#//apple_ref/doc/uid/TP40003931-CH3-SW153
+  https://developer.apple.com/library/mac/#documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html#//apple_ref/doc/uid/TP40003931-CH3-SW153
   for a full list.
 
   Args:

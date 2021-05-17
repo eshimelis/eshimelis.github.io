@@ -320,13 +320,13 @@ LDFLAGS.host ?=
 AR.host ?= %(AR.host)s
 
 # Define a dir function that can handle spaces.
-# http://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions
+# https://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions
 # "leading spaces cannot appear in the text of the first argument as written.
 # These characters can be put into the argument value by variable substitution."
 empty :=
 space := $(empty) $(empty)
 
-# http://stackoverflow.com/questions/1189781/using-make-dir-or-notdir-on-a-path-with-spaces
+# https://stackoverflow.com/questions/1189781/using-make-dir-or-notdir-on-a-path-with-spaces
 replace_spaces = $(subst $(space),""" + SPACE_REPLACEMENT + """,$1)
 unreplace_spaces = $(subst """ + SPACE_REPLACEMENT + """,$(space),$1)
 dirx = $(call unreplace_spaces,$(dir $(call replace_spaces,$1)))
@@ -603,7 +603,7 @@ def Target(filename):
 def EscapeShellArgument(s):
   """Quotes an argument so that it will be interpreted literally by a POSIX
      shell. Taken from
-     http://stackoverflow.com/questions/35817/whats-the-best-way-to-escape-ossystem-calls-in-python
+     https://stackoverflow.com/questions/35817/whats-the-best-way-to-escape-ossystem-calls-in-python
      """
   return "'" + s.replace("'", "'\\''") + "'"
 

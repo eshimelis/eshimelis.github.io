@@ -55,7 +55,7 @@ Auth.prototype.digest = function (method, path, authHeader) {
   //   - check challenge.stale (not necessarily?)
   //   - increase nc (not necessarily?)
   // For reference:
-  // http://tools.ietf.org/html/rfc2617#section-3
+  // https://tools.ietf.org/html/rfc2617#section-3
   // https://github.com/bagder/curl/blob/master/lib/http_digest.c
 
   var self = this

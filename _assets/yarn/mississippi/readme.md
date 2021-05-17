@@ -148,7 +148,7 @@ You can either choose to supply the writable and the readable at the time you cr
 var child = require('child_process')
 
 // @- tells it to read from stdin, --data-binary sets 'raw' binary mode
-var curl = child.spawn('curl -X POST --data-binary @- http://foo.com')
+var curl = child.spawn('curl -X POST --data-binary @- https://foo.com')
 
 // duplexCurl will write to stdin and read from stdout
 var duplexCurl = miss.duplex(curl.stdin, curl.stdout)

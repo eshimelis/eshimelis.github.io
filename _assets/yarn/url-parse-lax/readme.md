@@ -29,7 +29,7 @@ urlParseLax('sindresorhus.com');
 	query: null,
 	pathname: '/',
 	path: '/',
-	href: 'http://sindresorhus.com/'
+	href: 'https://sindresorhus.com/'
 }
 */
 
@@ -47,7 +47,7 @@ urlParseLax('[2001:db8::]:8000');
 	query: null,
 	pathname: '/',
 	path: '/',
-	href: 'http://[2001:db8::]:8000/'
+	href: 'https://[2001:db8::]:8000/'
 }
 */
 ```
@@ -97,4 +97,4 @@ url.parse('[2001:db8::]:8000');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

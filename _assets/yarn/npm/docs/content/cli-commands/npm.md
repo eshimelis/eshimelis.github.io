@@ -155,7 +155,7 @@ reproduction to report.
 
 ### Author
 
-[Isaac Z. Schlueter](http://blog.izs.me/) ::
+[Isaac Z. Schlueter](https://blog.izs.me/) ::
 [isaacs](https://github.com/isaacs/) ::
 [@izs](https://twitter.com/izs) ::
 <i@izs.me>

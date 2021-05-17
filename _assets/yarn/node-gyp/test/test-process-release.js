@@ -305,10 +305,10 @@ test('test process release - process.release ~ frankenstein@4.1.23', function (t
   })
 })
 
-test('test process release - process.release ~ frankenstein@4.1.23 --dist-url=http://foo.bar/baz/', function (t) {
+test('test process release - process.release ~ frankenstein@4.1.23 --dist-url=https://foo.bar/baz/', function (t) {
   t.plan(2)
 
-  var release = processRelease([], { opts: { 'dist-url': 'http://foo.bar/baz/' } }, 'v4.1.23', {
+  var release = processRelease([], { opts: { 'dist-url': 'https://foo.bar/baz/' } }, 'v4.1.23', {
     name: 'frankenstein',
     headersUrl: 'https://frankensteinjs.org/dist/v4.1.23/frankenstein-v4.1.23.tar.gz'
   })
@@ -319,13 +319,13 @@ test('test process release - process.release ~ frankenstein@4.1.23 --dist-url=ht
   t.deepEqual(release, {
     version: '4.1.23',
     name: 'frankenstein',
-    baseUrl: 'http://foo.bar/baz/v4.1.23/',
-    tarballUrl: 'http://foo.bar/baz/v4.1.23/frankenstein-v4.1.23-headers.tar.gz',
-    shasumsUrl: 'http://foo.bar/baz/v4.1.23/SHASUMS256.txt',
+    baseUrl: 'https://foo.bar/baz/v4.1.23/',
+    tarballUrl: 'https://foo.bar/baz/v4.1.23/frankenstein-v4.1.23-headers.tar.gz',
+    shasumsUrl: 'https://foo.bar/baz/v4.1.23/SHASUMS256.txt',
     versionDir: 'frankenstein-4.1.23',
-    ia32: { libUrl: 'http://foo.bar/baz/v4.1.23/win-x86/frankenstein.lib', libPath: 'win-x86/frankenstein.lib' },
-    x64: { libUrl: 'http://foo.bar/baz/v4.1.23/win-x64/frankenstein.lib', libPath: 'win-x64/frankenstein.lib' },
-    arm64: { libUrl: 'http://foo.bar/baz/v4.1.23/win-arm64/frankenstein.lib', libPath: 'win-arm64/frankenstein.lib' }
+    ia32: { libUrl: 'https://foo.bar/baz/v4.1.23/win-x86/frankenstein.lib', libPath: 'win-x86/frankenstein.lib' },
+    x64: { libUrl: 'https://foo.bar/baz/v4.1.23/win-x64/frankenstein.lib', libPath: 'win-x64/frankenstein.lib' },
+    arm64: { libUrl: 'https://foo.bar/baz/v4.1.23/win-arm64/frankenstein.lib', libPath: 'win-arm64/frankenstein.lib' }
   })
 })
 
@@ -408,7 +408,7 @@ test('test process release - process.release ~ node@4.0.0-rc.4 - bogus string pa
 test('test process release - NODEJS_ORG_MIRROR', function (t) {
   t.plan(2)
 
-  process.env.NODEJS_ORG_MIRROR = 'http://foo.bar'
+  process.env.NODEJS_ORG_MIRROR = 'https://foo.bar'
 
   var release = processRelease([], { opts: {} }, 'v4.1.23', {
     name: 'node',
@@ -421,13 +421,13 @@ test('test process release - NODEJS_ORG_MIRROR', function (t) {
   t.deepEqual(release, {
     version: '4.1.23',
     name: 'node',
-    baseUrl: 'http://foo.bar/v4.1.23/',
-    tarballUrl: 'http://foo.bar/v4.1.23/node-v4.1.23-headers.tar.gz',
-    shasumsUrl: 'http://foo.bar/v4.1.23/SHASUMS256.txt',
+    baseUrl: 'https://foo.bar/v4.1.23/',
+    tarballUrl: 'https://foo.bar/v4.1.23/node-v4.1.23-headers.tar.gz',
+    shasumsUrl: 'https://foo.bar/v4.1.23/SHASUMS256.txt',
     versionDir: '4.1.23',
-    ia32: { libUrl: 'http://foo.bar/v4.1.23/win-x86/node.lib', libPath: 'win-x86/node.lib' },
-    x64: { libUrl: 'http://foo.bar/v4.1.23/win-x64/node.lib', libPath: 'win-x64/node.lib' },
-    arm64: { libUrl: 'http://foo.bar/v4.1.23/win-arm64/node.lib', libPath: 'win-arm64/node.lib' }
+    ia32: { libUrl: 'https://foo.bar/v4.1.23/win-x86/node.lib', libPath: 'win-x86/node.lib' },
+    x64: { libUrl: 'https://foo.bar/v4.1.23/win-x64/node.lib', libPath: 'win-x64/node.lib' },
+    arm64: { libUrl: 'https://foo.bar/v4.1.23/win-arm64/node.lib', libPath: 'win-arm64/node.lib' }
   })
 
   delete process.env.NODEJS_ORG_MIRROR

@@ -151,7 +151,7 @@ FormData.prototype._lengthRetriever = function(value, callback) {
   } else if (value.hasOwnProperty('httpVersion')) {
     callback(null, +value.headers['content-length']);
 
-  // or request stream http://github.com/mikeal/request
+  // or request stream https://github.com/mikeal/request
   } else if (value.hasOwnProperty('httpModule')) {
     // wait till response come back
     value.on('response', function(response) {

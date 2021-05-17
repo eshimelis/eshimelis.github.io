@@ -739,7 +739,7 @@ def WriteTarget(namer, qualified_target, target_dicts, build_dir, config_to_use,
     SetVariableList(output, other_sources_name, other_sources)
 
   # CMake gets upset when executable targets provide no sources.
-  # http://www.cmake.org/pipermail/cmake/2010-July/038461.html
+  # https://www.cmake.org/pipermail/cmake/2010-July/038461.html
   dummy_sources_name = None
   has_sources = (s_sources_name or
                  c_sources_name or
@@ -914,7 +914,7 @@ def WriteTarget(namer, qualified_target, target_dicts, build_dir, config_to_use,
                           defines,
                           ';')
 
-    # Compile Flags - http://www.cmake.org/Bug/view.php?id=6493
+    # Compile Flags - https://www.cmake.org/Bug/view.php?id=6493
     # CMake currently does not have target C and CXX flags.
     # So, instead of doing...
 
@@ -1123,7 +1123,7 @@ def GenerateOutputForConfig(target_list, target_dicts, data,
     SetVariable(output, 'CMAKE_CXX_COMPILER', cxx)
 
   # The following appears to be as-yet undocumented.
-  # http://public.kitware.com/Bug/view.php?id=8392
+  # https://public.kitware.com/Bug/view.php?id=8392
   output.write('enable_language(ASM)\n')
   # ASM-ATT does not support .S files.
   # output.write('enable_language(ASM-ATT)\n')

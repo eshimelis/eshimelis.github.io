@@ -25,7 +25,7 @@ def QuoteForRspFile(arg):
   """Quote a command line argument so that it appears as one argument when
   processed via cmd.exe and parsed by CommandLineToArgvW (as is typical for
   Windows programs)."""
-  # See http://goo.gl/cuFbX and http://goo.gl/dhPnp including the comment
+  # See https://goo.gl/cuFbX and https://goo.gl/dhPnp including the comment
   # threads. This is actually the quoting rules for CommandLineToArgvW, not
   # for the shell, because the shell doesn't do anything in Windows. This
   # works more or less because most programs (including the compiler, etc.)

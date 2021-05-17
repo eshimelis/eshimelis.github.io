@@ -2,7 +2,7 @@
 
 var ToPrimitive = require('./ToPrimitive');
 
-// http://262.ecma-international.org/5.1/#sec-9.3
+// https://262.ecma-international.org/5.1/#sec-9.3
 
 module.exports = function ToNumber(value) {
 	var prim = ToPrimitive(value, Number);

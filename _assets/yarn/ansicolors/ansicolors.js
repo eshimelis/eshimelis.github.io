@@ -1,4 +1,4 @@
-// ColorCodes explained: http://www.termsys.demon.co.uk/vtansi.htm
+// ColorCodes explained: https://www.termsys.demon.co.uk/vtansi.htm
 'use strict';
 
 var colorNums = {

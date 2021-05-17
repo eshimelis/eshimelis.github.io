@@ -2,8 +2,8 @@
 
 **encoding** is a simple wrapper around [iconv-lite](https://github.com/ashtuchkin/iconv-lite/) to convert strings from one encoding to another.
 
-[![Build Status](https://secure.travis-ci.org/andris9/encoding.svg)](http://travis-ci.org/andris9/Nodemailer)
-[![npm version](https://badge.fury.io/js/encoding.svg)](http://badge.fury.io/js/encoding)
+[![Build Status](https://secure.travis-ci.org/andris9/encoding.svg)](https://travis-ci.org/andris9/Nodemailer)
+[![npm version](https://badge.fury.io/js/encoding.svg)](https://badge.fury.io/js/encoding)
 
 Initially _encoding_ was a wrapper around _node-iconv_ (main) and _iconv-lite_ (fallback) and was used as the encoding layer for Nodemailer/mailparser. Somehow it also ended up as a dependency for a bunch of other project, none of these actually using _node-iconv_. The loading mechanics caused issues for front-end projects and Nodemailer/malparser had moved on, so _node-iconv_ was removed.
 

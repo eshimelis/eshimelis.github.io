@@ -7,7 +7,7 @@ If one of the streams closes/errors all streams in the pipeline will be destroye
 npm install pumpify
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/pumpify.svg?style=flat)](http://travis-ci.org/mafintosh/pumpify)
+[![build status](https://img.shields.io/travis/mafintosh/pumpify.svg?style=flat)](https://travis-ci.org/mafintosh/pumpify)
 
 ## Usage
 

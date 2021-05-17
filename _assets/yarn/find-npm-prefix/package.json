@@ -7,7 +7,7 @@
     "test": "standard && tap --100 test"
   },
   "keywords": [],
-  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "author": "Rebecca Turner <me@re-becca.org> (https://re-becca.org/)",
   "license": "ISC",
   "devDependencies": {
     "require-inject": "^1.4.2",

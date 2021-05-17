@@ -35,7 +35,7 @@ var proxy = process.env.socks_proxy || 'socks://127.0.0.1:9050';
 console.log('using proxy server %j', proxy);
 
 // HTTP endpoint for the proxy to connect to
-var endpoint = process.argv[2] || 'http://nodejs.org/api/';
+var endpoint = process.argv[2] || 'https://nodejs.org/api/';
 console.log('attempting to GET %j', endpoint);
 var opts = url.parse(endpoint);
 

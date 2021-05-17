@@ -24,7 +24,7 @@
     "polyfill",
     "shim"
   ],
-  "author": "Javier Blanco <http://jbgutierrez.info>",
+  "author": "Javier Blanco <https://jbgutierrez.info>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jbgutierrez/path-parse/issues"

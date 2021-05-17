@@ -139,7 +139,7 @@ colors.enable();
 colors.disable();
 ```
 
-## Console.log [string substitution](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+## Console.log [string substitution](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)
 
 ```js
 var name = 'Marak';

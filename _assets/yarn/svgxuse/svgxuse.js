@@ -75,7 +75,7 @@
             }
             return Request;
         };
-        var xlinkNS = "http://www.w3.org/1999/xlink";
+        var xlinkNS = "https://www.w3.org/1999/xlink";
         checkUseElems = function () {
             var base;
             var bcr;

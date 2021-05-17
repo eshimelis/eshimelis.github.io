@@ -99,7 +99,7 @@ LineStream.prototype._transform = function(chunk, encoding, done) {
   }
   this._chunkEncoding = encoding;
   
-  // see: http://www.unicode.org/reports/tr18/#Line_Boundaries
+  // see: https://www.unicode.org/reports/tr18/#Line_Boundaries
   var lines = chunk.split(/\r\n|[\n\v\f\r\x85\u2028\u2029]/g);
   
   // don't split CRLF which spans chunks

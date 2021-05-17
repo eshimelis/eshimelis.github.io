@@ -6,7 +6,7 @@
   "version": "4.0.4",
   "description": "Library for updating an npmjs.com profile",
   "keywords": [],
-  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "author": "Rebecca Turner <me@re-becca.org> (https://re-becca.org/)",
   "license": "ISC",
   "dependencies": {
     "aproba": "^1.1.2 || 2",

@@ -1,6 +1,6 @@
 /**
  * JSONSchema Validator - Validates JavaScript objects using JSON Schemas
- *	(http://www.json.com/json-schema-proposal/)
+ *	(https://www.json.com/json-schema-proposal/)
  *
  * Copyright (c) 2007 Kris Zyp SitePen (www.sitepen.com)
  * Licensed under the MIT (MIT-LICENSE.txt) license.

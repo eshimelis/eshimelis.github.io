@@ -14,7 +14,7 @@
     "npm-bundled": "^1.0.1",
     "npm-normalize-package-bin": "^1.0.1"
   },
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "license": "ISC",
   "files": [
     "index.js"

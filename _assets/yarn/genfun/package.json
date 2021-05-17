@@ -1,7 +1,7 @@
 {
   "name": "genfun",
   "description": "Fast, prototype-friendly multimethods.",
-  "homepage": "http://github.com/zkat/genfun",
+  "homepage": "https://github.com/zkat/genfun",
   "keywords": [
     "clos",
     "functional",

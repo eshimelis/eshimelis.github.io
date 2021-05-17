@@ -1,7 +1,7 @@
 # URI.js
 
-URI.js is an [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt) compliant, scheme extendable URI parsing/validating/resolving library for all JavaScript environments (browsers, Node.js, etc).
-It is also compliant with the IRI ([RFC 3987](http://www.ietf.org/rfc/rfc3987.txt)), IDNA ([RFC 5890](http://www.ietf.org/rfc/rfc5890.txt)), IPv6 Address ([RFC 5952](http://www.ietf.org/rfc/rfc5952.txt)), IPv6 Zone Identifier ([RFC 6874](http://www.ietf.org/rfc/rfc6874.txt)) specifications.
+URI.js is an [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) compliant, scheme extendable URI parsing/validating/resolving library for all JavaScript environments (browsers, Node.js, etc).
+It is also compliant with the IRI ([RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)), IDNA ([RFC 5890](https://www.ietf.org/rfc/rfc5890.txt)), IPv6 Address ([RFC 5952](https://www.ietf.org/rfc/rfc5952.txt)), IPv6 Zone Identifier ([RFC 6874](https://www.ietf.org/rfc/rfc6874.txt)) specifications.
 
 URI.js has an extensive test suite, and works in all (Node.js, web) environments. It weighs in at 6.4kb (gzipped, 17kb deflated).
 
@@ -23,7 +23,7 @@ URI.js has an extensive test suite, and works in all (Node.js, web) environments
 
 ### Serializing
 
-	URI.serialize({scheme : "http", host : "example.com", fragment : "footer"}) === "http://example.com/#footer"
+	URI.serialize({scheme : "http", host : "example.com", fragment : "footer"}) === "https://example.com/#footer"
 
 ### Resolving
 
@@ -31,7 +31,7 @@ URI.js has an extensive test suite, and works in all (Node.js, web) environments
 
 ### Normalizing
 
-	URI.normalize("HTTP://ABC.com:80/%7Esmith/home.html") === "http://abc.com/~smith/home.html"
+	URI.normalize("https://ABC.com:80/%7Esmith/home.html") === "https://abc.com/~smith/home.html"
 
 ### Comparison
 
@@ -55,9 +55,9 @@ URI.js has an extensive test suite, and works in all (Node.js, web) environments
 ### IRI Support
 
 	//convert IRI to URI
-	URI.serialize(URI.parse("http://examplé.org/rosé")) === "http://xn--exampl-gva.org/ros%C3%A9"
+	URI.serialize(URI.parse("https://examplé.org/rosé")) === "https://xn--exampl-gva.org/ros%C3%A9"
 	//convert URI to IRI
-	URI.serialize(URI.parse("http://xn--exampl-gva.org/ros%C3%A9"), {iri:true}) === "http://examplé.org/rosé"
+	URI.serialize(URI.parse("https://xn--exampl-gva.org/ros%C3%A9"), {iri:true}) === "https://examplé.org/rosé"
 
 ### Options
 
@@ -81,31 +81,31 @@ All of the above functions can accept an additional options argument that is an 
 
 *	`iri` (boolean, false)
 
-	If set to `true`, the serializer will unescape non-ASCII characters as per [RFC 3987](http://www.ietf.org/rfc/rfc3987.txt).
+	If set to `true`, the serializer will unescape non-ASCII characters as per [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 
 *	`unicodeSupport` (boolean, false)
 
-	If set to `true`, the parser will unescape non-ASCII characters in the parsed output as per [RFC 3987](http://www.ietf.org/rfc/rfc3987.txt).
+	If set to `true`, the parser will unescape non-ASCII characters in the parsed output as per [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 
 *	`domainHost` (boolean, false)
 
-	If set to `true`, the library will treat the `host` component as a domain name, and convert IDNs (International Domain Names) as per [RFC 5891](http://www.ietf.org/rfc/rfc5891.txt).
+	If set to `true`, the library will treat the `host` component as a domain name, and convert IDNs (International Domain Names) as per [RFC 5891](https://www.ietf.org/rfc/rfc5891.txt).
 
 ## Scheme Extendable
 
-URI.js supports inserting custom [scheme](http://en.wikipedia.org/wiki/URI_scheme) dependent processing rules. Currently, URI.js has built in support for the following schemes:
+URI.js supports inserting custom [scheme](https://en.wikipedia.org/wiki/URI_scheme) dependent processing rules. Currently, URI.js has built in support for the following schemes:
 
-*	http \[[RFC 2616](http://www.ietf.org/rfc/rfc2616.txt)\]
-*	https \[[RFC 2818](http://www.ietf.org/rfc/rfc2818.txt)\]
-*	ws \[[RFC 6455](http://www.ietf.org/rfc/rfc6455.txt)\]
-*	wss \[[RFC 6455](http://www.ietf.org/rfc/rfc6455.txt)\]
-*	mailto \[[RFC 6068](http://www.ietf.org/rfc/rfc6068.txt)\]
-*	urn \[[RFC 2141](http://www.ietf.org/rfc/rfc2141.txt)\]
-*	urn:uuid \[[RFC 4122](http://www.ietf.org/rfc/rfc4122.txt)\]
+*	http \[[RFC 2616](https://www.ietf.org/rfc/rfc2616.txt)\]
+*	https \[[RFC 2818](https://www.ietf.org/rfc/rfc2818.txt)\]
+*	ws \[[RFC 6455](https://www.ietf.org/rfc/rfc6455.txt)\]
+*	wss \[[RFC 6455](https://www.ietf.org/rfc/rfc6455.txt)\]
+*	mailto \[[RFC 6068](https://www.ietf.org/rfc/rfc6068.txt)\]
+*	urn \[[RFC 2141](https://www.ietf.org/rfc/rfc2141.txt)\]
+*	urn:uuid \[[RFC 4122](https://www.ietf.org/rfc/rfc4122.txt)\]
 
 ### HTTP/HTTPS Support
 
-	URI.equal("HTTP://ABC.COM:80", "http://abc.com/") === true
+	URI.equal("https://ABC.COM:80", "https://abc.com/") === true
 	URI.equal("https://abc.com", "HTTPS://ABC.COM:443/") === true
 
 ### WS/WSS Support

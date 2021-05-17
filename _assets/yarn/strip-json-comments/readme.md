@@ -61,4 +61,4 @@ Replace comments with whitespace instead of stripping them entirely.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

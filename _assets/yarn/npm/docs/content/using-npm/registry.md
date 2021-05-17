@@ -78,7 +78,7 @@ simply override the `--registry` option for that `publish` command.
 
 Set `"private": true` in your package.json to prevent it from being
 published at all, or
-`"publishConfig":{"registry":"http://my-internal-registry.local"}`
+`"publishConfig":{"registry":"https://my-internal-registry.local"}`
 to force it to be published only to your internal registry.
 
 See [`package.json`](/configuring-npm/package-json) for more info on what goes in the package.json file.

@@ -356,11 +356,11 @@ fetch('https://flaky.site.com', {
   }
 })
 
-fetch('http://reliable.site.com', {
+fetch('https://reliable.site.com', {
   retry: false
 })
 
-fetch('http://one-more.site.com', {
+fetch('https://one-more.site.com', {
   retry: 3
 })
 ```

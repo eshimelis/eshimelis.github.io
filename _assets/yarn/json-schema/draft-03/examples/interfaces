@@ -1,5 +1,5 @@
 {
-    "extends":"http://json-schema.org/hyper-schema",
+    "extends":"https://json-schema.org/hyper-schema",
     "description":"A schema for schema interface definitions that describe programmatic class structures using JSON schema syntax",
     "properties":{
         "methods":{

@@ -39,4 +39,4 @@ The Windows specific version.
 
 ## License
 
-MIT © [Javier Blanco](http://jbgutierrez.info)
+MIT © [Javier Blanco](https://jbgutierrez.info)

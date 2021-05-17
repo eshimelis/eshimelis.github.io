@@ -47,7 +47,7 @@
                        python-continuation-offset))))))
 
 (define-derived-mode gyp-mode python-mode "Gyp"
-  "Major mode for editing .gyp files. See http://code.google.com/p/gyp/"
+  "Major mode for editing .gyp files. See https://code.google.com/p/gyp/"
   ;; gyp-parse-history is a stack of (POSITION . PARSE-STATE) tuples,
   ;; with greater positions at the top of the stack. PARSE-STATE
   ;; is a list of section symbols (see gyp-section-name and gyp-parse-to)
@@ -229,7 +229,7 @@
                                   (list (1+ string-start) (1- (point)))))
           t))))
 
-;;; Please see http://code.google.com/p/gyp/wiki/GypLanguageSpecification for
+;;; Please see https://code.google.com/p/gyp/wiki/GypLanguageSpecification for
 ;;; canonical list of keywords.
 (defun gyp-add-font-lock-keywords ()
   "Add gyp-mode keywords to font-lock mechanism."

@@ -1,6 +1,6 @@
 # parallel-transform
 
-[Transform stream](http://nodejs.org/api/stream.html#stream_class_stream_transform_1) for Node.js that allows you to run your transforms
+[Transform stream](https://nodejs.org/api/stream.html#stream_class_stream_transform_1) for Node.js that allows you to run your transforms
 in parallel without changing the order of the output.
 
 	npm install parallel-transform

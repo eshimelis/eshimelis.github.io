@@ -28,7 +28,7 @@ describe('auth-token', function () {
   })
 
   it('should return undefined if no auth token is given for registry', function (done) {
-    fs.writeFile(npmRcPath, 'registry=http://registry.npmjs.eu/', function (err) {
+    fs.writeFile(npmRcPath, 'registry=https://registry.npmjs.eu/', function (err) {
       var getAuthToken = requireUncached('../index')
       assert(!err, err)
       assert(!getAuthToken())
@@ -40,7 +40,7 @@ describe('auth-token', function () {
     it('should return auth token if it is defined in the legacy way via the `_auth` key', function (done) {
       var content = [
         '_auth=foobar',
-        'registry=http://registry.foobar.eu/'
+        'registry=https://registry.foobar.eu/'
       ].join('\n')
 
       fs.writeFile(npmRcPath, content, function (err) {
@@ -55,7 +55,7 @@ describe('auth-token', function () {
       var environmentVariable = '__REGISTRY_AUTH_TOKEN_NPM_TOKEN__'
       var content = [
         '_auth=${' + environmentVariable + '}',
-        'registry=http://registry.foobar.eu/'
+        'registry=https://registry.foobar.eu/'
       ].join('\n')
 
       process.env[environmentVariable] = 'foobar'
@@ -73,7 +73,7 @@ describe('auth-token', function () {
       var environmentVariable = '__REGISTRY_AUTH_TOKEN_NPM_TOKEN__'
       var content = [
         '_auth=$' + environmentVariable,
-        'registry=http://registry.foobar.eu/'
+        'registry=https://registry.foobar.eu/'
       ].join('\n')
 
       process.env[environmentVariable] = 'foobar'
@@ -91,7 +91,7 @@ describe('auth-token', function () {
   describe('bearer token', function () {
     it('should return auth token if registry is defined', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
         '//registry.foobar.eu/:_authToken=foobar', ''
       ].join('\n')
 
@@ -105,7 +105,7 @@ describe('auth-token', function () {
 
     it('should use npmrc passed in', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
         '//registry.foobar.eu/:_authToken=foobar', ''
       ].join('\n')
 
@@ -113,7 +113,7 @@ describe('auth-token', function () {
         var getAuthToken = requireUncached('../index')
         assert(!err, err)
         const npmrc = {
-          'registry': 'http://registry.foobar.eu/',
+          'registry': 'https://registry.foobar.eu/',
           '//registry.foobar.eu/:_authToken': 'qar'
         }
         assert.deepEqual(getAuthToken({npmrc: npmrc}), {token: 'qar', type: 'Bearer'})
@@ -123,7 +123,7 @@ describe('auth-token', function () {
 
     it('should return auth token if registry url has port specified', function (done) {
       var content = [
-        'registry=http://localhost:8770/',
+        'registry=https://localhost:8770/',
         // before the patch this token was selected.
         '//localhost/:_authToken=ohno',
         '//localhost:8770/:_authToken=beepboop', ''
@@ -140,7 +140,7 @@ describe('auth-token', function () {
     it('should return auth token defined by reference to an environment variable (with curly braces)', function (done) {
       var environmentVariable = '__REGISTRY_AUTH_TOKEN_NPM_TOKEN__'
       var content = [
-        'registry=http://registry.foobar.cc/',
+        'registry=https://registry.foobar.cc/',
         '//registry.foobar.cc/:_authToken=${' + environmentVariable + '}', ''
       ].join('\n')
       process.env[environmentVariable] = 'foobar'
@@ -157,7 +157,7 @@ describe('auth-token', function () {
     it('should return auth token defined by reference to an environment variable (without curly braces)', function (done) {
       var environmentVariable = '__REGISTRY_AUTH_TOKEN_NPM_TOKEN__'
       var content = [
-        'registry=http://registry.foobar.cc/',
+        'registry=https://registry.foobar.cc/',
         '//registry.foobar.cc/:_authToken=$' + environmentVariable, ''
       ].join('\n')
       process.env[environmentVariable] = 'foobar'
@@ -173,7 +173,7 @@ describe('auth-token', function () {
 
     it('should try with and without a slash at the end of registry url', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu',
+        'registry=https://registry.foobar.eu',
         '//registry.foobar.eu:_authToken=barbaz', ''
       ].join('\n')
 
@@ -215,8 +215,8 @@ describe('auth-token', function () {
         assert.deepEqual(getAuthToken('https://registry.blah.edu/foo/bar/baz', opts), {token: 'recurseNoLevel', type: 'Bearer'})
         assert.deepEqual(getAuthToken('https://registry.blah.org/foo/bar/baz', opts), {token: 'recurseExactlyOneLevel', type: 'Bearer'})
         assert.deepEqual(getAuthToken('https://registry.blah.com/foo/bar/baz', opts), {token: 'whatev', type: 'Bearer'})
-        assert.deepEqual(getAuthToken('http://registry.blah.eu/what/ever', opts), {token: 'yep', type: 'Bearer'})
-        assert.deepEqual(getAuthToken('http://registry.blah.eu//what/ever', opts), undefined, 'does not hang')
+        assert.deepEqual(getAuthToken('https://registry.blah.eu/what/ever', opts), {token: 'yep', type: 'Bearer'})
+        assert.deepEqual(getAuthToken('https://registry.blah.eu//what/ever', opts), undefined, 'does not hang')
         assert.equal(getAuthToken('//some.registry', opts), undef)
         done()
       })
@@ -233,8 +233,8 @@ describe('auth-token', function () {
 
     it('should prefer bearer token over basic token', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu/',
-        'registry=http://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
         '//registry.foobar.eu/:_authToken=bearerToken',
         '//registry.foobar.eu/:_password=' + encodeBase64('foobar'),
         '//registry.foobar.eu/:username=foobar', ''
@@ -264,7 +264,7 @@ describe('auth-token', function () {
   describe('basic token', function () {
     it('should return undefined if password or username are missing', function (done, undef) {
       var content = [
-        'registry=http://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
         '//registry.foobar.eu/:_password=' + encodeBase64('foobar'),
         '//registry.foobar.com/:username=foobar', ''
       ].join('\n')
@@ -280,7 +280,7 @@ describe('auth-token', function () {
 
     it('should return basic token if username and password are defined', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu/',
+        'registry=https://registry.foobar.eu/',
         '//registry.foobar.eu/:_password=' + encodeBase64('foobar'),
         '//registry.foobar.eu/:username=foobar', ''
       ].join('\n')
@@ -302,7 +302,7 @@ describe('auth-token', function () {
 
     it('should return basic token if registry url has port specified', function (done) {
       var content = [
-        'registry=http://localhost:8770/',
+        'registry=https://localhost:8770/',
         // before the patch this token was selected.
         '//localhost/:_authToken=ohno',
         '//localhost:8770/:_password=' + encodeBase64('foobar'),
@@ -327,7 +327,7 @@ describe('auth-token', function () {
     it('should return password defined by reference to an environment variable (with curly braces)', function (done) {
       var environmentVariable = '__REGISTRY_PASSWORD__'
       var content = [
-        'registry=http://registry.foobar.cc/',
+        'registry=https://registry.foobar.cc/',
         '//registry.foobar.cc/:username=username',
         '//registry.foobar.cc/:_password=${' + environmentVariable + '}', ''
       ].join('\n')
@@ -352,7 +352,7 @@ describe('auth-token', function () {
     it('should return password defined by reference to an environment variable (without curly braces)', function (done) {
       var environmentVariable = '__REGISTRY_PASSWORD__'
       var content = [
-        'registry=http://registry.foobar.cc/',
+        'registry=https://registry.foobar.cc/',
         '//registry.foobar.cc/:username=username',
         '//registry.foobar.cc/:_password=$' + environmentVariable, ''
       ].join('\n')
@@ -376,7 +376,7 @@ describe('auth-token', function () {
 
     it('should try with and without a slash at the end of registry url', function (done) {
       var content = [
-        'registry=http://registry.foobar.eu',
+        'registry=https://registry.foobar.eu',
         '//registry.foobar.eu:_password=' + encodeBase64('barbay'),
         '//registry.foobar.eu:username=barbaz', ''
       ].join('\n')

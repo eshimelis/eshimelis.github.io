@@ -4,7 +4,7 @@
   "description": "Port of C's wcwidth() and wcswidth()",
   "author": "Tim Oxley",
   "contributors": [
-    "Woong Jun <woong.jun@gmail.com> (http://code.woong.org/)"
+    "Woong Jun <woong.jun@gmail.com> (https://code.woong.org/)"
   ],
   "main": "index.js",
   "dependencies": {

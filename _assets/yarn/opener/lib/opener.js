@@ -12,7 +12,7 @@ module.exports = function opener(args, options, callback) {
         platform = "win32";
     }
 
-    // http://stackoverflow.com/q/1480971/3191, but see below for Windows.
+    // https://stackoverflow.com/q/1480971/3191, but see below for Windows.
     var command;
     switch (platform) {
         case "win32": {
@@ -53,7 +53,7 @@ module.exports = function opener(args, options, callback) {
         // responsibility to "cmd /c", which has that logic built in.
         //
         // Furthermore, if "cmd /c" double-quoted the first parameter, then "start" will interpret it as a window title,
-        // so we need to add a dummy empty-string window title: http://stackoverflow.com/a/154090/3191
+        // so we need to add a dummy empty-string window title: https://stackoverflow.com/a/154090/3191
         //
         // Additionally, on Windows ampersand and caret need to be escaped when passed to "start"
         args = args.map(function (value) {

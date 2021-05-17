@@ -459,7 +459,7 @@ assert.equal(qs.stringify({ a: 'b c' }, { format : 'RFC1738' }), 'a=b+c');
 ```
 
 [1]: https://npmjs.org/package/qs
-[2]: http://versionbadg.es/ljharb/qs.svg
+[2]: https://versionbadg.es/ljharb/qs.svg
 [3]: https://api.travis-ci.org/ljharb/qs.svg
 [4]: https://travis-ci.org/ljharb/qs
 [5]: https://david-dm.org/ljharb/qs.svg
@@ -469,7 +469,7 @@ assert.equal(qs.stringify({ a: 'b c' }, { format : 'RFC1738' }), 'a=b+c');
 [9]: https://ci.testling.com/ljharb/qs.png
 [10]: https://ci.testling.com/ljharb/qs
 [11]: https://nodei.co/npm/qs.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/qs.svg
+[license-image]: https://img.shields.io/npm/l/qs.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/qs.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=qs
+[downloads-image]: https://img.shields.io/npm/dm/qs.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=qs

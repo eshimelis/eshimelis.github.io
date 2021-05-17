@@ -46,7 +46,7 @@ function generateBase (httpMethod, base_uri, params) {
   // https://dev.twitter.com/docs/auth/creating-signature
 
   // Parameter normalization
-  // http://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
+  // https://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
   var normalized = map(params)
   // 1.  First, the name and value of each parameter are encoded
   .map(function (p) {

@@ -1,7 +1,7 @@
 TweetNaCl.js
 ============
 
-Port of [TweetNaCl](http://tweetnacl.cr.yp.to) / [NaCl](http://nacl.cr.yp.to/)
+Port of [TweetNaCl](https://tweetnacl.cr.yp.to) / [NaCl](https://nacl.cr.yp.to/)
 to JavaScript for modern browsers and Node.js. Public domain.
 
 [![Build Status](https://travis-ci.org/dchest/tweetnacl-js.svg?branch=master)
@@ -54,7 +54,7 @@ Installation
 
 You can install TweetNaCl.js via a package manager:
 
-[Bower](http://bower.io):
+[Bower](https://bower.io):
 
     $ bower install tweetnacl
 
@@ -206,7 +206,7 @@ Length of group element in bytes.
 
 ### Signatures
 
-Implements [ed25519](http://ed25519.cr.yp.to).
+Implements [ed25519](https://ed25519.cr.yp.to).
 
 #### nacl.sign.keyPair()
 
@@ -446,7 +446,7 @@ Third-party libraries based on TweetNaCl.js
 
 * [forward-secrecy](https://github.com/alax/forward-secrecy) — Axolotl ratchet implementation
 * [nacl-stream](https://github.com/dchest/nacl-stream-js) - streaming encryption
-* [tweetnacl-auth-js](https://github.com/dchest/tweetnacl-auth-js) — implementation of [`crypto_auth`](http://nacl.cr.yp.to/auth.html)
+* [tweetnacl-auth-js](https://github.com/dchest/tweetnacl-auth-js) — implementation of [`crypto_auth`](https://nacl.cr.yp.to/auth.html)
 * [chloride](https://github.com/dominictarr/chloride) - unified API for various NaCl modules
 
 
@@ -455,5 +455,5 @@ Who uses it
 
 Some notable users of TweetNaCl.js:
 
-* [miniLock](http://minilock.io/)
+* [miniLock](https://minilock.io/)
 * [Stellar](https://www.stellar.org/)

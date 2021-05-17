@@ -6,7 +6,7 @@ Returns the next buffer/object in a stream's readable queue
 npm install stream-shift
 ```
 
-[![build status](http://img.shields.io/travis/mafintosh/stream-shift.svg?style=flat)](http://travis-ci.org/mafintosh/stream-shift)
+[![build status](https://img.shields.io/travis/mafintosh/stream-shift.svg?style=flat)](https://travis-ci.org/mafintosh/stream-shift)
 
 ## Usage
 

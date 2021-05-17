@@ -49,4 +49,4 @@ Possible values: `'major'`, `'minor'`, `'patch'`, `'prerelease'`, `'build'`, `nu
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -5,7 +5,7 @@
 	There is not much documentation available regarding the format
 	of .pbfilespec files. As a starting point, see for instance the
 	outdated documentation at:
-	http://maxao.free.fr/xcode-plugin-interface/specifications.html
+	https://maxao.free.fr/xcode-plugin-interface/specifications.html
 	and the files in:
 	/Developer/Library/PrivateFrameworks/XcodeEdit.framework/Versions/A/Resources/
 

@@ -13,7 +13,7 @@
   ],
   "version": "5.1.1",
   "installVersion": 9,
-  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (https://tootallnate.net)",
   "repository": {
     "type": "git",
     "url": "git://github.com/nodejs/node-gyp.git"

@@ -3,14 +3,14 @@
 //
 // Copyright (c) 2009 Kazuhiko Arase
 //
-// URL: http://www.d-project.com/
+// URL: https://www.d-project.com/
 //
 // Licensed under the MIT license:
-//   http://www.opensource.org/licenses/mit-license.php
+//   https://www.opensource.org/licenses/mit-license.php
 //
 // The word "QR Code" is registered trademark of 
 // DENSO WAVE INCORPORATED
-//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//   https://www.denso-wave.com/qrcode/faqpatent-e.html
 //
 //---------------------------------------------------------------------
 // Modified to work in node for this project (and some refactoring)

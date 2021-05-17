@@ -1,5 +1,5 @@
 {
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "name": "tar",
   "description": "tar for node",
   "version": "4.4.13",

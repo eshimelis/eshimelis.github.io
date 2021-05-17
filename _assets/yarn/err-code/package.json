@@ -22,7 +22,7 @@
     "properties",
     "property"
   ],
-  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+  "author": "IndigoUnited <hello@indigounited.com> (https://indigounited.com)",
   "license": "MIT",
   "devDependencies": {
     "@satazor/eslint-config": "^3.0.0",

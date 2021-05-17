@@ -1,12 +1,12 @@
 {
-	"$schema" : "http://json-schema.org/draft-03/hyper-schema#",
-	"extends" : {"$ref" : "http://json-schema.org/draft-03/schema#"},
-	"id" : "http://json-schema.org/draft-03/hyper-schema#",
+	"$schema" : "https://json-schema.org/draft-03/hyper-schema#",
+	"extends" : {"$ref" : "https://json-schema.org/draft-03/schema#"},
+	"id" : "https://json-schema.org/draft-03/hyper-schema#",
 
 	"properties" : {
 		"links" : {
 			"type" : "array",
-			"items" : {"$ref" : "http://json-schema.org/draft-03/links#"}
+			"items" : {"$ref" : "https://json-schema.org/draft-03/links#"}
 		},
 
 		"fragmentResolution" : {

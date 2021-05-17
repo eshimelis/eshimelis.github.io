@@ -112,5 +112,5 @@ conf.all = {
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)<br>
+[BSD license](https://opensource.org/licenses/bsd-license.php)<br>
 Copyright Google

@@ -6,9 +6,9 @@ like any other function, but that automatically dispatch methods based on the
 combination of arguments passed to it when it's called, also known as multiple
 dispatch.
 
-It was inspired by [Slate](http://slatelanguage.org/),
-[CLOS](http://en.wikipedia.org/wiki/CLOS) and
-[Sheeple](http://github.com/zkat/sheeple).
+It was inspired by [Slate](https://slatelanguage.org/),
+[CLOS](https://en.wikipedia.org/wiki/CLOS) and
+[Sheeple](https://github.com/zkat/sheeple).
 
 ## Install
 
@@ -205,7 +205,7 @@ Users may override this behavior for particular `genfun` and `this`
 combinations, although `args` will always be an `Array`. The value returned from
 the dispatched `noApplicableMethod` method will be returned by `genfun` as if it
 had been its original method. Comparable to [Ruby's
-`method_missing`](http://ruby-doc.org/core-2.1.0/BasicObject.html#method-i-method_missing).
+`method_missing`](https://ruby-doc.org/core-2.1.0/BasicObject.html#method-i-method_missing).
 
 ### Performance
 

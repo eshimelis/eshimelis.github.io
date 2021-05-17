@@ -1,5 +1,5 @@
 {
-	"description" : "An Address following the convention of http://microformats.org/wiki/hcard",
+	"description" : "An Address following the convention of https://microformats.org/wiki/hcard",
 	"type" : "object",
 	"properties" : {
 		"post-office-box" : { "type" : "string" },

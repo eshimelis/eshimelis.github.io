@@ -1,6 +1,6 @@
 {
-	"$schema" : "http://json-schema.org/draft-03/hyper-schema#",
-	"id" : "http://json-schema.org/draft-03/links#",
+	"$schema" : "https://json-schema.org/draft-03/hyper-schema#",
+	"id" : "https://json-schema.org/draft-03/links#",
 	"type" : "object",
 	
 	"properties" : {
@@ -15,7 +15,7 @@
 			"required" : true
 		},
 		
-		"targetSchema" : {"$ref" : "http://json-schema.org/draft-03/hyper-schema#"},
+		"targetSchema" : {"$ref" : "https://json-schema.org/draft-03/hyper-schema#"},
 		
 		"method" : {
 			"type" : "string",
@@ -29,7 +29,7 @@
 		
 		"properties" : {
 			"type" : "object",
-			"additionalProperties" : {"$ref" : "http://json-schema.org/draft-03/hyper-schema#"}
+			"additionalProperties" : {"$ref" : "https://json-schema.org/draft-03/hyper-schema#"}
 		}
 	}
 }

@@ -15,7 +15,7 @@ const result = meant('foa', ['foo', 'bar', 'baz'])
 
 ## Installation
 
-Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
+Download node at [nodejs.org](https://nodejs.org) and install it, if you haven't already.
 
 ```sh
 npm install meant --save

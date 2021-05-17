@@ -1,6 +1,6 @@
 {
 	"name": "extend",
-	"author": "Stefan Thomas <justmoon@members.fsf.org> (http://www.justmoon.net)",
+	"author": "Stefan Thomas <justmoon@members.fsf.org> (https://www.justmoon.net)",
 	"version": "3.0.2",
 	"description": "Port of jQuery.extend for node.js and the browser",
 	"main": "index",

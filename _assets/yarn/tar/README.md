@@ -342,7 +342,7 @@ advanced use cases, such as re-using caches between runs.
 
 Note that using an asynchronous stream type with the `transform`
 option will cause undefined behavior in sync extractions.
-[MiniPass](http://npm.im/minipass)-based streams are designed for this
+[MiniPass](https://npm.im/minipass)-based streams are designed for this
 use case.
 
 ### tar.t(options, fileList, callback) [alias: tar.list]
@@ -643,7 +643,7 @@ Synchronous version of `tar.Unpack`.
 
 Note that using an asynchronous stream type with the `transform`
 option will cause undefined behavior in sync unpack streams.
-[MiniPass](http://npm.im/minipass)-based streams are designed for this
+[MiniPass](https://npm.im/minipass)-based streams are designed for this
 use case.
 
 ### class tar.Parse
@@ -682,7 +682,7 @@ The following options are supported:
 Stop all parsing activities.  This is called when there are zlib
 errors.  It also emits a warning with the message and error provided.
 
-### class tar.ReadEntry extends [MiniPass](http://npm.im/minipass)
+### class tar.ReadEntry extends [MiniPass](https://npm.im/minipass)
 
 A representation of an entry that is being read out of a tar archive.
 
@@ -707,7 +707,7 @@ It has the following fields:
 Create a new ReadEntry object with the specified header, extended
 header, and global extended header values.
 
-### class tar.WriteEntry extends [MiniPass](http://npm.im/minipass)
+### class tar.WriteEntry extends [MiniPass](https://npm.im/minipass)
 
 A representation of an entry that is being written from the file
 system into a tar archive.

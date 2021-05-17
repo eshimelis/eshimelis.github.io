@@ -38,4 +38,4 @@ var newObject2 = filterObj(obj, ['bar']);
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

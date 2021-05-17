@@ -6,7 +6,7 @@ var isPrimitive = require('./helpers/isPrimitive');
 
 var isCallable = require('is-callable');
 
-// http://ecma-international.org/ecma-262/5.1/#sec-8.12.8
+// https://ecma-international.org/ecma-262/5.1/#sec-8.12.8
 var ES5internalSlots = {
 	'[[DefaultValue]]': function (O) {
 		var actualHint;
@@ -33,7 +33,7 @@ var ES5internalSlots = {
 	}
 };
 
-// http://ecma-international.org/ecma-262/5.1/#sec-9.1
+// https://ecma-international.org/ecma-262/5.1/#sec-9.1
 module.exports = function ToPrimitive(input) {
 	if (isPrimitive(input)) {
 		return input;

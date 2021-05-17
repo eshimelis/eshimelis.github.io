@@ -14,9 +14,9 @@ cookie.value = 'somethingdifferent';
 header = cookie.toString();
 
 var cookiejar = new tough.CookieJar();
-cookiejar.setCookie(cookie, 'http://currentdomain.example.com/path', cb);
+cookiejar.setCookie(cookie, 'https://currentdomain.example.com/path', cb);
 // ...
-cookiejar.getCookies('http://example.com/otherpath',function(err,cookies) {
+cookiejar.getCookies('https://example.com/otherpath',function(err,cookies) {
   res.headers['cookie'] = cookies.join('; ');
 });
 ```
@@ -85,7 +85,7 @@ Returns the public suffix of this hostname.  The public suffix is the shortest d
 
 For example: `www.example.com` and `www.subdomain.example.com` both have public suffix `example.com`.
 
-For further information, see http://publicsuffix.org/.  This module derives its list from that site. This call is currently a wrapper around [`psl`](https://www.npmjs.com/package/psl)'s [get() method](https://www.npmjs.com/package/psl#pslgetdomain).
+For further information, see https://publicsuffix.org/.  This module derives its list from that site. This call is currently a wrapper around [`psl`](https://www.npmjs.com/package/psl)'s [get() method](https://www.npmjs.com/package/psl#pslgetdomain).
 
 ### `cookieCompare(a,b)`
 

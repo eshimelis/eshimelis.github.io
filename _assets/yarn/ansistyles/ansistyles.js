@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- * Info: http://www.termsys.demon.co.uk/vtansi.htm#colors 
+ * Info: https://www.termsys.demon.co.uk/vtansi.htm#colors 
  * Following caveats
  * bright    - brightens the color (bold-blue is same as brigthtBlue)
  * dim       - nothing on Mac or Linux

@@ -20,7 +20,7 @@
     "stream",
     "pipe"
   ],
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "license": "ISC",
   "description": "Bytes go in, but they don't come out (when muted).",
   "files": [

@@ -39,7 +39,7 @@ var GetMethod = function GetMethod(O, P) {
 	return void 0;
 };
 
-// http://www.ecma-international.org/ecma-262/6.0/#sec-toprimitive
+// https://www.ecma-international.org/ecma-262/6.0/#sec-toprimitive
 module.exports = function ToPrimitive(input) {
 	if (isPrimitive(input)) {
 		return input;

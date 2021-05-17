@@ -10,7 +10,7 @@
 [Public Suffix List](https://publicsuffix.org/).
 
 This implementation is tested against the
-[test data hosted by Mozilla](http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1)
+[test data hosted by Mozilla](https://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1)
 and kindly provided by [Comodo](https://www.comodo.com/).
 
 Cross browser testing provided by
@@ -29,7 +29,7 @@ A "public suffix" is one under which Internet users can directly register names.
 Some examples of public suffixes are ".com", ".co.uk" and "pvt.k12.wy.us". The
 Public Suffix List is a list of all known public suffixes.
 
-Source: http://publicsuffix.org
+Source: https://publicsuffix.org
 
 
 ## Installation

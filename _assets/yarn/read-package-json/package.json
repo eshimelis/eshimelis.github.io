@@ -1,7 +1,7 @@
 {
   "name": "read-package-json",
   "version": "2.1.2",
-  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "author": "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me/)",
   "description": "The thing npm uses to read package.json files with semantics and defaults and validation",
   "repository": {
     "type": "git",

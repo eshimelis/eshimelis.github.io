@@ -54,16 +54,16 @@ Standards for this project, including tests, code coverage, and semantics are en
 
 © Shannon Moeller <me@shannonmoeller.com> (shannonmoeller.com)
 
-Licensed under [MIT](http://shannonmoeller.com/mit.txt)
+Licensed under [MIT](https://shannonmoeller.com/mit.txt)
 
 [amazon-img]:    https://img.shields.io/badge/amazon-tip_jar-yellow.svg?style=flat-square
 [amazon-url]:    https://www.amazon.com/gp/registry/wishlist/1VQM9ID04YPC5?sort=universal-price
-[coveralls-img]: http://img.shields.io/coveralls/shannonmoeller/cli-columns/master.svg?style=flat-square
+[coveralls-img]: https://img.shields.io/coveralls/shannonmoeller/cli-columns/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/shannonmoeller/cli-columns
-[downloads-img]: http://img.shields.io/npm/dm/cli-columns.svg?style=flat-square
-[gitter-img]:    http://img.shields.io/badge/gitter-join_chat-1dce73.svg?style=flat-square
+[downloads-img]: https://img.shields.io/npm/dm/cli-columns.svg?style=flat-square
+[gitter-img]:    https://img.shields.io/badge/gitter-join_chat-1dce73.svg?style=flat-square
 [gitter-url]:    https://gitter.im/shannonmoeller/shannonmoeller
-[npm-img]:       http://img.shields.io/npm/v/cli-columns.svg?style=flat-square
+[npm-img]:       https://img.shields.io/npm/v/cli-columns.svg?style=flat-square
 [npm-url]:       https://npmjs.org/package/cli-columns
-[travis-img]:    http://img.shields.io/travis/shannonmoeller/cli-columns.svg?style=flat-square
+[travis-img]:    https://img.shields.io/travis/shannonmoeller/cli-columns.svg?style=flat-square
 [travis-url]:    https://travis-ci.org/shannonmoeller/cli-columns

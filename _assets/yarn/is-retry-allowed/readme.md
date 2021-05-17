@@ -39,4 +39,4 @@ Object with `code` property, which will be used to determine retry.
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop)
+MIT © [Vsevolod Strukchinsky](https://github.com/floatdrop)

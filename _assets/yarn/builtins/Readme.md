@@ -1,9 +1,9 @@
 
 # builtins
 
-  List of node.js [builtin modules](http://nodejs.org/api/).
+  List of node.js [builtin modules](https://nodejs.org/api/).
 
-  [![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](http://travis-ci.org/juliangruber/builtins)
+  [![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](https://travis-ci.org/juliangruber/builtins)
 
 ## Example
 

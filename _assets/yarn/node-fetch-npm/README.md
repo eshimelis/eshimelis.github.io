@@ -4,9 +4,9 @@
 on it more than absolutely necessary.**
 
 The fetch implementation used by npm v7 is
-[minipass-fetch](http://npm.im/minipass-fetch).  You may also be interested
-in [make-fetch-happen](http://npm.im/make-fetch-happen) (which adds
-caching) and [npm-registry-fetch](http://npm.im/npm-registry-fetch) (which
+[minipass-fetch](https://npm.im/minipass-fetch).  You may also be interested
+in [make-fetch-happen](https://npm.im/make-fetch-happen) (which adds
+caching) and [npm-registry-fetch](https://npm.im/npm-registry-fetch) (which
 contains business logic for interacting with the npm registry
 specifically).
 
@@ -92,7 +92,7 @@ fetch('https://api.github.com/users/github')
 // 3xx-5xx responses are NOT network errors, and should be handled in then()
 // you only need one catch() at the end of your promise chain
 
-fetch('http://domain.invalid/')
+fetch('https://domain.invalid/')
 	.catch(err => console.error(err));
 
 // stream
@@ -128,7 +128,7 @@ fetch('https://github.com/')
 
 // post
 
-fetch('http://httpbin.org/post', { method: 'POST', body: 'a=1' })
+fetch('https://httpbin.org/post', { method: 'POST', body: 'a=1' })
 	.then(res => res.json())
 	.then(json => console.log(json));
 
@@ -137,14 +137,14 @@ fetch('http://httpbin.org/post', { method: 'POST', body: 'a=1' })
 import { createReadStream } from 'fs';
 
 const stream = createReadStream('input.txt');
-fetch('http://httpbin.org/post', { method: 'POST', body: stream })
+fetch('https://httpbin.org/post', { method: 'POST', body: stream })
 	.then(res => res.json())
 	.then(json => console.log(json));
 
 // post with JSON
 
 var body = { a: 1 };
-fetch('http://httpbin.org/post', {
+fetch('https://httpbin.org/post', {
 	method: 'POST',
 	body:    JSON.stringify(body),
 	headers: { 'Content-Type': 'application/json' },
@@ -158,7 +158,7 @@ import FormData from 'form-data';
 
 const form = new FormData();
 form.append('a', 1);
-fetch('http://httpbin.org/post', { method: 'POST', body: form })
+fetch('https://httpbin.org/post', { method: 'POST', body: form })
 	.then(res => res.json())
 	.then(json => console.log(json));
 
@@ -169,7 +169,7 @@ import FormData from 'form-data';
 
 const form = new FormData();
 form.append('a', 1);
-fetch('http://httpbin.org/post', { method: 'POST', body: form, headers: form.getHeaders() })
+fetch('https://httpbin.org/post', { method: 'POST', body: form, headers: form.getHeaders() })
 	.then(res => res.json())
 	.then(json => console.log(json));
 
@@ -195,7 +195,7 @@ See [test cases](https://github.com/npm/node-fetch-npm/blob/master/test/test.js)
 
 Perform an HTTP(S) fetch.
 
-`url` should be an absolute url, such as `http://example.com/`. A path-relative URL (`/file/under/root`) or protocol-relative URL (`//can-be-http-or-https.com/`) will result in a rejected promise.
+`url` should be an absolute url, such as `https://example.com/`. A path-relative URL (`/file/under/root`) or protocol-relative URL (`//can-be-http-or-https.com/`) will result in a rejected promise.
 
 <a id="fetch-options"></a>
 #### Options

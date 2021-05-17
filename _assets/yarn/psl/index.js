@@ -90,8 +90,8 @@ exports.errorCodes = {
 // * `-` but not as a starting or ending character
 // * `.` as a separator for the textual portions of a domain name
 //
-// * http://en.wikipedia.org/wiki/Domain_name
-// * http://en.wikipedia.org/wiki/Hostname
+// * https://en.wikipedia.org/wiki/Domain_name
+// * https://en.wikipedia.org/wiki/Hostname
 //
 internals.validate = function (input) {
 

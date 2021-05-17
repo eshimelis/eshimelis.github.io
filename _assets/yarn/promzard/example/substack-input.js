@@ -54,7 +54,7 @@ module.exports = {
     "author" : {
         "name" : "James Halliday",
         "email" : "mail@substack.net",
-        "url" : "http://substack.net"
+        "url" : "https://substack.net"
     },
     "license" : "MIT",
     "engine" : { "node" : ">=0.6" }

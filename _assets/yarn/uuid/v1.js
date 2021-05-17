@@ -4,7 +4,7 @@ var bytesToUuid = require('./lib/bytesToUuid');
 // **`v1()` - Generate time-based UUID**
 //
 // Inspired by https://github.com/LiosK/UUID.js
-// and http://docs.python.org/library/uuid.html
+// and https://docs.python.org/library/uuid.html
 
 var _nodeId;
 var _clockseq;

@@ -1,5 +1,5 @@
 <!-- badges/ -->
-[![Build Status](https://secure.travis-ci.org/tim-kos/node-retry.png?branch=master)](http://travis-ci.org/tim-kos/node-retry "Check this project's build status on TravisCI")
+[![Build Status](https://secure.travis-ci.org/tim-kos/node-retry.png?branch=master)](https://travis-ci.org/tim-kos/node-retry "Check this project's build status on TravisCI")
 [![codecov](https://codecov.io/gh/tim-kos/node-retry/branch/master/graph/badge.svg)](https://codecov.io/gh/tim-kos/node-retry)
 <!-- /badges -->
 
@@ -104,9 +104,9 @@ Explaining the various values from left to right:
 
 To make this a little easier for you, use wolfram alpha to do the calculations:
 
-<http://www.wolframalpha.com/input/?i=Sum%5B1000*x^k%2C+{k%2C+0%2C+9}%5D+%3D+5+*+60+*+1000>
+<https://www.wolframalpha.com/input/?i=Sum%5B1000*x^k%2C+{k%2C+0%2C+9}%5D+%3D+5+*+60+*+1000>
 
-[article]: http://dthain.blogspot.com/2009/02/exponential-backoff-in-distributed.html
+[article]: https://dthain.blogspot.com/2009/02/exponential-backoff-in-distributed.html
 
 ### retry.createTimeout(attempt, opts)
 

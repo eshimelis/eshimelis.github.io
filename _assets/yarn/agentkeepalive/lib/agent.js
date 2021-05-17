@@ -80,7 +80,7 @@ class Agent extends OriginalAgent {
         return cb(err);
       }
       if (this.keepAlive) {
-        // Disable Nagle's algorithm: http://blog.caustik.com/2012/04/08/scaling-node-js-to-100k-concurrent-connections/
+        // Disable Nagle's algorithm: https://blog.caustik.com/2012/04/08/scaling-node-js-to-100k-concurrent-connections/
         // https://fengmk2.com/benchmark/nagle-algorithm-delayed-ack-mock.html
         socket.setNoDelay(true);
       }

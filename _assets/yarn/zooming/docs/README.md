@@ -30,10 +30,10 @@ To experient with Zooming right away, try the following code on [codepen](https:
 
   <body>
     <div class='grid'>
-      <figure><img src='http://via.placeholder.com/600x400' class='img-zoomable' /></figure>
-      <figure><img src='http://via.placeholder.com/400x600' class='img-zoomable' /></figure>
-      <figure><img src='http://via.placeholder.com/400x600' class='img-zoomable' /></figure>
-      <figure><img src='http://via.placeholder.com/600x400' class='img-zoomable' /></figure>
+      <figure><img src='https://via.placeholder.com/600x400' class='img-zoomable' /></figure>
+      <figure><img src='https://via.placeholder.com/400x600' class='img-zoomable' /></figure>
+      <figure><img src='https://via.placeholder.com/400x600' class='img-zoomable' /></figure>
+      <figure><img src='https://via.placeholder.com/600x400' class='img-zoomable' /></figure>
     </div>
 
     <!-- Load Zooming library -->

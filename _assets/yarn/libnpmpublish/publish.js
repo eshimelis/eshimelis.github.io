@@ -139,7 +139,7 @@ function buildMetadata (spec, auth, registry, manifest, tardata, opts) {
   // Legacy shasum support
   manifest.dist.shasum = integrity.sha1[0].hexDigest()
   manifest.dist.tarball = url.resolve(registry, tbURI)
-    .replace(/^https:\/\//, 'http://')
+    .replace(/^https:\/\//, 'https://')
 
   root._attachments = {}
   root._attachments[tbName] = {

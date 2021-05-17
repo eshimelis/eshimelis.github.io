@@ -37,7 +37,7 @@ tap.test('run the example using a buffer', function (t) {
     "author": {
       "name": "James Halliday",
       "email": "mail@substack.net",
-      "url": "http://substack.net"
+      "url": "https://substack.net"
     },
     "license": "MIT",
     "engine": {
