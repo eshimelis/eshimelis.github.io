@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env sh
 
 # Run this script to deploy the app to Github Pages.
 
@@ -14,27 +14,19 @@ then
 fi
 git checkout -b gh-pages
 
-read -n 1 -s -r -p "Build site - Press enter to continue"
-
 # Build site.
 sudo yarn install --modules-folder ./_assets/yarn
 sudo bundle exec jekyll build
-
-read -p "Clean up unecessary files - Press enter to continue"
 
 # Delete and move files.
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 mv _site/* .
 rm -R _site/
 
-read -p "Adding then pushing to gh-pages - Press enter to continue"
-
 # Push to gh-pages.
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
 git push -f -q origin gh-pages
-
-read -p "Returning to original branch - Press enter to continue"
 
 # Move back to previous branch.
 git checkout -
