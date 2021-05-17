@@ -8,6 +8,12 @@ description: ""
   {% for post in paginator.posts %}
     <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
       <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+        {% if post.published == false %}
+        <h3 style="color: darkmagenta;">(Unpublished)</h3>
+        {% endif %}
+        {% if post.draft %}
+        <h3 style="color: teal;">(Draft)</h3>
+        {% endif %}
         <h5>
           {{ post.title }}
           {% include svg-icon.html icon="arrow-right" %}

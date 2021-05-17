@@ -1,7 +1,7 @@
 # Mandatory settings
 
 blog_theme: light # Or use dark
-name: Eyassu Shimelis
+name: eyassu shimelis
 paginate: 25
 url: http://eyassu.com
 
@@ -22,7 +22,7 @@ social:
   github: eshimelis # Add your GitHub handle
   linkedin: # Add your LinkedIn handle
   twitter: eyassushimelis # Add your Twitter handle
-  email: # Add your Email address
+  email: eshimelis@hmc.edu # Add your Email address
   bitcoin: # Add your Bitcoin link or address
   ethereum: # Add your Ethereum link or address
   gitlab: # Add your GitLab handle
