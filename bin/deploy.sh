@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # Run this script to deploy the app to Github Pages.
 
 # Exit if any subcommand fails.
