@@ -7,10 +7,10 @@
 set -e
 
 # Set up Ruby dependencies via Bundler.
-gem install bundler --conservative
-bundle check || bundle install
-bundle update
+sudo gem install bundler --conservative
+sudo bundle check || bundle install
+sudo bundle update
 
 # Set up JS dependencies via Yarn.
-npm install -g yarn
-yarn install --modules-folder ./_assets/yarn
+sudo npm install -g yarn
+sudo yarn install --modules-folder ./_assets/yarn

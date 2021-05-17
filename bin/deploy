@@ -19,9 +19,9 @@ sudo yarn install --modules-folder ./_assets/yarn
 sudo bundle exec jekyll build
 
 # Delete and move files.
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
-mv _site/* .
-rm -R _site/
+sudo find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+sudo mv _site/* .
+sudo rm -R _site/
 
 # Push to gh-pages.
 git add -fA
@@ -30,8 +30,6 @@ git push -f -q origin gh-pages
 
 # Move back to previous branch.
 git checkout -
-yarn install --modules-folder ./_assets/yarn
+sudo yarn install --modules-folder ./_assets/yarn
 
 echo "Deployed Successfully!"
-
-exit 0
