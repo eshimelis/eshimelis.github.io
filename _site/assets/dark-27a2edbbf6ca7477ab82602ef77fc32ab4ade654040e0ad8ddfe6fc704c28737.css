@@ -667,17 +667,17 @@ img {
 
 .article {
   display: block;
-  margin: 100px 0; }
+  margin: 50px 0; }
 
 .article-list {
   display: block;
   padding: 0;
-  margin: 50px 0;
+  margin: 20px 0;
   list-style: none; }
   .article-list li {
     position: relative;
     display: block;
-    padding: 50px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #393636; }
     .article-list li:last-child {
       border-bottom: 0; }

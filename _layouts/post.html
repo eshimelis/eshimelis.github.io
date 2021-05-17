@@ -8,11 +8,7 @@
         {% include navigation.html %}
         <article class="article {% if site.scrollappear_enabled %}scrollappear{% endif %}">
           <header class="article-header">
-            <!-- {% if page.published %}
-            <h1>{{ page.title }}</h1>
-            {% else %}
-            <h1 style="color: tomato;">Unpublished: {{ page.title }}</h1>
-            {% endif %} -->
+            
             {% if page.published == false %}
             <h3 style="color: darkmagenta;">(Unpublished)</h3>
             {% endif %}

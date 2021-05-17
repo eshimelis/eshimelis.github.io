@@ -6,7 +6,8 @@ thumb_image: "documentation/bayes_theorem.jpg"
 tags: []
 published: true
 ---
-<!-- {% include image.html path="documentation/chalk-intro.png" path-detail="documentation/chalk-intro@2x.png" alt="Chalk intro" %} -->
+
+{% include image.html path="documentation/bayes_theorem.svg" path-detail="documentation/bayes_theorem.svg" alt="introduction" style="width: 50%; margin-left: auto; margin-right: auto" %}
 
 Testing, testing, 1...2...3
 

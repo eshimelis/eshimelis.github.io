@@ -3,15 +3,55 @@
   <channel>
     <title>eyassu shimelis</title>
     <description></description>
-    <link>https://localhost:4000</link>
-    <atom:link href="https://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Probabilistic Programming</title>
+        <description>Recent advnaces is probabilistic based programming.</description>
+        <pubDate>Mon, 17 May 2021 14:03:27 -0400</pubDate>
+        <link>http://localhost:4000/posts/probabilistic-programming</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/probabilistic-programming</guid>
+      </item>
+    
+      <item>
+        <title>Visual-Inertial Navigation</title>
+        <description>Have a look at what's possible with Visual Inertial Navigation</description>
+        <pubDate>Mon, 17 May 2021 12:19:27 -0400</pubDate>
+        <link>http://localhost:4000/posts/visual-navigation</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/visual-navigation</guid>
+      </item>
+    
+      <item>
+        <title>hello, world</title>
+        <description>Welcome!</description>
+        <pubDate>Mon, 17 May 2021 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/posts/intro</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/intro</guid>
+      </item>
+    
+      <item>
+        <title>Introducing chalk</title>
+        <description>Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.</description>
+        <pubDate>Sat, 23 Dec 2017 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/posts/introducing-chalk</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/introducing-chalk</guid>
+      </item>
+    
+      <item>
+        <title>How to configure Chalk</title>
+        <description>Learn more about the config file for Chalk and how to set it up properly.</description>
+        <pubDate>Fri, 22 Dec 2017 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/posts/configuring-chalk</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/configuring-chalk</guid>
+      </item>
     
       <item>
         <title>Chalk sample post with all elements</title>
         <description>Have a look at all the predesigned elements you can use in Chalk.</description>
         <pubDate>Thu, 21 Dec 2017 00:00:00 -0500</pubDate>
-        <link>https://localhost:4000/posts/chalk-sample-post-with-all-elements</link>
-        <guid isPermaLink="true">https://localhost:4000/posts/chalk-sample-post-with-all-elements</guid>
+        <link>http://localhost:4000/posts/chalk-sample-post-with-all-elements</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/chalk-sample-post-with-all-elements</guid>
       </item>
     
   </channel>
