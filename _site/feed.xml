@@ -9,7 +9,7 @@
       <item>
         <title>Visual-Inertial Navigation</title>
         <description>Have a look at what's possible with Visual Inertial Navigation</description>
-        <pubDate>Mon, 17 May 2021 21:27:16 -0400</pubDate>
+        <pubDate>Mon, 17 May 2021 22:29:02 -0400</pubDate>
         <link>http://localhost:4000/posts/visual-navigation</link>
         <guid isPermaLink="true">http://localhost:4000/posts/visual-navigation</guid>
       </item>
@@ -17,7 +17,7 @@
       <item>
         <title>Probabilistic Programming</title>
         <description>Recent advnaces is probabilistic based programming.</description>
-        <pubDate>Mon, 17 May 2021 21:27:16 -0400</pubDate>
+        <pubDate>Mon, 17 May 2021 22:29:02 -0400</pubDate>
         <link>http://localhost:4000/posts/probabilistic-programming</link>
         <guid isPermaLink="true">http://localhost:4000/posts/probabilistic-programming</guid>
       </item>
@@ -52,6 +52,22 @@
         <pubDate>Thu, 21 Dec 2017 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/posts/chalk-sample-post-with-all-elements</link>
         <guid isPermaLink="true">http://localhost:4000/posts/chalk-sample-post-with-all-elements</guid>
+      </item>
+    
+      <item>
+        <title>State-Space Control of an Inverted Pendulum</title>
+        <description>Junior-Year course in advanced systems engineering (feedback control systems)</description>
+        <pubDate>Fri, 28 Apr 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/posts/e102-final-project</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/e102-final-project</guid>
+      </item>
+    
+      <item>
+        <title>To Infinity and Beyond</title>
+        <description>Sophomore Year experimental engineering course in model rocketry: E80 - Experimental Engineering</description>
+        <pubDate>Sat, 08 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/posts/experimental-engineering</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/experimental-engineering</guid>
       </item>
     
   </channel>
