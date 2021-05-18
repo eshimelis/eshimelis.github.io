@@ -47,6 +47,7 @@ assets:
     img: { optim: {}}
   source_maps: false
   sources:
+    - assets/pdf
     - _assets/icons
     - _assets/javascripts
     - _assets/stylesheets
