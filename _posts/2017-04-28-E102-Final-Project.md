@@ -16,4 +16,4 @@ For our final project, we were tasked with creating a feedback control system fo
 
 You can check out the final report below.
 
-<embed src="{{ site.url}}/files/E102FinalReport.pdf" width="100%" height="800"  type="application/pdf">
+<iframe src="https://docs.google.com/viewer?url={{ site.url}}/files/E102FinalReport.pdf&embedded=true" width="100%" height="800px" frameborder="0" scrolling="no"></iframe>
