@@ -1,2 +1,0 @@
-# eyassu
-personal site

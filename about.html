@@ -10,7 +10,6 @@ description: ""
   <p>
     Hi, I'm Eyassu (pronounced ee-ya-soo), welcome to this site. I'm an electrical engineer by day, and by night.
   </p>
-  {%- assign resume = site.static_files | where_exp: "file", "file.path contains 'files/Shimelis_Resume.pdf'" -%}
   <br>
-  <!-- <a href="{{ resume[0].path }}">Resume</a> -->
+  <a href="{{ 'resume' | relative_url }}">Resume</a>
 </div>

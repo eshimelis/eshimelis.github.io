@@ -16,4 +16,14 @@ For our final project, I conducted a feedback control simulation study for an in
 
 You can check out the final report below.
 
-<iframe src="https://docs.google.com/viewer?url={{ site.url}}/files/E102FinalReport.pdf&embedded=true" width="100%" height="800px" frameborder="0" scrolling="no"></iframe>
+<div id="pdf_preview"></div>
+<script>
+var filename = "E102FinalReport.pdf";
+var pdf_path = "{{ site.url }}/files/" + filename;
+var options = {
+    height: "800px",
+    width: "100%",
+    fallbackLink: "<p>This browser does not support inline PDFs: <a href='[url]'>Download " + filename + "</a></p>" 
+};
+PDFObject.embed(pdf_path, "#pdf_preview", options);
+</script>

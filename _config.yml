@@ -49,7 +49,7 @@ assets:
   sources:
     - assets/pdf
     - _assets/icons
-    - _assets/javascripts
+    - _assets/js
     - _assets/stylesheets
     - _assets/yarn
 collections:

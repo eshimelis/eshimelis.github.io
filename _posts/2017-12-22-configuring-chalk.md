@@ -148,7 +148,7 @@ $base-transition-speed: .2s;
 
 #### Fonts
 
-Chalk uses Google Fonts by default. You can change the font in `_assets/javascripts/webfonts.js` and in `404.html`.
+Chalk uses Google Fonts by default. You can change the font in `_assets/js/webfonts.js` and in `404.html`.
 
 {% highlight javascript %}
 WebFont.load({

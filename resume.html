@@ -1,0 +1,20 @@
+---
+layout: default
+title: "resume"
+description: ""
+---
+
+<div class="about {% if site.scrollappear_enabled %}scrollappear{% endif %}">
+  <div id="pdf_preview"></div>
+  <script>
+  var filename = "Shimelis_Resume.pdf";
+  var pdf_path = "{{ site.url }}/files/" + filename;
+  var options = {
+      height: "800px",
+      width: "100%",
+      fallbackLink: "<p>This browser does not support inline PDFs: <a href='[url]'>Download " + filename + "</a></p>" 
+  };
+  PDFObject.embed(pdf_path, "#pdf_preview", options);
+  </script>
+
+</div>
