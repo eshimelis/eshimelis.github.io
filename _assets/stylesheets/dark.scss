@@ -25,16 +25,16 @@ $base-accent-highlighted-color: darken($base-accent-color, 15);
 
 // Border color
 
-$base-border-color: $gray-darker;
+$base-border-color: $gray-light;
 
 // Page specific colors
 
 $body-background: $gray-darkest;
-$header-logo-color: $white;
+$header-logo-color: $gray-lightest;
 $header-link-color: $gray-light;
 $header-link-color-hover: $white;
 $article-header-title-color: $gray-lightest;
-$article-header-description-color: $gray;
+$article-header-description-color: $gray-lighter;
 $article-post-titles-color: $gray-lightest;
 $article-footer-color: $gray-dark;
 $article-footer-link-color: $gray-light;
