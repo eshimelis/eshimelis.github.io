@@ -5,6 +5,15 @@
 # Exit if any subcommand fails.
 set -e
 
+# Make sure there aren't any uncommited changes
+if [[ $(git diff --name-only) ]]; then
+    git diff --name-only
+    echo "\nThere are uncommitted files, please commit the files above before continuing. Exiting."
+    exit 1
+else
+    echo "All files committed, continuing with deployment."
+fi
+
 echo "Started deploying"
 
 # Checkout gh-pages branch.
