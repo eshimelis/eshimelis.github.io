@@ -7,9 +7,19 @@ set -e
 
 # Make sure there aren't any uncommited changes
 if [[ $(git diff --name-only) ]]; then
+    echo "There are uncommitted files. They will be erased if they are not commited and pushed."
+    echo
     git diff --name-only
-    echo "\nThere are uncommitted files, please commit the files above before continuing. Exiting."
-    exit 1
+    echo
+    read -p "Do you want to continue with deployment (y/N)? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        :
+    else
+        echo "Exiting..."
+        exit 1
+    fi
 else
     echo "All files committed, continuing with deployment."
 fi
