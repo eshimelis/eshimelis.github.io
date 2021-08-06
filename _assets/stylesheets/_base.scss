@@ -159,3 +159,13 @@ img {
   color: $white;
   background-color: $gray-darkest;
 }
+
+// figure captions
+
+figcaption {
+  // background-color: #222;
+  // color: #fff;
+  font: italic smaller sans-serif;
+  padding: -10px;
+  text-align: center;
+}
