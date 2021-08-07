@@ -6,9 +6,16 @@ published: true
 tags: [projects]
 ---
 
-<!-- <h1 align="center">Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</h1> -->
-<!-- <h2 align="center">Autonomous Robot Navigation (E160) Final Project</h2>
-<h3 align="center"> Eyassu Shimelis and Sean Mahre </h3> -->
+The final project was a culmintation of multiple labs, each requiring a two-page report:
+
+<h4><a href="{{ site.url }}/files/e160/E160Lab1.pdf">[PDF] Lab 1 - Infrared Distance Sensor Calibration </a></h4>
+<h4><a href="{{ site.url }}/files/e160/E160Lab2.pdf">[PDF] Lab 2 - Odometry Error Characterization</a></h4>
+<h4> <a href="{{ site.url }}/files/e160/E160Lab3.pdf">[PDF] Lab 3 - Point Tracking Controller</a></h4>
+<h4> <a href="{{ site.url }}/files/e160/E160Lab4.pdf">[PDF] Lab 4 - Particle Filter</a></h4>
+
+<br> <br>
+<h2 align="center">Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</h2>
+<br>
 
 <h2>Background</h2>
 <p>The Kalman Filter (KF) is a filtering and prediction technique for
