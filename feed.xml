@@ -1,20 +1,42 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>eyassu shimelis</title>
+    <description></description>
+    <link>https://eyassu.com</link>
+    <atom:link href="https://eyassu.com/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>hello, world</title>
+        <description>Welcome!</description>
+        <pubDate>Mon, 17 May 2021 00:00:00 -0400</pubDate>
+        <link>https://eyassu.com/posts/intro</link>
+        <guid isPermaLink="true">https://eyassu.com/posts/intro</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</title>
+        <description>Autonomous Robot Navigation [E160] - Final Project</description>
+        <pubDate>Tue, 15 May 2018 00:00:00 -0400</pubDate>
+        <link>https://eyassu.com/posts/autonomous-robot-navigation</link>
+        <guid isPermaLink="true">https://eyassu.com/posts/autonomous-robot-navigation</guid>
+      </item>
+    
+      <item>
+        <title>State-Space Control of an Inverted Pendulum</title>
+        <description>Junior-Year course in advanced systems engineering (feedback control systems)</description>
+        <pubDate>Fri, 28 Apr 2017 00:00:00 -0400</pubDate>
+        <link>https://eyassu.com/posts/e102-final-project</link>
+        <guid isPermaLink="true">https://eyassu.com/posts/e102-final-project</guid>
+      </item>
+    
+      <item>
+        <title>To Infinity and Beyond</title>
+        <description>Sophomore Year experimental engineering course in model rocketry: E80 - Experimental Engineering</description>
+        <pubDate>Sat, 08 Oct 2016 00:00:00 -0400</pubDate>
+        <link>https://eyassu.com/posts/experimental-engineering</link>
+        <guid isPermaLink="true">https://eyassu.com/posts/experimental-engineering</guid>
+      </item>
+    
   </channel>
 </rss>

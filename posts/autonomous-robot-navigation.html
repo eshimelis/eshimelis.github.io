@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>eyassu shimelis | Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</title>
+  <meta name="description" content="Autonomous Robot Navigation [E160] - Final Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eyassu.com/posts/autonomous-robot-navigation">
+  <meta property="og:description" content="Autonomous Robot Navigation [E160] - Final Project">
+  <meta property="og:site_name" content="eyassu shimelis">
+
+  <!-- <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://eyassu.com/posts/autonomous-robot-navigation">
+  <meta name="twitter:title" content="Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)">
+  <meta name="twitter:description" content="Autonomous Robot Navigation [E160] - Final Project"> -->
+
+  <!-- 
+    <meta property="og:image" content="https://eyassu.com/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="https://eyassu.com/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+   -->
+
+  <link href="https://eyassu.com/feed.xml" type="application/rss+xml" rel="alternate" title="eyassu shimelis Last 10 blog posts" />
+
+  
+
+  <link rel="icon" type="image/x-icon" href="/assets/favicon-21d748685b73008c0d09320f9af2693aa9e76bf4009e663090fce698bb2fca97.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon-a8a92f6f2009742515c216b00d2b6c151e9de20f03a348c95fdfb2ec98addece.png">
+
+  
+
+    
+      <link rel="stylesheet" type="text/css" title="light" id="light" href="/assets/light-7bd96801f6d7fdc3636ff0676b87f0dd1ddc85f87121f3d809e67e1b19ecb4bf.css">
+      <link rel="stylesheet" type="text/css" title="dark" id="dark" href="/assets/dark-04f96bb145cf4d9d7fc07c420d13801d57f0afb135f63a165121c06d88cbcd9b.css" disabled="true">
+    
+
+  
+
+</head>
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115796871-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-115796871-1');
+  </script>
+
+
+<script type="text/javascript" src="/assets/vendor-271c9e0bb8f41ba4e52e27be4707abeb8dbd063275ce48a31299ab671d04edb6.js"></script>
+<script type="text/javascript" src="/assets/pdfobject-92cac37f9d01c744223ea4569846925036b56d294549f9f644d63b8da8b6d2fd.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-a684ac1b4c77438badee8f93db3f09b4e4a85cf9f606307370b03c31fcb5d47e.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js"></script>
+
+
+  <script type="text/javascript" src="/assets/themetoggle-df0d3d73164dc26dffbd630182ae4d0dfa7bee6b694a2b5d565d73595b582bbf.js"></script>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="eyassu shimelis">eyassu shimelis</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="https://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-7c85e77c0742e47f58c6a0de0dda00a7cc0f609e489bd15fe76dff967ec25701.svg#icon-about" xlink:href="/assets/about-7c85e77c0742e47f58c6a0de0dda00a7cc0f609e489bd15fe76dff967ec25701.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/eshimelis" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="https://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-40cc6eaeefc84f6d2a9639e489ea19e487afb69eb3d6a785cca54f50521d1201.svg#icon-github" xlink:href="/assets/github-40cc6eaeefc84f6d2a9639e489ea19e487afb69eb3d6a785cca54f50521d1201.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/eshimelis" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="https://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-7852590315f744674afaf68e7480d400530859b772aea2e0214a8c8c5247c638.svg#icon-linkedin" xlink:href="/assets/linkedin-7852590315f744674afaf68e7480d400530859b772aea2e0214a8c8c5247c638.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:eshimelis@hmc.edu" title="Email">
+          <svg xmlns="https://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-6a89474465efd2dfbad67dea0ac4cba831eaa25fce72e53e848fe529c7f900a9.svg#icon-email" xlink:href="/assets/email-6a89474465efd2dfbad67dea0ac4cba831eaa25fce72e53e848fe529c7f900a9.svg#icon-email"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+      <li>
+        <a onclick="toggle()" title="Toggle Theme">
+          <svg xmlns="https://www.w3.org/2000/svg" class="icon-theme">
+  <use href="/assets/theme-ada97b2d3afaa1bd337f8c4974789a1706e1815bc4fdac819a1400a3acb744a6.svg#icon-theme" xlink:href="/assets/theme-ada97b2d3afaa1bd337f8c4974789a1706e1815bc4fdac819a1400a3acb744a6.svg#icon-theme"></use>
+</svg>
+
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            
+            
+            
+            <h1>Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</h1>
+            <p>Autonomous Robot Navigation [E160] - Final Project</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    May 15, 2018
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      4 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/projects" title="See all posts with tag 'Projects'">Projects</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p>The final project was a culmintation of multiple labs, each requiring a two-page report:</p>
+
+<h4><a href="https://eyassu.com/files/e160/E160Lab1.pdf">[PDF] Lab 1 - Infrared Distance Sensor Calibration </a></h4>
+<h4><a href="https://eyassu.com/files/e160/E160Lab2.pdf">[PDF] Lab 2 - Odometry Error Characterization</a></h4>
+<h4> <a href="https://eyassu.com/files/e160/E160Lab3.pdf">[PDF] Lab 3 - Point Tracking Controller</a></h4>
+<h4> <a href="https://eyassu.com/files/e160/E160Lab4.pdf">[PDF] Lab 4 - Particle Filter</a></h4>
+
+<p><br /> <br /></p>
+<h2 align="center">Localizing a Differential-Drive Robot with an Unscented Kalman Filter (UKF)</h2>
+<p><br /></p>
+
+<h2>Background</h2>
+<p>The Kalman Filter (KF) is a filtering and prediction technique for
+    continuous systems; however, it is only limited to linear Gaussian
+    systems. In order for the Kalman filter to be correct, its derivation
+    relies on linear transformations. One method of applying this filter to
+    nonlinear systems is to instead use a first-order Taylor series estimate.
+    In a previous lab, we implemented a particle filter, which can be used to
+    approximate most distributions with enough particles; however, particle
+    filters are computationally expensive. The benefit of the Kalman filter
+    is its closed form solution, making a very fast technique for Gaussian systems
+    The unscented Kalman filter (also known as sigma-point belief propagation)
+    is another method of linearizing nonlinear systems, for use in Kalman filtering.
+    Instead of linearizing a system, like the EKF, the UKF propogates sigma points
+    through the non-linear transformation. Sigma points are located at the mean and
+    symmetrically along the main axes of the covariance.
+</p>
+
+<p>Link to the final presentation: <a href="https://docs.google.com/presentation/d/1-C9s5yihTRWvIDMOfT9dZc8EY41FBMYsYPX167Xb2Rc/edit?usp=sharing"> E160 UKF Final Presentation</a> </p>
+
+<h2>Project Definition</h2>
+<p>Localize a differential drive robot in a known map, using an algorithm more
+accurate than an extended Kalman filter and more efficient than a particle filter.</p>
+
+<h2>Materials</h2>
+<p>The robot used in this report is a small, two-pound differential drive robot,
+shown in the figure below. The diameter of each wheel is 6.95 cm +/- 0.01
+ and the distance between the center of the two wheels is 14.15 cm +/- 0.01.
+ Each wheel also has an encoder that is capable of measuring the relative
+ rotation of each wheel with a resolution of 4.36*10^{-3} rad/tick.</p>
+
+<figure>
+<img src="/assets/documentation/e160/chassis-0329d4c279664cd2645ba8389b0cf525ed3d99600800c98486ad7bc92e1f0c90.png" alt="The E160 differential drive robot" style="width: 500px; margin-left: auto; margin-right: auto" />
+<figcaption> The E160 differential drive robot </figcaption>
+</figure>
+
+<h2>Map</h2>
+<p>The particle filter was tested in simple hallway. The hallway has a footprint
+of approximately 4 meters by 4 meters, the specific measurements
+are shown in the figure below. To overcome the sensor’s limited range, the
+robot’s trajectory was place next to the walls.</p>
+
+<figure>
+<img src="/assets/documentation/e160/map-921a613e616ae3fcb6ba167de7b5073a58a9a52c7601bb102269080c02b2e42d.png" alt="Overhead map of the hallway" style="width: 500px; margin-left: auto; margin-right: auto" />
+<figcaption> Overhead map of the hallway </figcaption>
+</figure>
+
+<h2>UKF Pseudocode</h2>
+<p>The following UKF pseudocode is from Chapter 4 of Sebastian Thrun’s text: Probabilistic Robotics.<br /></p>
+
+<figure>
+<img src="/assets/documentation/e160/UKFPseudocode-8d9dd4f4ff44bb7adf8a4d363101d700c012a6f232b63bee5ca73f56f2b016ed.png" alt="UKF Pseudocode" style="width: 500px; margin-left: auto; margin-right: auto" />
+<figcaption> Unscented Kalman Filter algorithm, from Sebastian Thrun's testbook </figcaption>
+</figure>
+
+<h2>UKF State Design</h2>
+<p>The UKF state consisted of three variables: the two dimensional position (x,y) and the robot’s heading (theta). <br /></p>
+<figure>
+<img src="/assets/documentation/e160/ukfstate-873f943826b69cfabc03003a02783284aeaac36dd069924cdf93bda19afa85de.png" alt="UKF State" style="width: 100px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<figure>
+<img src="/assets/documentation/e160/ukfcovariance-ef8cf65f7d9059464afecd1eb39f915553db10f41a344116fbbbe22e1a968c7f.png" alt="UKF Covariance" style="width: 250px; margin-left: auto; margin-right: auto" />
+<figcaption> Representation of distribution as a Gaussian, with a mean and covariance </figcaption>
+</figure>
+
+<h2>Experiment 1 - Convergence</h2>
+<p> This experiment looked at convergence rates for different types of initial disturbances.
+<h2 align="center">Simulation</h2>
+<p>Theta-offset: Converged 4/5 times</p>
+<p>XY-offset: Converged 5/5 times</p><br />
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DtFZNy1HP_M" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+<figure>
+<img src="/assets/documentation/e160/UKFSimConvergenceError-46ded0449b67ec719f297e2179c456ebcf53657ef76200d5c5b7b2772d34e800.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<h2>Experiment 2 - Passive Tracking</h2>
+<h2>[Simulation]</h2>
+<p>RMSE: 0.0331 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eIip8V51J2c" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<figure>
+<img src="/assets/documentation/e160/UKFSimPassive-18f48291d026355b3b0fdc4652a51a8d9a7a8ce69692d08ecc8e2a3c1291beda.png" alt="UKF Covariance" style="width: 1000px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+<figure>
+<img src="/assets/documentation/e160/UKFSimPassiveError-e535d69e964493c1b767d29ec9bd13586d2fa33b3388d4c6fa5242a4ce894d5e.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<h2>[Hardware]</h2>
+<p>RMSE: 0.1841 m</p>
+
+<figure>
+<img src="/assets/documentation/e160/UKFHardwarePassive-0a1bc17d0fcf441e0813295ce109404026671352937584b2209dc8ebd7124789.png" alt="UKF Covariance" style="width: 1000px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+<figure>
+<img src="/assets/documentation/e160/UKFHardwarePassiveError-86db7670b3134249315154b91cc725dc2c3ac242fe3a95719b9be8225cb8fd74.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<h2>Experiment 3 - Feedback Control</h2>
+<h2>[Simulation]</h2>
+<p>RMSE: 0.0389 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KkzKvl0QoRs" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<figure>
+<img src="/assets/documentation/e160/UKFSimFeedbackTest-7e80ea4676590ef68a3be45aa2e2bf1ab5b4e99c118e9699e2a197a508d58e0b.png" alt="UKF Covariance" style="width: 1000px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+<figure>
+<img src="/assets/documentation/e160/UKFSimFeedbackTestError-eea8489602a7592b751f89337afd24dec40a5413bdd108905b120f81cca77ea1.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<h2>[Hardware]</h2>
+<p>RMSE: 0.1914 m</p>
+
+<figure>
+<img src="/assets/documentation/e160/UKFHardwareFeedback-927cbbc23fafbadc167c0b2eb0c25cac735623f1d11a918f07f97c314169f002.png" alt="UKF Covariance" style="width: 1000px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+<figure>
+<img src="/assets/documentation/e160/UKFHardwarePositionError-8425cc5058b7693d36499e7ddfbe3260eb59d009ceb4c420802fb414c654df89.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+
+<h2>Experiment 4 - UKF and Particle Filter Comparison</h2>
+<h2>Simulation</h2>
+<p>UKF RMSE: 0.0496 m</p>
+<p>Particle Filter RMSE: 0.0183 m</p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cGWNfols4lc" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
+</div>
+
+<figure>
+<img src="/assets/documentation/e160/UKFvsPF-5091e632e7cc55fcc8799e331d9b0e6dd6b77f88a7319a0b9b5a827bbc164322.png" alt="UKF Covariance" style="width: 1000px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+<figure>
+<img src="/assets/documentation/e160/UKFvsPFError-fd196a4048e2b62013711f9bc31d521a7c421ae57814ee00d98ca3de7274bc72.png" alt="UKF Covariance" style="width: 700px; margin-left: auto; margin-right: auto" />
+<figcaption> </figcaption>
+</figure>
+</p>
+
+          </div>
+          <!-- <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Localizing+a+Differential-Drive+Robot+with+an+Unscented+Kalman+Filter+(UKF)%20-%20https://eyassu.com/posts/autonomous-robot-navigation" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://eyassu.com/posts/autonomous-robot-navigation" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div> -->
+
+          <!--  -->
+        </article>
+        <footer class="footer scrollappear">
+  <p>© Eyassu Shimelis</p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

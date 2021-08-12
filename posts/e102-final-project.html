@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>eyassu shimelis | Page not found</title>
-  <meta name="description" content="Page not found">
+  <title>eyassu shimelis | State-Space Control of an Inverted Pendulum</title>
+  <meta name="description" content="Junior-Year course in advanced systems engineering (feedback control systems)">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Page not found">
+  <meta property="og:title" content="State-Space Control of an Inverted Pendulum">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://eyassu.com/404.html">
-  <meta property="og:description" content="Page not found">
+  <meta property="og:url" content="https://eyassu.com/posts/e102-final-project">
+  <meta property="og:description" content="Junior-Year course in advanced systems engineering (feedback control systems)">
   <meta property="og:site_name" content="eyassu shimelis">
 
   <!-- <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://eyassu.com/404.html">
-  <meta name="twitter:title" content="Page not found">
-  <meta name="twitter:description" content="Page not found"> -->
+  <meta name="twitter:url" content="https://eyassu.com/posts/e102-final-project">
+  <meta name="twitter:title" content="State-Space Control of an Inverted Pendulum">
+  <meta name="twitter:description" content="Junior-Year course in advanced systems engineering (feedback control systems)"> -->
 
   <!-- 
     <meta property="og:image" content="https://eyassu.com/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
@@ -67,8 +67,6 @@
 
   <script type="text/javascript" src="/assets/themetoggle-df0d3d73164dc26dffbd630182ae4d0dfa7bee6b694a2b5d565d73595b582bbf.js"></script>
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto&display=swap" rel="stylesheet">  -->
 <body>
   <main>
     <div class="grid grid-centered">
@@ -151,15 +149,72 @@
 
 
 
-        <div class="notfound-wrapper">
-  <div class="notfound-content">
-    <p>
-      Looks like you got lost.
-      <br>
-      Let's get you back to the <a href="/">homepage</a>!
-    </p>
+        <article class="article scrollappear">
+          <header class="article-header">
+            
+            
+            
+            <h1>State-Space Control of an Inverted Pendulum</h1>
+            <p>Junior-Year course in advanced systems engineering (feedback control systems)</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    April 28, 2017
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/projects" title="See all posts with tag 'Projects'">Projects</a>
+    
   </div>
 </div>
+          </header>
+
+          <div class="article-content">
+            <p><img src="/assets/e102-565ba0bf870172402992ef0b724aef442a2ac4d789620e59020da7d724942fb8.png" alt="pencartulum control system block diagram" style="margin-left: auto; margin-right: auto" /></p>
+
+<p>E102 - Advanced Systems Engineering II is a junior-level course that’s part of of HMC’s engineering curriculum.</p>
+
+<p>The course course covers LTI system transfer functions, Laplace/Z transforms, feedback control systems, modern state space methods, stability, etc.</p>
+
+<p>For our final project, I conducted a feedback control simulation study for an inverted pendulum on a cart, a.k.a. the ‘pencartulum’. Given some position and angular offset, the goal was to drive it to the origin, within minimum-time, offshoot, and acceleration constraints.</p>
+
+<p>You can check out the final report below.</p>
+
+<div id="pdf_preview"></div>
+<script>
+var filename = "E102FinalReport.pdf";
+var pdf_path = "https://eyassu.com/files/" + filename;
+var options = {
+    height: "800px",
+    width: "100%",
+    fallbackLink: "<p>This browser does not support inline PDFs: <a href='[url]'>Download " + filename + "</a></p>" 
+};
+PDFObject.embed(pdf_path, "#pdf_preview", options);
+</script>
+
+
+          </div>
+          <!-- <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=State-Space+Control+of+an+Inverted+Pendulum%20-%20https://eyassu.com/posts/e102-final-project" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://eyassu.com/posts/e102-final-project" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div> -->
+
+          <!--  -->
+        </article>
         <footer class="footer scrollappear">
   <p>© Eyassu Shimelis</p>
 </footer>
