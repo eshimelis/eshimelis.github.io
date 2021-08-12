@@ -7,28 +7,33 @@ description: ""
 <ul class="article-list">
   {% for post in paginator.posts %}
     <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
-      <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-        {% if post.published == false %}
-        <h3 style="color: darkmagenta;">(Unpublished)</h3>
-        {% endif %}
-        {% if post.draft %}
-        <h3 style="color: teal;">(Draft)</h3>
-        {% endif %}
-        <h5>
-          {{ post.title }}
-          {% include svg-icon.html icon="arrow-right" %}
-        </h5>
-      </a>
-      <p>
-        {% if post.description %}
-          {{ post.description }}  
-        {% else %}
-          {{ post.excerpt }}
-        {% endif %}
-      </p>
-      {% include article/info-footer.html post=post %}
+
+        <img src="{{ post.icon }}" style="float:left; height:120px; margin-right: 8px;">
+        
+          <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+            {% if post.published == false %}
+            <h3 style="color: darkmagenta;">Unpublished</h3>
+            {% endif %}
+            {% if post.draft %}
+            <h3 style="color: teal;">Draft</h3>
+            {% endif %}
+            <h5>
+              {{ post.title }}
+              <!-- {% include svg-icon.html icon="arrow-right" %} -->
+            </h5>
+          </a>
+          <p style="margin-top:5px">
+            {% if post.description %}
+              {{ post.description }}  
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </p>
+          {% include article/info-footer.html post=post %}
+
     </li>
   {% endfor %}
+
   {% if paginator.total_pages > 1 %}
     <li class="article-pagination {% if site.settings.scrollappear_enabled %}scrollappear{% endif %}">
       {% if paginator.next_page %}

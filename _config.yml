@@ -42,12 +42,15 @@ social:
 
 # Important settings (change at own risk)
 assets:
+  cache: false
   plugins:
     css: { autoprefixer: {}}
     img: { optim: {}}
   source_maps: false
   sources:
-    - assets/pdf
+    - assets/images
+    - assets/images/documentation
+    - assets/
     - _assets/icons
     - _assets/js
     - _assets/stylesheets
@@ -57,8 +60,7 @@ collections:
     output: true
     permalink: /tag/:slug/
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: my_tags
     values:
