@@ -4,6 +4,7 @@ title: "To Infinity and Beyond"
 description: "Sophomore Year experimental engineering course in model rocketry: E80 - Experimental Engineering"
 published: true
 tags: [projects]
+icon: "/assets/icons/amateur_rocketry.jpg"
 ---
 
 This might very well be the most useful course I took as an undergrad...

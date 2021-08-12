@@ -8,7 +8,7 @@ description: ""
   {% for post in paginator.posts %}
     <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
 
-        <img src="{{ post.icon }}" style="float:left; height:120px; margin-right: 8px;">
+        <img src="{{ post.icon }}" style="float:left; height:120px; margin-right: 10px;">
         
           <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
             {% if post.published == false %}

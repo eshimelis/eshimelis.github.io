@@ -4,6 +4,7 @@ title: "State-Space Control of an Inverted Pendulum"
 description: "Junior-Year course in advanced systems engineering (feedback control systems)"
 published: true
 tags: [projects]
+icon: "/assets/icons/cart_pendulum.png"
 ---
 
 <img src="{% asset 'e102.png' @path %}" alt="pencartulum control system block diagram" style="margin-left: auto; margin-right: auto"/>
